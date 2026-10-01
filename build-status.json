@@ -93,7 +93,7 @@
         "version": "1.0.32",
         "version_code": 100032,
         "apk_ready": true,
-        "apk_size": 38941219
+        "apk_size": 38941299
       },
       "recent_commits": [
         {
@@ -285,5 +285,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:43:14Z"
+  "checked_at": "2026-10-01T21:43:44Z"
 }
