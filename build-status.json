@@ -97,9 +97,64 @@
       },
       "recent_commits": [
         {
-          "sha": "55fa0b0",
-          "message": "seed",
-          "date": "2026-10-01T11:27:34Z"
+          "sha": "6d6f9fd",
+          "date": "2026-10-01",
+          "message": "Fix nullability: ctx must be non-null for wakeScreenDirect"
+        },
+        {
+          "sha": "af1e859",
+          "date": "2026-10-01",
+          "message": "Fix nullable lambda capture in statusRow"
+        },
+        {
+          "sha": "033cad5",
+          "date": "2026-10-01",
+          "message": "Fix Kotlin type error in POWER dispatch"
+        },
+        {
+          "sha": "7d5dc1c",
+          "date": "2026-10-01",
+          "message": "Home status list: tappable rows replace banners"
+        },
+        {
+          "sha": "23699cb",
+          "date": "2026-10-01",
+          "message": "Home: status + notification banners for Start Bridge and Accessibility"
+        },
+        {
+          "sha": "e000420",
+          "date": "2026-10-01",
+          "message": "AirPlay-style home screen"
+        },
+        {
+          "sha": "a134378",
+          "date": "2026-10-01",
+          "message": "Minimalist home screen: cog, conditional banners, status only"
+        },
+        {
+          "sha": "a62accb",
+          "date": "2026-10-01",
+          "message": "Smaller buttons, fix janky D-pad navigation"
+        },
+        {
+          "sha": "69bc310",
+          "date": "2026-10-01",
+          "message": "Polish the permission fix flow"
+        },
+        {
+          "sha": "1f39e17",
+          "date": "2026-10-01",
+          "message": "Fix wake: direct wake without a11y service, Wi-Fi lock during sleep"
+        },
+        {
+          "sha": "862857f",
+          "date": "2026-10-01",
+          "message": "PC-free recovery for the restricted-settings reset after updates"
+        },
+        {
+          "sha": "007c180",
+          "date": "2026-10-01",
+          "message": "PC setup ADB command now appends instead of replacing accessibility services"
         }
       ]
     }
@@ -186,5 +241,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T16:47:41Z"
+  "checked_at": "2026-10-01T16:48:32Z"
 }
