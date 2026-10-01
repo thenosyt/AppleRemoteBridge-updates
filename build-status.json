@@ -177,23 +177,23 @@
       "label": "Notify Tyson when 1.0.27 is live"
     },
     {
-      "done": false,
+      "done": true,
       "label": "Trackpad remapping: center-halfway=1, near-edge=2, flick=5 (waiting for Tyson to finish testing)"
     },
     {
-      "done": false,
+      "done": true,
       "label": "Bug: Bridge status row doesn't refresh after tapping Start (shows X even when running)"
     },
     {
-      "done": false,
+      "done": true,
       "label": "UX: Bridge row should show a dialog when tapped (e.g., 'Looking for iPhone to pair...') instead of just silently starting"
     },
     {
-      "done": false,
+      "done": true,
       "label": "Bug: Settings cog and other top elements have no focus highlight (can't tell what's selected)"
     },
     {
-      "done": false,
+      "done": true,
       "label": "UX: ONN 4K Pro must never be focusable. Status rows only focusable when showing X (need action). When all checkmarks, only Settings cog is selectable."
     },
     {
@@ -219,6 +219,10 @@
     {
       "done": false,
       "label": "App: Help note on home screen - 'If iPhone won't connect, try restarting your iPhone'"
+    },
+    {
+      "done": false,
+      "label": "Fix: Wake TV from sleep when iPhone power button pressed (currently not working on Onn 4K Pro)"
     }
   ],
   "version_history": [
@@ -297,5 +301,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T22:21:13Z"
+  "checked_at": "2026-10-01T22:21:42Z"
 }
