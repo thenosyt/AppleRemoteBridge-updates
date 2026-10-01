@@ -97,6 +97,11 @@
       },
       "recent_commits": [
         {
+          "sha": "96aaf78",
+          "date": "2026-10-01",
+          "message": "v1.0.30: Trackpad remapping, Bridge dialog, focus rules, PC fix dialog"
+        },
+        {
           "sha": "af27287",
           "date": "2026-10-01",
           "message": "Accessibility row shows PC fix dialog with short URL and steps"
@@ -150,11 +155,6 @@
           "sha": "033cad5",
           "date": "2026-10-01",
           "message": "Fix Kotlin type error in POWER dispatch"
-        },
-        {
-          "sha": "7d5dc1c",
-          "date": "2026-10-01",
-          "message": "Home status list: tappable rows replace banners"
         }
       ]
     }
@@ -267,5 +267,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:37:43Z"
+  "checked_at": "2026-10-01T21:38:12Z"
 }
