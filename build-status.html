@@ -176,6 +176,25 @@ function stepDot(step) {
   return '<span class="dot dot-wait">○</span>';
 }
 
+function buildTimeHtml(build) {
+  if (!build.created_at) return "";
+  const fmt = (iso) => {
+    const d = new Date(iso);
+    return d.toLocaleString("en-US", { timeZone: "America/Los_Angeles",
+      month: "short", day: "numeric", hour: "numeric", minute: "2-digit", hour12: true });
+  };
+  const started = fmt(build.created_at);
+  let extra = "";
+  if (build.updated_at && build.updated_at !== build.created_at) {
+    const s = new Date(build.created_at), e = new Date(build.updated_at);
+    const mins = Math.round((e - s) / 60000);
+    const dur = mins < 1 ? "under a minute" : mins === 1 ? "1 min" : mins + " mins";
+    const ended = fmt(build.updated_at);
+    extra = ` · ended ${ended} (${dur})`;
+  }
+  return `<div class="build-meta" style="opacity:0.6;">Started ${started}${extra}</div>`;
+}
+
 function renderBuild(build) {
   const [badgeClass, badgeText] = badgeFor(build);
   const fillClass = fillClassFor(build);
@@ -205,6 +224,7 @@ function renderBuild(build) {
         <div class="progress-fill ${fillClass}" style="width:${pct}%"></div>
       </div>
       <div class="build-meta">${pct}%${sha}${runLink}</div>
+      ${buildTimeHtml(build)}
       ${liveHtml}
       ${steps ? `<div class="step-list">${steps}</div>` : ""}
     </div>`;
