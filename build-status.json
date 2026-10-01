@@ -183,6 +183,10 @@
     {
       "done": false,
       "label": "Bug: Bridge status row doesn't refresh after tapping Start (shows X even when running)"
+    },
+    {
+      "done": false,
+      "label": "UX: Bridge row should show a dialog when tapped (e.g., 'Looking for iPhone to pair...') instead of just silently starting"
     }
   ],
   "version_history": [
@@ -243,5 +247,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:25:13Z"
+  "checked_at": "2026-10-01T21:25:42Z"
 }
