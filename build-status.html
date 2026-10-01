@@ -290,7 +290,7 @@ function renderBuild(build) {
     ringCenter = `<text x="28" y="28" class="ring-icon" fill="#fff" font-size="12">${pct}%</text>`;
   }
   const isBuilding = build.state === "in_progress" || build.state === "queued";
-  const versionColor = isBuilding ? "#ff9f0a" : "inherit";
+  const versionColor = isBuilding ? "#0a84ff" : "inherit";
   const versionHtml = build.run_number ? `<span style="color:${versionColor};font-weight:700;">v1.0.${build.run_number}</span> · ` : "";
   const ringSvg = `
       <div class="progress-ring-wrap">
