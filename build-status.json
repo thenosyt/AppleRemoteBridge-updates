@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "failure",
-      "run_id": 36890391872,
-      "run_number": 25,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 36891978271,
+      "run_number": 22,
       "branch": "master",
-      "sha": "0a4faba",
-      "created_at": "2026-10-01T16:13:40Z",
-      "updated_at": "2026-10-01T16:16:38Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36890391872",
+      "sha": "9ea5037",
+      "created_at": "2026-10-01T16:26:15Z",
+      "updated_at": "2026-10-01T16:26:20Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36891978271",
       "steps": [
         {
           "name": "Set up job",
@@ -42,39 +42,44 @@
           "conclusion": "success"
         },
         {
-          "name": "Build debug APK",
+          "name": "Decode signing keystore",
           "status": "completed",
-          "conclusion": "failure"
+          "conclusion": "success"
         },
         {
-          "name": "Run actions/upload-artifact@v4",
-          "status": "completed",
-          "conclusion": "skipped"
+          "name": "Build signed release APK",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "Verify the APK is signed",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Publish to updates repo",
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "skipped"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
       "name": "Apple Remote Bridge",
@@ -100,13 +105,67 @@
       "label": "Fix POWER type error (pushed)"
     },
     {
-      "done": false,
-      "label": "Find why build still failing"
+      "done": true,
+      "label": "Fix nullable lambda in statusRow (pushed)"
     },
     {
       "done": false,
-      "label": "Fix and push again"
+      "label": "Build 1.0.13 - in progress"
+    },
+    {
+      "done": false,
+      "label": "Verify published and notify Tyson"
     }
   ],
-  "checked_at": "2026-10-01T16:26:11Z"
+  "version_history": [
+    {
+      "version": "1.0.4",
+      "version_code": 100004,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    },
+    {
+      "version": "1.0.6",
+      "version_code": 100006,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    },
+    {
+      "version": "1.0.7",
+      "version_code": 100007,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    },
+    {
+      "version": "1.0.8",
+      "version_code": 100008,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    },
+    {
+      "version": "1.0.9",
+      "version_code": 100009,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    },
+    {
+      "version": "1.0.10",
+      "version_code": 100010,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    },
+    {
+      "version": "1.0.11",
+      "version_code": 100011,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    },
+    {
+      "version": "1.0.12",
+      "version_code": 100012,
+      "date": "2026-10-01",
+      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+    }
+  ],
+  "checked_at": "2026-10-01T16:29:08Z"
 }
