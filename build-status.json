@@ -92,6 +92,11 @@
       },
       "recent_commits": [
         {
+          "sha": "af27287",
+          "date": "2026-10-01",
+          "message": "Accessibility row shows PC fix dialog with short URL and steps"
+        },
+        {
           "sha": "04ba4d3",
           "date": "2026-10-01",
           "message": "Remove broken Fix on TV button from Accessibility status row"
@@ -145,11 +150,6 @@
           "sha": "7d5dc1c",
           "date": "2026-10-01",
           "message": "Home status list: tappable rows replace banners"
-        },
-        {
-          "sha": "23699cb",
-          "date": "2026-10-01",
-          "message": "Home: status + notification banners for Start Bridge and Accessibility"
         }
       ]
     }
@@ -236,5 +236,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T20:44:10Z"
+  "checked_at": "2026-10-01T20:44:41Z"
 }
