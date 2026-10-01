@@ -97,6 +97,11 @@
       },
       "recent_commits": [
         {
+          "sha": "f25af9b",
+          "date": "2026-10-01",
+          "message": "Add visual focus highlight to status rows so D-pad selection is visible"
+        },
+        {
           "sha": "ef3d2fb",
           "date": "2026-10-01",
           "message": "Fix D-pad navigation: status rows always focusable, not only when showing X"
@@ -150,11 +155,6 @@
           "sha": "a134378",
           "date": "2026-10-01",
           "message": "Minimalist home screen: cog, conditional banners, status only"
-        },
-        {
-          "sha": "a62accb",
-          "date": "2026-10-01",
-          "message": "Smaller buttons, fix janky D-pad navigation"
         }
       ]
     }
@@ -237,5 +237,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:47:12Z"
+  "checked_at": "2026-10-01T19:47:49Z"
 }
