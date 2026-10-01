@@ -289,6 +289,9 @@ function renderBuild(build) {
   } else {
     ringCenter = `<text x="28" y="28" class="ring-icon" fill="#fff" font-size="12">${pct}%</text>`;
   }
+  const isBuilding = build.state === "in_progress" || build.state === "queued";
+  const versionColor = isBuilding ? "#ff9f0a" : "inherit";
+  const versionHtml = build.run_number ? `<span style="color:${versionColor};font-weight:700;">v1.0.${build.run_number}</span> · ` : "";
   const ringSvg = `
       <div class="progress-ring-wrap">
         <svg class="progress-ring ${ringClass}" viewBox="0 0 56 56">
@@ -296,7 +299,7 @@ function renderBuild(build) {
           <circle class="ring-fg" cx="28" cy="28" r="24" stroke-dasharray="${circ}" stroke-dashoffset="${isSuccess || isFailed ? 0 : offset}"></circle>
           ${ringCenter}
         </svg>
-        <div class="build-meta" style="margin:0;">${build.run_number ? `v1.0.${build.run_number} · ` : ""}${sha}${runLink}</div>
+        <div class="build-meta" style="margin:0;">${versionHtml}${sha}${runLink}</div>
       </div>`;
   return `
     <div class="build-card">
