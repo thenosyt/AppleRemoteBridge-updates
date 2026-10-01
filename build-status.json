@@ -90,8 +90,8 @@
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
-        "version": "1.0.28",
-        "version_code": 100028,
+        "version": "1.0.29",
+        "version_code": 100029,
         "apk_ready": true,
         "apk_size": 38941219
       },
@@ -237,5 +237,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:57:10Z"
+  "checked_at": "2026-10-01T19:57:42Z"
 }
