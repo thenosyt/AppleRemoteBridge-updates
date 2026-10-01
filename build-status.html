@@ -35,6 +35,16 @@
     padding: 24px;
     margin-bottom: 20px;
   }
+  .build-card.collapsible { cursor: pointer; }
+  .build-card.collapsible .build-header::after {
+    content: "›";
+    font-size: 22px;
+    color: rgba(255,255,255,0.4);
+    transform: rotate(90deg);
+    transition: transform 0.2s;
+  }
+  .build-card.collapsed .build-header::after { transform: rotate(0deg); }
+  .build-card.collapsed .collapsible-body { display: none; }
   .build-header {
     display: flex;
     justify-content: space-between;
@@ -224,11 +234,11 @@ function renderTasks(tasks) {
     return `<div class="step" style="${style}">${done}${escapeHtml(t.label)}</div>`;
   }).join("");
   return `
-    <div class="build-card">
+    <div class="build-card collapsible" onclick="this.classList.toggle('collapsed')">
       <div class="build-header">
         <div class="build-name">What I'm working on</div>
       </div>
-      <div class="step-list" style="max-height:none;">${items}</div>
+      <div class="collapsible-body"><div class="step-list" style="max-height:none;">${items}</div></div>
     </div>`;
 }
 
@@ -240,11 +250,11 @@ function renderHistory(history) {
     return `<div class="step"><span class="dot dot-ok">●</span><strong>v${escapeHtml(v.version)}</strong> <span style="opacity:0.5;">${escapeHtml(v.date)}</span>${notes}</div>`;
   }).join("");
   return `
-    <div class="build-card">
+    <div class="build-card collapsible collapsed" onclick="this.classList.toggle('collapsed')">
       <div class="build-header">
         <div class="build-name">Version history</div>
       </div>
-      <div class="step-list" style="max-height:220px;">${items}</div>
+      <div class="collapsible-body"><div class="step-list" style="max-height:220px;">${items}</div></div>
     </div>`;
 }
 
@@ -254,12 +264,12 @@ function renderBuildNotes(notes) {
     `<div class="step"><span class="dot dot-run">·</span>${escapeHtml(n)}</div>`
   ).join("");
   return `
-    <div class="build-card" style="border:1px solid rgba(10,132,255,0.3);">
+    <div class="build-card collapsible" style="border:1px solid rgba(10,132,255,0.3);" onclick="this.classList.toggle('collapsed')">
       <div class="build-header">
         <div class="build-name">In this build (v${escapeHtml(notes.version)})</div>
         <div class="build-badge badge-running">Testing</div>
       </div>
-      <div class="step-list" style="max-height:none;">${items}</div>
+      <div class="collapsible-body"><div class="step-list" style="max-height:none;">${items}</div></div>
     </div>`;
 }
 
