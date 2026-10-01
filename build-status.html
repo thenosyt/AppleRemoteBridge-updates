@@ -457,11 +457,11 @@ async function load() {
     const completed = builds.filter(b => b.state !== "in_progress" && b.state !== "queued");
     let buildsHtml = "";
     if (inProgress.length) {
-      buildsHtml += `<div style="font-size:18px;font-weight:700;margin:24px 0 12px;color:#0a84ff;">Currently Building</div>`;
+      buildsHtml += `<div style="font-size:24px;font-weight:800;margin:28px 0 16px;color:#0a84ff;letter-spacing:-0.5px;">Currently Building</div>`;
       buildsHtml += inProgress.map(renderBuild).join("");
     }
     if (completed.length) {
-      buildsHtml += `<div style="font-size:18px;font-weight:700;margin:24px 0 12px;opacity:0.8;">Completed Builds</div>`;
+      buildsHtml += `<div style="font-size:24px;font-weight:800;margin:28px 0 16px;opacity:0.8;letter-spacing:-0.5px;">Completed Builds</div>`;
       buildsHtml += completed.map(renderBuild).join("");
     }
     document.getElementById("builds").innerHTML = buildsHtml || '<div class="error">No builds tracked yet.</div>';
