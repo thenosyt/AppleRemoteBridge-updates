@@ -126,50 +126,50 @@
       "version": "1.0.4",
       "version_code": 100004,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "Early development build"
     },
     {
       "version": "1.0.6",
       "version_code": 100006,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "Apple TV-style UI refresh, updates moved to Settings"
     },
     {
       "version": "1.0.7",
       "version_code": 100007,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "Apple TV-style UI refresh, updates moved to Settings"
     },
     {
       "version": "1.0.8",
       "version_code": 100008,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "Onboarding walkthrough, auto-start on boot, PC setup wizard"
     },
     {
       "version": "1.0.9",
       "version_code": 100009,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "Onboarding walkthrough, auto-start on boot, PC setup wizard"
     },
     {
       "version": "1.0.10",
       "version_code": 100010,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "UI polish, permission flow improvements, smaller buttons"
     },
     {
       "version": "1.0.11",
       "version_code": 100011,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "UI polish, permission flow improvements, smaller buttons"
     },
     {
       "version": "1.0.12",
       "version_code": 100012,
       "date": "2026-10-01",
-      "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+      "notes": "iPhone keyboard text entry, push-to-talk voice, Gemini assist, trackpad tuning"
     }
   ],
-  "checked_at": "2026-10-01T16:42:42Z"
+  "checked_at": "2026-10-01T16:43:12Z"
 }
