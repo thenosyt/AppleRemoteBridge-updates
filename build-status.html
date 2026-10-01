@@ -216,12 +216,33 @@ function escapeHtml(s) {
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function renderTasks(tasks) {
+function renderTasks(tasks, builds) {
   if (!tasks || !tasks.length) return "";
+  // Calculate build progress from the latest build steps
+  let buildPct = null, buildStep = "";
+  if (builds && builds.length) {
+    const b = builds[0];
+    const steps = (b.steps || []).filter(s => !s.name.startsWith("Post "));
+    const done = steps.filter(s => s.status === "completed").length;
+    if (steps.length && b.state === "in_progress") {
+      buildPct = Math.round(done / steps.length * 100);
+      const cur = (b.steps || []).find(s => s.status === "in_progress");
+      buildStep = cur ? cur.name : "";
+    }
+  }
   const items = tasks.map(t => {
     const done = t.done ? '<span class="dot dot-ok">✓</span>' : '<span class="dot dot-run">○</span>';
     const style = t.done ? 'opacity:0.55;text-decoration:line-through;' : '';
-    return `<div class="step" style="${style}">${done}${escapeHtml(t.label)}</div>`;
+    let extra = "";
+    if (t.build_task && buildPct !== null) {
+      extra = `<div style="margin:6px 0 2px 28px;max-width:320px;">
+        <div style="background:rgba(255,255,255,0.12);border-radius:6px;height:10px;overflow:hidden;">
+          <div style="background:#0a84ff;height:10px;width:${buildPct}%;border-radius:6px;transition:width 0.5s;"></div>
+        </div>
+        <div style="font-size:13px;opacity:0.7;margin-top:4px;">${buildPct}%${buildStep ? " - " + escapeHtml(buildStep) : ""}</div>
+      </div>`;
+    }
+    return `<div class="step" style="${style}">${done}${escapeHtml(t.label)}${extra}</div>`;
   }).join("");
   return `
     <div class="build-card">
@@ -269,7 +290,7 @@ async function load() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     const builds = data.builds || [];
-    document.getElementById("tasks").innerHTML = renderTasks(data.tasks);
+    document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds);
     document.getElementById("build-notes").innerHTML = renderBuildNotes(data.build_notes);
     document.getElementById("history").innerHTML = renderHistory(data.version_history);
     document.getElementById("builds").innerHTML =
