@@ -232,14 +232,12 @@
     }
   ],
   "build_notes": {
-    "notes": [
-      "AirPlay-style home screen: big TV name, numbered iPhone pairing steps",
-      "Tappable status rows: select a row to jump to the fix, now with working D-pad navigation",
-      "Minimalist home: Settings cog in the corner, no clutter",
-      "Wake attempt: tries to wake the TV directly (untested on your Onn, may not work)",
-      "Smaller buttons and smoother D-pad movement"
+    "changes": [
+      "Visual focus highlight: D-pad selection now shows a white background on status rows so you can see what's selected",
+      "Fixed cut-off pairing steps text: smaller size and tighter spacing so all 4 steps are visible",
+      "Settings cog now highlights when focused via D-pad"
     ],
-    "version": "1.0.27"
+    "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:02:12Z"
+  "checked_at": "2026-10-01T21:02:31Z"
 }
