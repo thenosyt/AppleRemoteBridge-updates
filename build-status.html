@@ -195,15 +195,6 @@ function renderBuild(build) {
     const apkState = pub.apk_ready ? "ready" : "not ready";
     liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;">Live: v${escapeHtml(pub.version)} · APK ${apkState}${size}</div>`;
   }
-  // Recent commits: what's in the pipeline.
-  let commitsHtml = "";
-  const commits = build.recent_commits || [];
-  if (commits.length) {
-    const items = commits.slice(0, 8).map(c =>
-      `<div class="step"><span class="dot dot-wait">·</span>${escapeHtml(c.message)} <span style="opacity:0.4;">${escapeHtml(c.sha)}</span></div>`
-    ).join("");
-    commitsHtml = `<div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.5);font-weight:600;">What's new</div><div class="step-list">${items}</div>`;
-  }
   return `
     <div class="build-card">
       <div class="build-header">
@@ -215,7 +206,6 @@ function renderBuild(build) {
       </div>
       <div class="build-meta">${pct}%${sha}${runLink}</div>
       ${liveHtml}
-      ${commitsHtml}
       ${steps ? `<div class="step-list">${steps}</div>` : ""}
     </div>`;
 }
@@ -234,11 +224,11 @@ function renderTasks(tasks) {
     return `<div class="step" style="${style}">${done}${escapeHtml(t.label)}</div>`;
   }).join("");
   return `
-    <div class="build-card collapsible" onclick="this.classList.toggle('collapsed')">
+    <div class="build-card">
       <div class="build-header">
         <div class="build-name">What I'm working on</div>
       </div>
-      <div class="collapsible-body"><div class="step-list" style="max-height:none;">${items}</div></div>
+      <div class="step-list" style="max-height:none;">${items}</div>
     </div>`;
 }
 
@@ -250,11 +240,11 @@ function renderHistory(history) {
     return `<div class="step"><span class="dot dot-ok">●</span><strong>v${escapeHtml(v.version)}</strong> <span style="opacity:0.5;">${escapeHtml(v.date)}</span>${notes}</div>`;
   }).join("");
   return `
-    <div class="build-card collapsible collapsed" onclick="this.classList.toggle('collapsed')">
+    <div class="build-card">
       <div class="build-header">
         <div class="build-name">Version history</div>
       </div>
-      <div class="collapsible-body"><div class="step-list" style="max-height:220px;">${items}</div></div>
+      <div class="step-list" style="max-height:220px;">${items}</div></div>
     </div>`;
 }
 
@@ -264,12 +254,12 @@ function renderBuildNotes(notes) {
     `<div class="step"><span class="dot dot-run">·</span>${escapeHtml(n)}</div>`
   ).join("");
   return `
-    <div class="build-card collapsible" style="border:1px solid rgba(10,132,255,0.3);" onclick="this.classList.toggle('collapsed')">
+    <div class="build-card" style="border:1px solid rgba(10,132,255,0.3);">
       <div class="build-header">
         <div class="build-name">In this build (v${escapeHtml(notes.version)})</div>
         <div class="build-badge badge-running">Testing</div>
       </div>
-      <div class="collapsible-body"><div class="step-list" style="max-height:none;">${items}</div></div>
+      <div class="step-list" style="max-height:none;">${items}</div>
     </div>`;
 }
 
