@@ -97,6 +97,11 @@
       },
       "recent_commits": [
         {
+          "sha": "33b2e71",
+          "date": "2026-10-01",
+          "message": "v1.0.33: iPhone help note, Settings badge, update notification, live status auto-refresh"
+        },
+        {
           "sha": "96aaf78",
           "date": "2026-10-01",
           "message": "v1.0.30: Trackpad remapping, Bridge dialog, focus rules, PC fix dialog"
@@ -150,11 +155,6 @@
           "sha": "af1e859",
           "date": "2026-10-01",
           "message": "Fix nullable lambda capture in statusRow"
-        },
-        {
-          "sha": "033cad5",
-          "date": "2026-10-01",
-          "message": "Fix Kotlin type error in POWER dispatch"
         }
       ]
     }
@@ -301,5 +301,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T22:28:45Z"
+  "checked_at": "2026-10-01T22:29:13Z"
 }
