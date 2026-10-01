@@ -125,7 +125,24 @@
       <div class="build-name">ADB Recovery Command — Apple Remote Bridge</div>
     </div>
     <div style="color:rgba(255,255,255,0.6);font-size:13px;margin:8px 0 12px;">For Apple Remote Bridge (all versions). Run this from your PC when the accessibility toggle flips back off after an update. Copy-paste as one line.</div>
-    <div style="background:#000;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;word-break:break-all;color:#fff;user-select:all;">adb -s 192.168.4.32:5555 shell "appops set com.sagi.appleremotebridge ACCESS_RESTRICTED_SETTINGS allow; settings put secure enabled_accessibility_services com.sagi.appleremotebridge/com.sagi.appleremotebridge.RemoteAccessibilityService:com.spocky.projengmenu/com.spocky.projengmenu.services.ProjectivyAccessibilityService; settings put secure accessibility_enabled 1"</div>
+    <div id="adb-cmd" style="background:#000;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;word-break:break-all;color:#fff;user-select:all;">adb -s 192.168.4.32:5555 shell "appops set com.sagi.appleremotebridge ACCESS_RESTRICTED_SETTINGS allow; settings put secure enabled_accessibility_services com.sagi.appleremotebridge/com.sagi.appleremotebridge.RemoteAccessibilityService:com.spocky.projengmenu/com.spocky.projengmenu.services.ProjectivyAccessibilityService; settings put secure accessibility_enabled 1"</div>
+    <button onclick="copyAdbCmd()" style="margin-top:12px;background:#0a84ff;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:16px;font-weight:600;cursor:pointer;width:100%;">Copy Command</button>
+    <script>
+    function copyAdbCmd() {
+      const el = document.getElementById('adb-cmd');
+      const text = el.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Command copied!');
+      }).catch(() => {
+        const range = document.createRange();
+        range.selectNode(el);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        alert('Command copied!');
+      });
+    }
+    </script>
   </div>
   <div class="updated" id="updated"></div>
 
