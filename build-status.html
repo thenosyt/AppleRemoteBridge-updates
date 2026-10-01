@@ -105,6 +105,7 @@
   <div class="subtitle">Live progress for everything being built</div>
   <div id="tasks" style="width:100%;max-width:560px;"></div>
   <div id="builds" style="width:100%;max-width:560px;"></div>
+  <div id="history" style="width:100%;max-width:560px;"></div>
   <div class="updated" id="updated"></div>
 
 <script>
@@ -230,6 +231,21 @@ function renderTasks(tasks) {
     </div>`;
 }
 
+function renderHistory(history) {
+  if (!history || !history.length) return "";
+  // Show newest first.
+  const items = [...history].reverse().map(v => {
+    return `<div class="step"><span class="dot dot-ok">●</span><strong>v${escapeHtml(v.version)}</strong> <span style="opacity:0.5;">${escapeHtml(v.date)}</span></div>`;
+  }).join("");
+  return `
+    <div class="build-card">
+      <div class="build-header">
+        <div class="build-name">Version history</div>
+      </div>
+      <div class="step-list" style="max-height:220px;">${items}</div>
+    </div>`;
+}
+
 async function load() {
   try {
     const res = await fetch(STATUS_URL + "?t=" + Date.now(), { cache: "no-store" });
@@ -237,6 +253,7 @@ async function load() {
     const data = await res.json();
     const builds = data.builds || [];
     document.getElementById("tasks").innerHTML = renderTasks(data.tasks);
+    document.getElementById("history").innerHTML = renderHistory(data.version_history);
     document.getElementById("builds").innerHTML =
       builds.length ? builds.map(renderBuild).join("")
                     : '<div class="error">No builds tracked yet.</div>';
