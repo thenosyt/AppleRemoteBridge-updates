@@ -175,6 +175,10 @@
     {
       "done": true,
       "label": "Notify Tyson when 1.0.27 is live"
+    },
+    {
+      "done": false,
+      "label": "Trackpad remapping: center-halfway=1, near-edge=2, flick=5 (waiting for Tyson to finish testing)"
     }
   ],
   "version_history": [
@@ -237,5 +241,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T20:02:11Z"
+  "checked_at": "2026-10-01T20:02:42Z"
 }
