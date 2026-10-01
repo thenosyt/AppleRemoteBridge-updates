@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 36917159280,
       "run_number": 29,
       "branch": "master",
       "sha": "a41dbea",
       "created_at": "2026-10-01T19:49:47Z",
-      "updated_at": "2026-10-01T19:49:53Z",
+      "updated_at": "2026-10-01T19:54:32Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36917159280",
       "steps": [
         {
@@ -53,33 +53,38 @@
         },
         {
           "name": "Verify the APK is signed",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "name": "Apple Remote Bridge",
@@ -88,7 +93,7 @@
         "version": "1.0.28",
         "version_code": 100028,
         "apk_ready": true,
-        "apk_size": 38941327
+        "apk_size": 38941219
       },
       "recent_commits": [
         {
@@ -232,5 +237,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:54:13Z"
+  "checked_at": "2026-10-01T19:54:42Z"
 }
