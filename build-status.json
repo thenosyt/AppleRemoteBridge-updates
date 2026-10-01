@@ -239,14 +239,14 @@
     }
   ],
   "build_notes": {
-    "version": "1.0.13",
     "notes": [
-      "AirPlay-style home screen: big TV name, numbered iPhone steps",
-      "Tappable status rows: select a row with an issue to jump to the fix",
-      "Minimalist home: Settings cog, no clutter, no permanent buttons",
-      "Wake fix: direct screen wake without needing accessibility",
-      "Smaller buttons, smoother D-pad navigation"
-    ]
+      "AirPlay-style home screen: big TV name, numbered iPhone pairing steps",
+      "Tappable status rows: select a row to jump to the fix, now with working D-pad navigation",
+      "Minimalist home: Settings cog in the corner, no clutter",
+      "Wake attempt: tries to wake the TV directly (untested on your Onn, may not work)",
+      "Smaller buttons and smoother D-pad movement"
+    ],
+    "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:04:12Z"
+  "checked_at": "2026-10-01T19:04:43Z"
 }
