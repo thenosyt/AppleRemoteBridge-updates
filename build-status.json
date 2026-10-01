@@ -13,7 +13,72 @@
       "steps": [
         {
           "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Vendor Companion Link protocol",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-java@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run gradle/actions/setup-gradle@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Decode signing keystore",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build signed release APK",
           "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "Verify the APK is signed",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Publish to updates repo",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-java@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
           "conclusion": null
         }
       ],
@@ -42,6 +107,10 @@
     {
       "done": true,
       "label": "Fix nullable lambda in statusRow (pushed)"
+    },
+    {
+      "done": true,
+      "label": "Fix ctx nullability in wake (pushed)"
     },
     {
       "done": false,
@@ -102,5 +171,5 @@
       "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
     }
   ],
-  "checked_at": "2026-10-01T16:40:42Z"
+  "checked_at": "2026-10-01T16:41:12Z"
 }
