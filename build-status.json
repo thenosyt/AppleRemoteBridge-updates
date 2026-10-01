@@ -93,7 +93,7 @@
         "version": "1.0.26",
         "version_code": 100026,
         "apk_ready": true,
-        "apk_size": 38941279
+        "apk_size": 38941323
       },
       "recent_commits": [
         {
@@ -250,5 +250,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T18:38:11Z"
+  "checked_at": "2026-10-01T18:38:41Z"
 }
