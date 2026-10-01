@@ -97,6 +97,11 @@
       },
       "recent_commits": [
         {
+          "sha": "c45a3c3",
+          "date": "2026-10-01",
+          "message": "Remove old permission card referencing non-existent R.color.text"
+        },
+        {
           "sha": "6d6f9fd",
           "date": "2026-10-01",
           "message": "Fix nullability: ctx must be non-null for wakeScreenDirect"
@@ -150,11 +155,6 @@
           "sha": "862857f",
           "date": "2026-10-01",
           "message": "PC-free recovery for the restricted-settings reset after updates"
-        },
-        {
-          "sha": "007c180",
-          "date": "2026-10-01",
-          "message": "PC setup ADB command now appends instead of replacing accessibility services"
         }
       ]
     }
@@ -241,5 +241,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T16:50:41Z"
+  "checked_at": "2026-10-01T16:51:41Z"
 }
