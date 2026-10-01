@@ -169,12 +169,11 @@
       "label": "Fixed: D-pad navigation was completely broken when statuses showed checkmarks"
     },
     {
-      "build_task": true,
-      "done": false,
-      "label": "Build 1.0.27 - in progress"
+      "done": true,
+      "label": "Build 1.0.27 - published"
     },
     {
-      "done": false,
+      "done": true,
       "label": "Notify Tyson when 1.0.27 is live"
     }
   ],
@@ -238,5 +237,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:43:42Z"
+  "checked_at": "2026-10-01T19:44:11Z"
 }
