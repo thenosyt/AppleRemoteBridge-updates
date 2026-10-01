@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 36935364633,
       "run_number": 33,
       "branch": "master",
       "sha": "3ca27da",
       "created_at": "2026-10-01T22:29:25Z",
-      "updated_at": "2026-10-01T22:29:29Z",
+      "updated_at": "2026-10-01T22:33:44Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36935364633",
       "steps": [
         {
@@ -68,27 +68,32 @@
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
-        "version": "1.0.33",
-        "version_code": 100033,
+        "version": "1.0.32",
+        "version_code": 100032,
         "apk_ready": true,
-        "apk_size": 38941303
+        "apk_size": 38941299
       },
       "recent_commits": [
         {
@@ -302,5 +307,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T22:33:55Z"
+  "checked_at": "2026-10-01T22:34:13Z"
 }
