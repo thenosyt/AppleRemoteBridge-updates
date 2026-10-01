@@ -211,6 +211,10 @@
     {
       "done": false,
       "label": "Bug v1.0.29: D-pad navigation jumps around erratically when clicking in Settings/app"
+    },
+    {
+      "done": false,
+      "label": "UX: Accessibility status should auto-update to checkmark live when service connects, without requiring app restart"
     }
   ],
   "version_history": [
@@ -289,5 +293,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:52:44Z"
+  "checked_at": "2026-10-01T21:53:12Z"
 }
