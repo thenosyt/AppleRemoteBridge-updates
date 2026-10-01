@@ -235,7 +235,7 @@ function renderBuild(build) {
       <div class="progress-track">
         <div class="progress-fill ${fillClass}" style="width:${pct}%"></div>
       </div>
-      <div class="build-meta">${pct}%${sha}${runLink}</div>
+      <div class="build-meta">${build.run_number ? `v1.0.${build.run_number} · ` : ""}${pct}%${sha}${runLink}</div>
       ${buildTimeHtml(build)}
       ${liveHtml}
       ${commitsHtml(build)}
