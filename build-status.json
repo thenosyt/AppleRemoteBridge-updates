@@ -190,6 +190,18 @@
     {
       "done": false,
       "label": "UX: ONN 4K Pro must never be focusable. Status rows only focusable when showing X (need action). When all checkmarks, only Settings cog is selectable."
+    },
+    {
+      "done": false,
+      "label": "App: Circular progress ring animation when downloading/installing update (same Apple-style as website)"
+    },
+    {
+      "done": false,
+      "label": "App: Badge on Settings cog when update is available (red dot indicator)"
+    },
+    {
+      "done": false,
+      "label": "App: Notification when update is available (if auto-check finds one)"
     }
   ],
   "version_history": [
@@ -262,5 +274,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:39:12Z"
+  "checked_at": "2026-10-01T21:39:42Z"
 }
