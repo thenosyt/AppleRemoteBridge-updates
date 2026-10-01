@@ -238,8 +238,26 @@ function renderBuild(build) {
       <div class="build-meta">${pct}%${sha}${runLink}</div>
       ${buildTimeHtml(build)}
       ${liveHtml}
+      ${commitsHtml(build)}
       ${steps ? `<div class="step-list">${steps}</div>` : ""}
     </div>`;
+}
+
+function commitsHtml(build) {
+  const commits = build.recent_commits || [];
+  if (!commits.length) return "";
+  const items = commits.map(c => {
+    const msg = typeof c === "string" ? c : (c.message || "");
+    return `<div class="step"><span class="dot" style="color:#0a84ff;">·</span>${escapeHtml(msg)}</div>`;
+  }).join("");
+  const uid = "commits-" + (build.run_id || Math.random().toString(36).slice(2));
+  return `
+    <div class="build-meta" style="margin-top:10px;">
+      <a href="javascript:void(0)" onclick="document.getElementById('${uid}').style.display = document.getElementById('${uid}').style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-arrow').textContent = document.getElementById('${uid}').style.display === 'none' ? '▸' : '▾';" style="color:#0a84ff;text-decoration:none;cursor:pointer;">
+        <span class="toggle-arrow">▸</span> What changed in this build (${commits.length})
+      </a>
+    </div>
+    <div id="${uid}" class="step-list" style="display:none;margin-top:4px;">${items}</div>`;
 }
 
 function escapeHtml(s) {
