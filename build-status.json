@@ -185,7 +185,7 @@
       "label": "Build 1.0.26 - published"
     },
     {
-      "done": false,
+      "done": true,
       "label": "Verify published and notify Tyson"
     }
   ],
@@ -249,5 +249,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T18:52:41Z"
+  "checked_at": "2026-10-01T18:53:12Z"
 }
