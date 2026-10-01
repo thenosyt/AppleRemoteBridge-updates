@@ -152,31 +152,11 @@
   "tasks": [
     {
       "done": true,
-      "label": "Fix POWER type error (pushed)"
+      "label": "1.0.26 published: AirPlay home screen, tappable status rows"
     },
     {
       "done": true,
-      "label": "Fix nullable lambda in statusRow (pushed)"
-    },
-    {
-      "done": true,
-      "label": "Fix ctx nullability in wake (pushed)"
-    },
-    {
-      "done": true,
-      "label": "Remove old permission card with bad R.color.text (pushed)"
-    },
-    {
-      "done": true,
-      "label": "Fix unresolved start/accessibility/requestFocus refs (pushed)"
-    },
-    {
-      "done": true,
-      "label": "Build 1.0.26 - published"
-    },
-    {
-      "done": true,
-      "label": "Fix D-pad: status rows always focusable (pushed)"
+      "label": "Fixed: D-pad navigation was completely broken when statuses showed checkmarks"
     },
     {
       "build_task": true,
@@ -185,57 +165,57 @@
     },
     {
       "done": false,
-      "label": "Verify published and notify Tyson"
+      "label": "Notify Tyson when 1.0.27 is live"
     }
   ],
   "version_history": [
     {
+      "date": "2026-10-01",
+      "notes": "First working build: iPhone keyboard text entry, push-to-talk voice on TV mics, Android 14 crash fix, in-app updater, trackpad tuning, Gemini assist",
       "version": "1.0.4",
-      "version_code": 100004,
-      "date": "2026-10-01",
-      "notes": "Early development build"
+      "version_code": 100004
     },
     {
+      "date": "2026-10-01",
+      "notes": "Apple TV-style UI refresh, updates moved to Settings, PC setup wizard page, large-text toggle option",
       "version": "1.0.6",
-      "version_code": 100006,
-      "date": "2026-10-01",
-      "notes": "Apple TV-style UI refresh, updates moved to Settings"
+      "version_code": 100006
     },
     {
+      "date": "2026-10-01",
+      "notes": "Onboarding walkthrough with animated checklist for first-time setup",
       "version": "1.0.7",
-      "version_code": 100007,
-      "date": "2026-10-01",
-      "notes": "Apple TV-style UI refresh, updates moved to Settings"
+      "version_code": 100007
     },
     {
+      "date": "2026-10-01",
+      "notes": "Auto-start on TV boot, automatic update check on launch, Wi-Fi network hint, built-in remote control guide",
       "version": "1.0.8",
-      "version_code": 100008,
-      "date": "2026-10-01",
-      "notes": "Onboarding walkthrough, auto-start on boot, PC setup wizard"
+      "version_code": 100008
     },
     {
+      "date": "2026-10-01",
+      "notes": "PC setup page can now enable accessibility directly via ADB commands",
       "version": "1.0.9",
-      "version_code": 100009,
-      "date": "2026-10-01",
-      "notes": "Onboarding walkthrough, auto-start on boot, PC setup wizard"
+      "version_code": 100009
     },
     {
+      "date": "2026-10-01",
+      "notes": "Apple TV trackpad feel improvements, keyboard reappears reliably on reconnect, power button can wake the TV",
       "version": "1.0.10",
-      "version_code": 100010,
-      "date": "2026-10-01",
-      "notes": "UI polish, permission flow improvements, smaller buttons"
+      "version_code": 100010
     },
     {
+      "date": "2026-10-01",
+      "notes": "TV stays reachable during sleep so the iPhone power button can wake it",
       "version": "1.0.11",
-      "version_code": 100011,
-      "date": "2026-10-01",
-      "notes": "UI polish, permission flow improvements, smaller buttons"
+      "version_code": 100011
     },
     {
-      "version": "1.0.12",
-      "version_code": 100012,
       "date": "2026-10-01",
-      "notes": "iPhone keyboard text entry, push-to-talk voice, Gemini assist, trackpad tuning"
+      "notes": "PC setup ADB command now preserves other accessibility services instead of replacing them",
+      "version": "1.0.12",
+      "version_code": 100012
     }
   ],
   "build_notes": {
@@ -248,5 +228,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:04:43Z"
+  "checked_at": "2026-10-01T19:05:14Z"
 }
