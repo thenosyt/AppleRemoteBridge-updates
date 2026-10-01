@@ -179,6 +179,10 @@
     {
       "done": false,
       "label": "Trackpad remapping: center-halfway=1, near-edge=2, flick=5 (waiting for Tyson to finish testing)"
+    },
+    {
+      "done": false,
+      "label": "Bug: Bridge status row doesn't refresh after tapping Start (shows X even when running)"
     }
   ],
   "version_history": [
@@ -239,5 +243,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:24:11Z"
+  "checked_at": "2026-10-01T21:24:42Z"
 }
