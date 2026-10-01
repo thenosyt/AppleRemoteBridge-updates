@@ -245,6 +245,18 @@
       "notes": "PC setup ADB command now preserves other accessibility services instead of replacing them",
       "version": "1.0.12",
       "version_code": 100012
+    },
+    {
+      "version": "1.0.27",
+      "version_code": 100027,
+      "date": "2026-10-01",
+      "notes": "AirPlay-style home screen, tappable status rows with D-pad navigation fix"
+    },
+    {
+      "version": "1.0.29",
+      "version_code": 100029,
+      "date": "2026-10-01",
+      "notes": "Visual focus highlight for D-pad, fixed cut-off pairing steps text"
     }
   ],
   "build_notes": {
@@ -255,5 +267,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:32:12Z"
+  "checked_at": "2026-10-01T21:32:37Z"
 }
