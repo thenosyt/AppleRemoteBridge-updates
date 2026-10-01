@@ -452,9 +452,19 @@ async function load() {
     document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds);
     document.getElementById("build-notes").innerHTML = renderBuildNotes(data.build_notes);
     document.getElementById("history").innerHTML = renderHistory(data.version_history);
-    document.getElementById("builds").innerHTML =
-      builds.length ? builds.map(renderBuild).join("")
-                    : '<div class="error">No builds tracked yet.</div>';
+    // Separate current (in-progress) from completed builds
+    const inProgress = builds.filter(b => b.state === "in_progress" || b.state === "queued");
+    const completed = builds.filter(b => b.state !== "in_progress" && b.state !== "queued");
+    let buildsHtml = "";
+    if (inProgress.length) {
+      buildsHtml += `<div style="font-size:18px;font-weight:700;margin:24px 0 12px;color:#0a84ff;">Currently Building</div>`;
+      buildsHtml += inProgress.map(renderBuild).join("");
+    }
+    if (completed.length) {
+      buildsHtml += `<div style="font-size:18px;font-weight:700;margin:24px 0 12px;opacity:0.8;">Completed Builds</div>`;
+      buildsHtml += completed.map(renderBuild).join("");
+    }
+    document.getElementById("builds").innerHTML = buildsHtml || '<div class="error">No builds tracked yet.</div>';
     if (data.checked_at) {
       const d = new Date(data.checked_at);
       document.getElementById("updated").textContent =
