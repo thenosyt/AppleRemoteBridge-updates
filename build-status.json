@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "failure",
       "run_id": 36895173636,
       "run_number": 24,
       "branch": "master",
       "sha": "83e790f",
       "created_at": "2026-10-01T16:52:01Z",
-      "updated_at": "2026-10-01T16:52:07Z",
+      "updated_at": "2026-10-01T16:54:11Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36895173636",
       "steps": [
         {
@@ -245,5 +245,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T16:54:12Z"
+  "checked_at": "2026-10-01T16:54:41Z"
 }
