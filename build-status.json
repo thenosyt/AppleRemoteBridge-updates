@@ -90,10 +90,10 @@
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
-        "version": "1.0.33",
-        "version_code": 100033,
+        "version": "1.0.32",
+        "version_code": 100032,
         "apk_ready": true,
-        "apk_size": 38941299
+        "apk_size": 38941303
       },
       "recent_commits": [
         {
@@ -307,5 +307,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T22:36:18Z"
+  "checked_at": "2026-10-01T22:36:43Z"
 }
