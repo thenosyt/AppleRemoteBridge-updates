@@ -48,32 +48,32 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -85,10 +85,10 @@
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
-        "version": "1.0.12",
-        "version_code": 100012,
+        "version": "1.0.26",
+        "version_code": 100026,
         "apk_ready": true,
-        "apk_size": 38941279
+        "apk_size": 38941323
       },
       "recent_commits": [
         {
@@ -245,5 +245,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T18:37:12Z"
+  "checked_at": "2026-10-01T18:37:43Z"
 }
