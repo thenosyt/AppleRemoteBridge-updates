@@ -183,6 +183,15 @@ function renderBuild(build) {
     const apkState = pub.apk_ready ? "ready" : "not ready";
     liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;">Live: v${escapeHtml(pub.version)} · APK ${apkState}${size}</div>`;
   }
+  // Recent commits: what's in the pipeline.
+  let commitsHtml = "";
+  const commits = build.recent_commits || [];
+  if (commits.length) {
+    const items = commits.slice(0, 8).map(c =>
+      `<div class="step"><span class="dot dot-wait">·</span>${escapeHtml(c.message)} <span style="opacity:0.4;">${escapeHtml(c.sha)}</span></div>`
+    ).join("");
+    commitsHtml = `<div style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.5);font-weight:600;">What's new</div><div class="step-list">${items}</div>`;
+  }
   return `
     <div class="build-card">
       <div class="build-header">
@@ -194,6 +203,7 @@ function renderBuild(build) {
       </div>
       <div class="build-meta">${pct}%${sha}${runLink}</div>
       ${liveHtml}
+      ${commitsHtml}
       ${steps ? `<div class="step-list">${steps}</div>` : ""}
     </div>`;
 }
