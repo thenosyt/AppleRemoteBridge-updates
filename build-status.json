@@ -93,7 +93,7 @@
         "version": "1.0.26",
         "version_code": 100026,
         "apk_ready": true,
-        "apk_size": 38941279
+        "apk_size": 38941323
       },
       "recent_commits": [
         {
@@ -181,9 +181,8 @@
       "label": "Fix unresolved start/accessibility/requestFocus refs (pushed)"
     },
     {
-      "build_task": true,
-      "done": false,
-      "label": "Build 1.0.13 - in progress"
+      "done": true,
+      "label": "Build 1.0.26 - published"
     },
     {
       "done": false,
@@ -250,5 +249,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T18:40:42Z"
+  "checked_at": "2026-10-01T18:41:12Z"
 }
