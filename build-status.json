@@ -97,6 +97,11 @@
       },
       "recent_commits": [
         {
+          "sha": "04ba4d3",
+          "date": "2026-10-01",
+          "message": "Remove broken Fix on TV button from Accessibility status row"
+        },
+        {
           "sha": "1119017",
           "date": "2026-10-01",
           "message": "Fix cut-off pairing steps text: smaller size, tighter spacing"
@@ -150,11 +155,6 @@
           "sha": "23699cb",
           "date": "2026-10-01",
           "message": "Home: status + notification banners for Start Bridge and Accessibility"
-        },
-        {
-          "sha": "e000420",
-          "date": "2026-10-01",
-          "message": "AirPlay-style home screen"
         }
       ]
     }
@@ -241,5 +241,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T20:41:44Z"
+  "checked_at": "2026-10-01T20:42:11Z"
 }
