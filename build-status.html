@@ -104,6 +104,7 @@
   <h1>Build Status</h1>
   <div class="subtitle">Live progress for everything being built</div>
   <div id="tasks" style="width:100%;max-width:560px;"></div>
+  <div id="build-notes" style="width:100%;max-width:560px;"></div>
   <div id="builds" style="width:100%;max-width:560px;"></div>
   <div id="history" style="width:100%;max-width:560px;"></div>
   <div class="updated" id="updated"></div>
@@ -235,7 +236,8 @@ function renderHistory(history) {
   if (!history || !history.length) return "";
   // Show newest first.
   const items = [...history].reverse().map(v => {
-    return `<div class="step"><span class="dot dot-ok">●</span><strong>v${escapeHtml(v.version)}</strong> <span style="opacity:0.5;">${escapeHtml(v.date)}</span></div>`;
+    const notes = v.notes ? ` <span style="opacity:0.5;">- ${escapeHtml(v.notes)}</span>` : "";
+    return `<div class="step"><span class="dot dot-ok">●</span><strong>v${escapeHtml(v.version)}</strong> <span style="opacity:0.5;">${escapeHtml(v.date)}</span>${notes}</div>`;
   }).join("");
   return `
     <div class="build-card">
@@ -246,6 +248,21 @@ function renderHistory(history) {
     </div>`;
 }
 
+function renderBuildNotes(notes) {
+  if (!notes || !notes.notes || !notes.notes.length) return "";
+  const items = notes.notes.map(n =>
+    `<div class="step"><span class="dot dot-run">·</span>${escapeHtml(n)}</div>`
+  ).join("");
+  return `
+    <div class="build-card" style="border:1px solid rgba(10,132,255,0.3);">
+      <div class="build-header">
+        <div class="build-name">In this build (v${escapeHtml(notes.version)})</div>
+        <div class="build-badge badge-running">Testing</div>
+      </div>
+      <div class="step-list" style="max-height:none;">${items}</div>
+    </div>`;
+}
+
 async function load() {
   try {
     const res = await fetch(STATUS_URL + "?t=" + Date.now(), { cache: "no-store" });
@@ -253,6 +270,7 @@ async function load() {
     const data = await res.json();
     const builds = data.builds || [];
     document.getElementById("tasks").innerHTML = renderTasks(data.tasks);
+    document.getElementById("build-notes").innerHTML = renderBuildNotes(data.build_notes);
     document.getElementById("history").innerHTML = renderHistory(data.version_history);
     document.getElementById("builds").innerHTML =
       builds.length ? builds.map(renderBuild).join("")
