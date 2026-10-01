@@ -48,12 +48,12 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -88,7 +88,7 @@
         "version": "1.0.28",
         "version_code": 100028,
         "apk_ready": true,
-        "apk_size": 38941335
+        "apk_size": 38941327
       },
       "recent_commits": [
         {
@@ -232,5 +232,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:53:42Z"
+  "checked_at": "2026-10-01T19:54:13Z"
 }
