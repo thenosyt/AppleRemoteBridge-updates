@@ -300,12 +300,13 @@
     }
   ],
   "build_notes": {
-    "changes": [
-      "Visual focus highlight: D-pad selection now shows a white background on status rows so you can see what's selected",
-      "Fixed cut-off pairing steps text: smaller size and tighter spacing so all 4 steps are visible",
-      "Settings cog now highlights when focused via D-pad"
-    ],
-    "version": "1.0.29"
+    "version": "1.0.33",
+    "notes": [
+      "iPhone help note on home screen (restart iPhone if won't connect)",
+      "Red badge on Settings cog when update available",
+      "System notification when update found",
+      "Accessibility status auto-refreshes live every 5 seconds"
+    ]
   },
-  "checked_at": "2026-10-01T23:08:11Z"
+  "checked_at": "2026-10-01T23:09:11Z"
 }
