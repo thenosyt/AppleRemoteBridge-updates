@@ -87,5 +87,19 @@
       }
     }
   ],
-  "checked_at": "2026-10-01T16:23:25Z"
+  "tasks": [
+    {
+      "done": true,
+      "label": "Fix POWER type error (pushed)"
+    },
+    {
+      "done": false,
+      "label": "Find why build still failing"
+    },
+    {
+      "done": false,
+      "label": "Fix and push again"
+    }
+  ],
+  "checked_at": "2026-10-01T16:23:57Z"
 }
