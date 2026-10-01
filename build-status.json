@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 36917159280,
-      "run_number": 29,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 36930012618,
+      "run_number": 32,
       "branch": "master",
-      "sha": "a41dbea",
-      "created_at": "2026-10-01T19:49:47Z",
-      "updated_at": "2026-10-01T19:54:32Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36917159280",
+      "sha": "6a215e8",
+      "created_at": "2026-10-01T21:38:30Z",
+      "updated_at": "2026-10-01T21:38:34Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36930012618",
       "steps": [
         {
           "name": "Set up job",
@@ -23,68 +23,48 @@
         },
         {
           "name": "Vendor Companion Link protocol",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         },
         {
           "name": "Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Decode signing keystore",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
       "name": "Apple Remote Bridge",
@@ -267,5 +247,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:38:12Z"
+  "checked_at": "2026-10-01T21:38:42Z"
 }
