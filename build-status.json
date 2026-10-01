@@ -207,6 +207,10 @@
     {
       "done": false,
       "label": "App: Notification when update is available (if auto-check finds one)"
+    },
+    {
+      "done": false,
+      "label": "Bug v1.0.29: D-pad navigation jumps around erratically when clicking in Settings/app"
     }
   ],
   "version_history": [
@@ -285,5 +289,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:49:12Z"
+  "checked_at": "2026-10-01T21:49:43Z"
 }
