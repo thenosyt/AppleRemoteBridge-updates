@@ -92,6 +92,11 @@
       },
       "recent_commits": [
         {
+          "sha": "1119017",
+          "date": "2026-10-01",
+          "message": "Fix cut-off pairing steps text: smaller size, tighter spacing"
+        },
+        {
           "sha": "f25af9b",
           "date": "2026-10-01",
           "message": "Add visual focus highlight to status rows so D-pad selection is visible"
@@ -145,11 +150,6 @@
           "sha": "e000420",
           "date": "2026-10-01",
           "message": "AirPlay-style home screen"
-        },
-        {
-          "sha": "a134378",
-          "date": "2026-10-01",
-          "message": "Minimalist home screen: cog, conditional banners, status only"
         }
       ]
     }
@@ -232,5 +232,5 @@
     ],
     "version": "1.0.27"
   },
-  "checked_at": "2026-10-01T19:48:42Z"
+  "checked_at": "2026-10-01T19:49:13Z"
 }
