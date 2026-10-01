@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 36930012618,
-      "run_number": 32,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 36935364633,
+      "run_number": 33,
       "branch": "master",
-      "sha": "6a215e8",
-      "created_at": "2026-10-01T21:38:30Z",
-      "updated_at": "2026-10-01T21:41:37Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36930012618",
+      "sha": "3ca27da",
+      "created_at": "2026-10-01T22:29:25Z",
+      "updated_at": "2026-10-01T22:29:29Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36935364633",
       "steps": [
         {
           "name": "Set up job",
@@ -48,43 +48,38 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         },
         {
           "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
       "name": "Apple Remote Bridge",
@@ -201,11 +196,11 @@
       "label": "App: Circular progress ring animation when downloading/installing update (same Apple-style as website)"
     },
     {
-      "done": false,
+      "done": true,
       "label": "App: Badge on Settings cog when update is available (red dot indicator)"
     },
     {
-      "done": false,
+      "done": true,
       "label": "App: Notification when update is available (if auto-check finds one)"
     },
     {
@@ -213,11 +208,11 @@
       "label": "Bug v1.0.29: D-pad navigation jumps around erratically when clicking in Settings/app"
     },
     {
-      "done": false,
+      "done": true,
       "label": "UX: Accessibility status should auto-update to checkmark live when service connects, without requiring app restart"
     },
     {
-      "done": false,
+      "done": true,
       "label": "App: Help note on home screen - 'If iPhone won't connect, try restarting your iPhone'"
     },
     {
@@ -301,5 +296,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T22:29:13Z"
+  "checked_at": "2026-10-01T22:29:42Z"
 }
