@@ -97,6 +97,11 @@
       },
       "recent_commits": [
         {
+          "sha": "ef3d2fb",
+          "date": "2026-10-01",
+          "message": "Fix D-pad navigation: status rows always focusable, not only when showing X"
+        },
+        {
           "sha": "006290d",
           "date": "2026-10-01",
           "message": "Fix publish race: pull --rebase before push to updates repo"
@@ -150,11 +155,6 @@
           "sha": "a62accb",
           "date": "2026-10-01",
           "message": "Smaller buttons, fix janky D-pad navigation"
-        },
-        {
-          "sha": "69bc310",
-          "date": "2026-10-01",
-          "message": "Polish the permission fix flow"
         }
       ]
     }
@@ -249,5 +249,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T18:56:42Z"
+  "checked_at": "2026-10-01T18:57:12Z"
 }
