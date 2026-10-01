@@ -103,6 +103,7 @@
 <body>
   <h1>Build Status</h1>
   <div class="subtitle">Live progress for everything being built</div>
+  <div id="tasks" style="width:100%;max-width:560px;"></div>
   <div id="builds" style="width:100%;max-width:560px;"></div>
   <div class="updated" id="updated"></div>
 
@@ -174,6 +175,14 @@ function renderBuild(build) {
   const sha = build.sha ? ` <span>· ${escapeHtml(build.sha)}</span>` : "";
   const runLink = build.html_url
     ? ` <a href="${escapeHtml(build.html_url)}" target="_blank">View on GitHub</a>` : "";
+  // Published (live) version, if available.
+  let liveHtml = "";
+  const pub = build.published;
+  if (pub && pub.version) {
+    const size = pub.apk_size ? ` (${(pub.apk_size / 1048576).toFixed(1)} MB)` : "";
+    const apkState = pub.apk_ready ? "ready" : "not ready";
+    liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;">Live: v${escapeHtml(pub.version)} · APK ${apkState}${size}</div>`;
+  }
   return `
     <div class="build-card">
       <div class="build-header">
@@ -184,6 +193,7 @@ function renderBuild(build) {
         <div class="progress-fill ${fillClass}" style="width:${pct}%"></div>
       </div>
       <div class="build-meta">${pct}%${sha}${runLink}</div>
+      ${liveHtml}
       ${steps ? `<div class="step-list">${steps}</div>` : ""}
     </div>`;
 }
@@ -194,12 +204,29 @@ function escapeHtml(s) {
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
+function renderTasks(tasks) {
+  if (!tasks || !tasks.length) return "";
+  const items = tasks.map(t => {
+    const done = t.done ? '<span class="dot dot-ok">✓</span>' : '<span class="dot dot-run">○</span>';
+    const style = t.done ? 'opacity:0.55;text-decoration:line-through;' : '';
+    return `<div class="step" style="${style}">${done}${escapeHtml(t.label)}</div>`;
+  }).join("");
+  return `
+    <div class="build-card">
+      <div class="build-header">
+        <div class="build-name">What I'm working on</div>
+      </div>
+      <div class="step-list" style="max-height:none;">${items}</div>
+    </div>`;
+}
+
 async function load() {
   try {
     const res = await fetch(STATUS_URL + "?t=" + Date.now(), { cache: "no-store" });
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     const builds = data.builds || [];
+    document.getElementById("tasks").innerHTML = renderTasks(data.tasks);
     document.getElementById("builds").innerHTML =
       builds.length ? builds.map(renderBuild).join("")
                     : '<div class="error">No builds tracked yet.</div>';
