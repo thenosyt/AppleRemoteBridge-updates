@@ -191,6 +191,10 @@
     {
       "done": false,
       "label": "Bug: Settings cog and other top elements have no focus highlight (can't tell what's selected)"
+    },
+    {
+      "done": false,
+      "label": "UX: ONN 4K Pro must never be focusable. Status rows only focusable when showing X (need action). When all checkmarks, only Settings cog is selectable."
     }
   ],
   "version_history": [
@@ -251,5 +255,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:27:12Z"
+  "checked_at": "2026-10-01T21:27:41Z"
 }
