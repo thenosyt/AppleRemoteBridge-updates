@@ -187,6 +187,10 @@
     {
       "done": false,
       "label": "UX: Bridge row should show a dialog when tapped (e.g., 'Looking for iPhone to pair...') instead of just silently starting"
+    },
+    {
+      "done": false,
+      "label": "Bug: Settings cog and other top elements have no focus highlight (can't tell what's selected)"
     }
   ],
   "version_history": [
@@ -247,5 +251,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:26:12Z"
+  "checked_at": "2026-10-01T21:26:43Z"
 }
