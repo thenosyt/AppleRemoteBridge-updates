@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "failure",
       "run_id": 36891978271,
       "run_number": 22,
       "branch": "master",
       "sha": "9ea5037",
       "created_at": "2026-10-01T16:26:15Z",
-      "updated_at": "2026-10-01T16:26:20Z",
+      "updated_at": "2026-10-01T16:29:48Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36891978271",
       "steps": [
         {
@@ -48,38 +48,43 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "failure"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "skipped"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "skipped"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "skipped"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "name": "Apple Remote Bridge",
@@ -167,5 +172,5 @@
       "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
     }
   ],
-  "checked_at": "2026-10-01T16:29:17Z"
+  "checked_at": "2026-10-01T16:31:48Z"
 }
