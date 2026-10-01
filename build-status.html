@@ -359,6 +359,23 @@ function escapeHtml(s) {
 
 function renderTasks(tasks, builds) {
   if (!tasks || !tasks.length) return "";
+  // Task progress ring
+  const doneCount = tasks.filter(t => t.done).length;
+  const totalCount = tasks.length;
+  const taskPct = totalCount ? Math.round(doneCount / totalCount * 100) : 0;
+  const taskCirc = 2 * Math.PI * 24;
+  const taskOffset = taskCirc * (1 - taskPct / 100);
+  const taskRing = `
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <svg width="48" height="48" viewBox="0 0 56 56">
+          <circle cx="28" cy="28" r="24" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="6"></circle>
+          <circle cx="28" cy="28" r="24" fill="none" stroke="#0a84ff" stroke-width="6" stroke-linecap="round"
+            stroke-dasharray="${taskCirc}" stroke-dashoffset="${taskOffset}"
+            transform="rotate(-90 28 28)" style="transition:stroke-dashoffset 0.8s ease;"></circle>
+          <text x="28" y="28" text-anchor="middle" dominant-baseline="central" fill="#fff" font-size="11" font-weight="600">${doneCount}/${totalCount}</text>
+        </svg>
+        <div style="font-size:14px;opacity:0.8;">${doneCount} of ${totalCount} tasks done</div>
+      </div>`;
   // Calculate build progress from the latest build steps
   let buildPct = null, buildStep = "";
   if (builds && builds.length) {
@@ -390,6 +407,7 @@ function renderTasks(tasks, builds) {
       <div class="build-header">
         <div class="build-name">What I'm working on</div>
       </div>
+      ${taskRing}
       <div class="step-list" style="max-height:none;">${items}</div>
     </div>`;
 }
