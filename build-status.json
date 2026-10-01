@@ -84,7 +84,14 @@
         "version_code": 100012,
         "apk_ready": true,
         "apk_size": 38941279
-      }
+      },
+      "recent_commits": [
+        {
+          "sha": "55fa0b0",
+          "message": "seed",
+          "date": "2026-10-01T11:27:34Z"
+        }
+      ]
     }
   ],
   "tasks": [
@@ -101,5 +108,5 @@
       "label": "Fix and push again"
     }
   ],
-  "checked_at": "2026-10-01T16:23:57Z"
+  "checked_at": "2026-10-01T16:24:59Z"
 }
