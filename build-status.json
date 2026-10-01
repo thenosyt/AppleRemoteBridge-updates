@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 36907541863,
-      "run_number": 26,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 36910749241,
+      "run_number": 31,
       "branch": "master",
-      "sha": "9ef73be",
-      "created_at": "2026-10-01T18:32:05Z",
-      "updated_at": "2026-10-01T18:37:49Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36907541863",
+      "sha": "f62582f",
+      "created_at": "2026-10-01T18:57:46Z",
+      "updated_at": "2026-10-01T18:57:50Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36910749241",
       "steps": [
         {
           "name": "Set up job",
@@ -42,49 +42,34 @@
           "conclusion": "success"
         },
         {
-          "name": "Decode signing keystore",
-          "status": "completed",
-          "conclusion": "success"
+          "name": "Build debug APK",
+          "status": "in_progress",
+          "conclusion": null
         },
         {
-          "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
+          "name": "Run actions/upload-artifact@v4",
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
       "name": "Apple Remote Bridge",
@@ -186,6 +171,15 @@
     },
     {
       "done": true,
+      "label": "Fix D-pad: status rows always focusable (pushed)"
+    },
+    {
+      "build_task": true,
+      "done": false,
+      "label": "Build 1.0.27 - in progress"
+    },
+    {
+      "done": false,
       "label": "Verify published and notify Tyson"
     }
   ],
@@ -249,5 +243,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T18:57:42Z"
+  "checked_at": "2026-10-01T18:58:10Z"
 }
