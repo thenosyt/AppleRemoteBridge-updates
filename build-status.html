@@ -73,21 +73,39 @@
   .badge-success { background: rgba(48,209,88,0.2); color: #30d158; }
   .badge-failure { background: rgba(255,69,58,0.2); color: #ff453a; }
   .badge-unknown { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.6); }
-  .progress-track {
-    height: 10px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 5px;
-    overflow: hidden;
+  .progress-ring-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
     margin-bottom: 14px;
   }
-  .progress-fill {
-    height: 100%;
-    border-radius: 5px;
-    transition: width 0.8s ease, background-color 0.4s ease;
+  .progress-ring {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
   }
-  .fill-queued { background: #ff9f0a; }
-  .fill-running { background: #0a84ff; }
-  .fill-success { background: #30d158; }
+  .progress-ring .ring-bg {
+    fill: none;
+    stroke: rgba(255,255,255,0.1);
+    stroke-width: 6;
+  }
+  .progress-ring .ring-fg {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.8s ease;
+  }
+  .ring-queued .ring-fg { stroke: #ff9f0a; }
+  .ring-running .ring-fg { stroke: #0a84ff; }
+  .ring-success .ring-fg { stroke: #30d158; }
+  .ring-failed .ring-fg { stroke: #ff453a; }
+  .progress-ring .ring-icon {
+    font-size: 20px;
+    text-anchor: middle;
+    dominant-baseline: central;
+  }
   .fill-failure { background: #ff453a; }
   .build-meta {
     font-size: 13px;
@@ -257,16 +275,36 @@ function renderBuild(build) {
     const apkState = pub.apk_ready ? "ready to install" : "not ready";
     liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;font-weight:600;">✓ Available now: v${escapeHtml(pub.version)} · ${apkState}${size}</div>`;
   }
+  // Circular progress ring (Apple-style)
+  const isSuccess = build.conclusion === "success";
+  const isFailed = build.conclusion === "failure";
+  const ringClass = isSuccess ? "ring-success" : isFailed ? "ring-failed" : (build.state === "queued" ? "ring-queued" : "ring-running");
+  const circ = 2 * Math.PI * 24;
+  const offset = circ * (1 - pct / 100);
+  let ringCenter = "";
+  if (isSuccess) {
+    ringCenter = `<text x="28" y="28" class="ring-icon" fill="#30d158">✓</text>`;
+  } else if (isFailed) {
+    ringCenter = `<text x="28" y="28" class="ring-icon" fill="#ff453a">!</text>`;
+  } else {
+    ringCenter = `<text x="28" y="28" class="ring-icon" fill="#fff" font-size="12">${pct}%</text>`;
+  }
+  const ringSvg = `
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring ${ringClass}" viewBox="0 0 56 56">
+          <circle class="ring-bg" cx="28" cy="28" r="24"></circle>
+          <circle class="ring-fg" cx="28" cy="28" r="24" stroke-dasharray="${circ}" stroke-dashoffset="${isSuccess || isFailed ? 0 : offset}"></circle>
+          ${ringCenter}
+        </svg>
+        <div class="build-meta" style="margin:0;">${build.run_number ? `v1.0.${build.run_number} · ` : ""}${sha}${runLink}</div>
+      </div>`;
   return `
     <div class="build-card">
       <div class="build-header">
         <div class="build-name">${escapeHtml(build.name || build.repo || "Build")}</div>
         <div class="build-badge ${badgeClass}">${escapeHtml(badgeText)}</div>
       </div>
-      <div class="progress-track">
-        <div class="progress-fill ${fillClass}" style="width:${pct}%"></div>
-      </div>
-      <div class="build-meta">${build.run_number ? `v1.0.${build.run_number} · ` : ""}${pct}%${sha}${runLink}</div>
+      ${ringSvg}
       ${buildTimeHtml(build)}
       ${liveHtml}
       ${commitsHtml(build)}
