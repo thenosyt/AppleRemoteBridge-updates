@@ -215,6 +215,10 @@
     {
       "done": false,
       "label": "UX: Accessibility status should auto-update to checkmark live when service connects, without requiring app restart"
+    },
+    {
+      "done": false,
+      "label": "App: Help note on home screen - 'If iPhone won't connect, try restarting your iPhone'"
     }
   ],
   "version_history": [
@@ -293,5 +297,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T22:16:12Z"
+  "checked_at": "2026-10-01T22:16:41Z"
 }
