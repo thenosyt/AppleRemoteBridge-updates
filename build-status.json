@@ -23,32 +23,32 @@
         },
         {
           "name": "Vendor Companion Link protocol",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Decode signing keystore",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Build signed release APK",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -58,6 +58,21 @@
         },
         {
           "name": "Publish to updates repo",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-java@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
           "status": "pending",
           "conclusion": null
         },
@@ -247,5 +262,5 @@
     ],
     "version": "1.0.29"
   },
-  "checked_at": "2026-10-01T21:38:42Z"
+  "checked_at": "2026-10-01T21:39:12Z"
 }
