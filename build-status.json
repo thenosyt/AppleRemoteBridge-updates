@@ -97,6 +97,11 @@
       },
       "recent_commits": [
         {
+          "sha": "9b39e64",
+          "date": "2026-10-01",
+          "message": "Fix unresolved references: statusRow returns View, capture bridgeRow/a11yRow for focus"
+        },
+        {
           "sha": "c45a3c3",
           "date": "2026-10-01",
           "message": "Remove old permission card referencing non-existent R.color.text"
@@ -150,11 +155,6 @@
           "sha": "1f39e17",
           "date": "2026-10-01",
           "message": "Fix wake: direct wake without a11y service, Wi-Fi lock during sleep"
-        },
-        {
-          "sha": "862857f",
-          "date": "2026-10-01",
-          "message": "PC-free recovery for the restricted-settings reset after updates"
         }
       ]
     }
@@ -245,5 +245,5 @@
       "Smaller buttons, smoother D-pad navigation"
     ]
   },
-  "checked_at": "2026-10-01T17:50:13Z"
+  "checked_at": "2026-10-01T17:50:44Z"
 }
