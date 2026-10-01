@@ -188,7 +188,8 @@ function buildTimeHtml(build) {
   };
   const started = fmt(build.created_at);
   let extra = "";
-  if (build.updated_at && build.updated_at !== build.created_at) {
+  // Only show "ended" for completed/failed builds, not in-progress ones.
+  if (build.state !== "in_progress" && build.updated_at && build.updated_at !== build.created_at) {
     const s = new Date(build.created_at), e = new Date(build.updated_at);
     const mins = Math.round((e - s) / 60000);
     const dur = mins < 1 ? "under a minute" : mins === 1 ? "1 min" : mins + " mins";
@@ -223,8 +224,8 @@ function renderBuild(build) {
   const pub = build.published;
   if (pub && pub.version) {
     const size = pub.apk_size ? ` (${(pub.apk_size / 1048576).toFixed(1)} MB)` : "";
-    const apkState = pub.apk_ready ? "ready" : "not ready";
-    liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;">Live: v${escapeHtml(pub.version)} · APK ${apkState}${size}</div>`;
+    const apkState = pub.apk_ready ? "ready to install" : "not ready";
+    liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;font-weight:600;">✓ Available now: v${escapeHtml(pub.version)} · ${apkState}${size}</div>`;
   }
   return `
     <div class="build-card">
@@ -246,15 +247,37 @@ function renderBuild(build) {
 function commitsHtml(build) {
   const commits = build.recent_commits || [];
   if (!commits.length) return "";
+  // Translate technical commit messages to plain language.
+  const friendly = (msg) => {
+    const m = msg.toLowerCase();
+    if (m.includes("d-pad") && m.includes("focusable")) return "Fixed TV remote navigation: status rows can now be selected with the D-pad";
+    if (m.includes("publish race") || m.includes("pull --rebase")) return "Fixed build publishing (was failing when status page updated at the same time)";
+    if (m.includes("unresolved reference") || m.includes("statusrow returns view")) return "Fixed app crash on the home screen";
+    if (m.includes("r.color.text") || m.includes("permission card")) return "Removed old permission popup that was causing a crash";
+    if (m.includes("nullability") || m.includes("ctx must be non-null")) return "Fixed a crash when waking the TV";
+    if (m.includes("nullable lambda")) return "Fixed a crash in the status display";
+    if (m.includes("power type error") || m.includes("power dispatch")) return "Fixed power button handling";
+    if (m.includes("tappable rows replace banners")) return "New: tap a status row to jump to the fix";
+    if (m.includes("airplay-style home")) return "New: AirPlay-style home screen with big TV name and pairing steps";
+    if (m.includes("minimalist home")) return "New: cleaner home screen with Settings cog";
+    if (m.includes("smaller buttons") || m.includes("d-pad navigation")) return "Smaller buttons and smoother D-pad movement";
+    if (m.includes("wake") && m.includes("direct")) return "Tries a new way to wake the TV (untested)";
+    if (m.includes("permission fix flow")) return "Improved the permission fix instructions";
+    return msg; // fallback to original if no match
+  };
+  const seen = new Set();
   const items = commits.map(c => {
     const msg = typeof c === "string" ? c : (c.message || "");
-    return `<div class="step"><span class="dot" style="color:#0a84ff;">·</span>${escapeHtml(msg)}</div>`;
+    const text = friendly(msg);
+    if (seen.has(text)) return "";
+    seen.add(text);
+    return `<div class="step"><span class="dot" style="color:#0a84ff;">·</span>${escapeHtml(text)}</div>`;
   }).join("");
   const uid = "commits-" + (build.run_id || Math.random().toString(36).slice(2));
   return `
     <div class="build-meta" style="margin-top:10px;">
       <a href="javascript:void(0)" onclick="document.getElementById('${uid}').style.display = document.getElementById('${uid}').style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-arrow').textContent = document.getElementById('${uid}').style.display === 'none' ? '▸' : '▾';" style="color:#0a84ff;text-decoration:none;cursor:pointer;">
-        <span class="toggle-arrow">▸</span> What changed in this build (${commits.length})
+        <span class="toggle-arrow">▸</span> What changed in this build
       </a>
     </div>
     <div id="${uid}" class="step-list" style="display:none;margin-top:4px;">${items}</div>`;
