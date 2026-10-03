@@ -362,7 +362,7 @@ function escapeHtml(s) {
 
 function renderTasks(tasks, builds) {
   if (!tasks || !tasks.length) return "";
-  // Task progress ring
+  // Task progress ring (overall)
   const doneCount = tasks.filter(t => t.done).length;
   const totalCount = tasks.length;
   const taskPct = totalCount ? Math.round(doneCount / totalCount * 100) : 0;
@@ -391,7 +391,7 @@ function renderTasks(tasks, builds) {
       buildStep = cur ? cur.name : "";
     }
   }
-  const items = tasks.map(t => {
+  const taskItem = t => {
     const done = t.done ? '<span class="dot dot-ok">✓</span>' : '<span class="dot dot-run">○</span>';
     const style = t.done ? 'opacity:0.55;text-decoration:line-through;' : '';
     let extra = "";
@@ -404,14 +404,40 @@ function renderTasks(tasks, builds) {
       </div>`;
     }
     return `<div class="step" style="${style}">${done}${escapeHtml(t.label)}${extra}</div>`;
-  }).join("");
+  };
+  // Group by category (App / Website). Open tasks show inline; completed ones
+  // collapse into an expandable at the bottom so the list stays short.
+  const cats = [
+    { key: "app", title: "App" },
+    { key: "site", title: "Website" },
+  ];
+  let sections = "";
+  let allDone = [];
+  for (const cat of cats) {
+    const ct = tasks.filter(t => (t.category || "app") === cat.key);
+    if (!ct.length) continue;
+    const open = ct.filter(t => !t.done);
+    const done = ct.filter(t => t.done);
+    allDone = allDone.concat(done);
+    sections += `<div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">${cat.title} <span style="font-weight:400;opacity:0.6;">· ${open.length} open</span></div>`;
+    sections += `<div class="step-list" style="max-height:none;">${open.map(taskItem).join("") || '<div class="step" style="opacity:0.5;">All done</div>'}</div>`;
+  }
+  let doneBlock = "";
+  if (allDone.length) {
+    doneBlock = `
+      <details style="margin-top:14px;background:rgba(255,255,255,0.04);border-radius:10px;padding:10px 14px;">
+        <summary style="font-size:14px;font-weight:600;opacity:0.75;cursor:pointer;list-style:none;">Completed (${allDone.length}) ▸</summary>
+        <div class="step-list" style="max-height:none;margin-top:8px;">${allDone.map(taskItem).join("")}</div>
+      </details>`;
+  }
   return `
     <div class="build-card">
       <div class="build-header">
         <div class="build-name">What I'm working on</div>
       </div>
       ${taskRing}
-      <div class="step-list" style="max-height:none;">${items}</div>
+      ${sections}
+      ${doneBlock}
     </div>`;
 }
 
