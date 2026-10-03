@@ -312,7 +312,20 @@
       "completed_at": null
     }
   ],
-  "pending_fixes": [],
+  "pending_fixes": [
+    {
+      "label": "Compact home screen: shrink the device-name/status hero card so the hero and entire setup checklist fit on one TV screen with no scrolling"
+    },
+    {
+      "label": "Rounded settings gear focus highlight: replace the square selection highlight with a rounded/filled Apple-style focus state"
+    },
+    {
+      "label": "Setup checklist ordering and collapse: incomplete items sort to the top, completed move below; when everything is complete, collapse the list to one green checkmark"
+    },
+    {
+      "label": "Compact Apple-style Settings: redesign as a tighter grouped settings list like the Apple TV+ app for Android TV, several settings fitting on one screen"
+    }
+  ],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -417,7 +430,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-03T22:12:40Z",
+  "checked_at": "2026-10-03T22:13:10Z",
   "newly_completed": [],
   "page_version": "11"
 }
