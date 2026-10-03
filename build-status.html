@@ -174,7 +174,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "10";
+const PAGE_VERSION = "11";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -407,7 +407,7 @@ function fmtEta(sec) {
   return m > 0 ? `≈ ${m} min ${s} sec left` : `≈ ${s} sec left`;
 }
 
-function renderTasks(tasks, builds) {
+function renderTasks(tasks, builds, pending) {
   if (!tasks || !tasks.length) return "";
   // Completed tasks auto-expire 7 days after completion so the list never
   // piles up forever. Tasks without a completed_at date are kept.
@@ -484,6 +484,15 @@ function renderTasks(tasks, builds) {
     sections += `<div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">${cat.title} <span style="font-weight:400;opacity:0.6;">· ${open.length} open</span></div>`;
     sections += `<div class="step-list" style="max-height:none;">${open.map(taskItem).join("") || '<div class="step" style="opacity:0.5;">All done</div>'}</div>`;
   }
+  // Fixes waiting for Tyson's tap on the push button. Shown only when
+  // there is something pending, so the card stays clean otherwise.
+  let pendingBlock = "";
+  const waiting = (pending || []).filter(p => p && p.label);
+  if (waiting.length) {
+    pendingBlock = `
+      <div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">Pending approval <span style="font-weight:400;opacity:0.6;">· ${waiting.length} waiting</span></div>
+      <div class="step-list" style="max-height:none;">${waiting.map(p => `<div class="step"><span class="dot dot-run">○</span>${escapeHtml(p.label)}</div>`).join("")}</div>`;
+  }
   let doneBlock = "";
   if (allDone.length) {
     doneBlock = `
@@ -499,6 +508,7 @@ function renderTasks(tasks, builds) {
       </div>
       ${taskRing}
       ${sections}
+      ${pendingBlock}
       ${doneBlock}
     </div>`;
 }
@@ -547,7 +557,7 @@ async function load() {
     } else if (upd) {
       upd.style.display = "none";
     }
-    document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds);
+    document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds, data.pending_fixes);
     document.getElementById("history").innerHTML = renderHistory(data.version_history);
     // Separate current (in-progress) from completed builds
     const inProgress = builds.filter(b => b.state === "in_progress" || b.state === "queued");
