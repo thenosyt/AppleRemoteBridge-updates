@@ -91,10 +91,10 @@
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
-        "version": "1.0.34",
-        "version_code": 100034,
+        "version": "1.0.35",
+        "version_code": 100035,
         "apk_ready": true,
-        "apk_size": 38958491
+        "apk_size": 38957651
       },
       "recent_commits": [
         {
@@ -303,8 +303,9 @@
       "id": "app-trackpad-sensitivity-and-autostart",
       "title": "v1.0.35: trackpad sensitivity fix (slider, dead zone, one step per swipe) + bridge auto-start",
       "category": "app",
-      "status": "open",
-      "created_at": "2026-10-03"
+      "status": "done",
+      "created_at": "2026-10-03",
+      "completed_at": "2026-10-03"
     }
   ],
   "pending_fixes": [],
@@ -395,25 +396,24 @@
     }
   ],
   "build_notes": {
-    "version": "1.0.34",
-    "notes": [
-      "Circular progress ring fills as the update downloads and installs",
-      "D-pad navigation no longer jumps around in Settings and the app",
-      "New layered wake-from-sleep when the iPhone power button is pressed"
-    ],
     "changes": [
-      "Circular update progress ring",
-      "D-pad navigation fixes",
-      "Layered wake-from-sleep"
-    ]
+      "Trackpad sensitivity fix (one step per swipe, dead zone, step pause, slider)",
+      "Bridge auto-start",
+      "Paired status with checkmark",
+      "Setup checklist on home screen",
+      "Home screen layout cleanup"
+    ],
+    "notes": [
+      "Trackpad calmed down: one swipe moves exactly one item, with a bigger dead zone and a short pause between steps",
+      "New trackpad sensitivity slider in Settings, from Calm to Quick",
+      "Bridge now starts on its own when the app opens and after a TV reboot; accessibility stays the only requirement",
+      "Home screen shows a green Paired checkmark once an iPhone pairs, and the pairing steps hide",
+      "Home screen setup checklist mirrors the PC setup page, with checkmarks for each step",
+      "Home screen cleanup: no more tiny scroll, Apple-style settings gear, footer removed"
+    ],
+    "version": "1.0.35"
   },
-  "checked_at": "2026-10-03T16:06:25Z",
-  "newly_completed": [
-    {
-      "version": "1.0.34",
-      "apk_size_mb": 37.2,
-      "run_number": 35
-    }
-  ],
+  "checked_at": "2026-10-03T16:07:11Z",
+  "newly_completed": [],
   "page_version": "11"
 }
