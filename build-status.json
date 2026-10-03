@@ -98,6 +98,11 @@
       },
       "recent_commits": [
         {
+          "sha": "cbf35d5",
+          "date": "2026-10-03",
+          "message": "v1.0.35: trackpad sensitivity fix, bridge auto-start, Paired status, home layout cleanup"
+        },
+        {
           "sha": "a9d3d9a",
           "date": "2026-10-03",
           "message": "v1.0.34: update progress ring, D-pad focus fixes, layered wake-from-sleep"
@@ -151,11 +156,6 @@
           "sha": "c45a3c3",
           "date": "2026-10-01",
           "message": "Remove old permission card referencing non-existent R.color.text"
-        },
-        {
-          "sha": "6d6f9fd",
-          "date": "2026-10-01",
-          "message": "Fix nullability: ctx must be non-null for wakeScreenDirect"
         }
       ]
     }
@@ -386,6 +386,12 @@
       "version_code": 100034,
       "date": "2026-10-03",
       "notes": "Circular update progress ring, D-pad navigation fixes, layered wake-from-sleep"
+    },
+    {
+      "version": "1.0.35",
+      "version_code": 100035,
+      "date": "2026-10-03",
+      "notes": "Trackpad sensitivity fix (one step per swipe, dead zone, step pause, slider), bridge auto-start, Paired status with checkmark, setup checklist on home, home layout cleanup"
     }
   ],
   "build_notes": {
@@ -401,7 +407,7 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T16:01:28Z",
+  "checked_at": "2026-10-03T16:01:55Z",
   "newly_completed": [],
   "page_version": "11"
 }
