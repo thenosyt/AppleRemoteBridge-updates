@@ -260,6 +260,11 @@
       "label": "Hub: task ring turns green with checkmark when all tasks are done",
       "done": true,
       "category": "site"
+    },
+    {
+      "label": "Hub: page reloads itself automatically when a new version is published",
+      "done": false,
+      "category": "site"
     }
   ],
   "version_history": [
@@ -355,7 +360,7 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T14:53:24Z",
+  "checked_at": "2026-10-03T14:53:40Z",
   "newly_completed": [],
   "page_version": "7"
 }
