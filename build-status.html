@@ -436,11 +436,19 @@ function renderBuildNotes(notes) {
   const items = notes.notes.map(n =>
     `<div class="step"><span class="dot dot-run">·</span>${escapeHtml(n)}</div>`
   ).join("");
+  // Same Apple-style checkmark ring as completed builds.
+  const circ = 2 * Math.PI * 24;
+  const ringSvg = `
+      <svg class="progress-ring ring-success" viewBox="0 0 56 56" style="width:40px;height:40px;">
+        <circle class="ring-bg" cx="28" cy="28" r="24"></circle>
+        <circle class="ring-fg" cx="28" cy="28" r="24" stroke-dasharray="${circ}" stroke-dashoffset="0"></circle>
+        <text x="28" y="28" class="ring-icon" fill="#30d158">✓</text>
+      </svg>`;
   return `
     <div class="build-card" style="border:1px solid rgba(10,132,255,0.3);">
       <div class="build-header">
         <div class="build-name">In this build (v${escapeHtml(notes.version)})</div>
-        <div class="build-badge badge-running">Testing</div>
+        ${ringSvg}
       </div>
       <div class="step-list" style="max-height:none;">${items}</div>
     </div>`;
