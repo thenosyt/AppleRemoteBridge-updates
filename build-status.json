@@ -309,7 +309,7 @@
     },
     {
       "id": "app-compact-home-and-gear-highlight",
-      "title": "Compact home screen (hero + checklist fit one screen, no scroll) + rounded settings gear focus highlight",
+      "title": "Compact home screen (no scroll) + rounded gear highlight + checklist sorting (incomplete on top, collapses to checkmark when done)",
       "category": "app",
       "status": "open",
       "created_at": "2026-10-03"
@@ -420,7 +420,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-03T16:10:25Z",
+  "checked_at": "2026-10-03T16:10:55Z",
   "newly_completed": [],
   "page_version": "11"
 }
