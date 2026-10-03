@@ -162,98 +162,98 @@
   ],
   "tasks": [
     {
-      "done": true,
       "label": "1.0.26 published: AirPlay home screen, tappable status rows",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Fixed: D-pad navigation was completely broken when statuses showed checkmarks",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Build 1.0.27 - published",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Notify Tyson when 1.0.27 is live",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Trackpad remapping: center-halfway=1, near-edge=2, flick=5 (waiting for Tyson to finish testing)",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Bug: Bridge status row doesn't refresh after tapping Start (shows X even when running)",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "UX: Bridge row should show a dialog when tapped (e.g., 'Looking for iPhone to pair...') instead of just silently starting",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Bug: Settings cog and other top elements have no focus highlight (can't tell what's selected)",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "UX: ONN 4K Pro must never be focusable. Status rows only focusable when showing X (need action). When all checkmarks, only Settings cog is selectable.",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "App: Circular progress ring animation when downloading/installing update (same Apple-style as website)",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-03"
     },
     {
-      "done": true,
       "label": "App: Badge on Settings cog when update is available (red dot indicator)",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "App: Notification when update is available (if auto-check finds one)",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Bug v1.0.29: D-pad navigation jumps around erratically when clicking in Settings/app",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-03"
     },
     {
-      "done": true,
       "label": "UX: Accessibility status should auto-update to checkmark live when service connects, without requiring app restart",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "App: Help note on home screen - 'If iPhone won't connect, try restarting your iPhone'",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-01"
     },
     {
-      "done": true,
       "label": "Fix: Wake TV from sleep when iPhone power button pressed (currently not working on Onn 4K Pro)",
+      "done": true,
       "category": "app",
       "completed_at": "2026-10-03"
     },
@@ -300,17 +300,16 @@
       "completed_at": "2026-10-03"
     },
     {
-      "category": "app",
-      "created_at": "2026-10-03",
-      "completed_at": "2026-10-03",
       "label": "v1.0.35: trackpad sensitivity fix (slider, dead zone, one step per swipe) + bridge auto-start",
-      "done": true
+      "done": true,
+      "category": "app",
+      "completed_at": "2026-10-03"
     },
     {
-      "category": "app",
-      "created_at": "2026-10-03",
       "label": "Compact home screen (no scroll) + rounded gear highlight + checklist sorting/collapse + compact Apple-style Settings",
-      "done": false
+      "done": false,
+      "category": "app",
+      "completed_at": null
     }
   ],
   "pending_fixes": [],
@@ -418,7 +417,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-03T22:04:55Z",
+  "checked_at": "2026-10-03T22:05:05Z",
   "newly_completed": [],
   "page_version": "11"
 }
