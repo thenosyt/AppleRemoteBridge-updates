@@ -311,8 +311,24 @@ function renderBuild(build) {
       ${buildTimeHtml(build)}
       ${liveHtml}
       ${commitsHtml(build)}
-      ${steps ? `<div class="step-list">${steps}</div>` : ""}
+      ${stepsHtml(build, steps, isBuilding)}
     </div>`;
+}
+
+// Build steps: shown inline while a build is running; collapsed behind a
+// tap-to-expand row once the build is done so release notes get the focus.
+function stepsHtml(build, steps, isBuilding) {
+  if (!steps) return "";
+  if (isBuilding) return `<div class="step-list">${steps}</div>`;
+  const count = (build.steps || []).filter(s => s.status === "in_progress" || s.status === "completed").length;
+  const uid = "steps-" + (build.run_id || Math.random().toString(36).slice(2));
+  return `
+    <div class="build-meta" style="margin-top:10px;">
+      <a href="javascript:void(0)" onclick="document.getElementById('${uid}').style.display = document.getElementById('${uid}').style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-arrow').textContent = document.getElementById('${uid}').style.display === 'none' ? '▸' : '▾';" style="color:#0a84ff;text-decoration:none;cursor:pointer;">
+        <span class="toggle-arrow">▸</span> Build steps (${count})
+      </a>
+    </div>
+    <div id="${uid}" class="step-list" style="display:none;margin-top:4px;">${steps}</div>`;
 }
 
 function commitsHtml(build) {
@@ -348,10 +364,10 @@ function commitsHtml(build) {
   return `
     <div class="build-meta" style="margin-top:10px;">
       <a href="javascript:void(0)" onclick="document.getElementById('${uid}').style.display = document.getElementById('${uid}').style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-arrow').textContent = document.getElementById('${uid}').style.display === 'none' ? '▸' : '▾';" style="color:#0a84ff;text-decoration:none;cursor:pointer;">
-        <span class="toggle-arrow">▸</span> What changed in this build
+        <span class="toggle-arrow">▾</span> What changed in this build
       </a>
     </div>
-    <div id="${uid}" class="step-list" style="display:none;margin-top:4px;">${items}</div>`;
+    <div id="${uid}" class="step-list" style="margin-top:4px;">${items}</div>`;
 }
 
 function escapeHtml(s) {
