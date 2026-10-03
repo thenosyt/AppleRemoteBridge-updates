@@ -175,7 +175,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "6";
+const PAGE_VERSION = "7";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -526,15 +526,24 @@ async function load() {
     const builds = data.builds || [];
     // Anchor for live ETA countdowns (ticks every second between refreshes).
     if (data.checked_at) window.__checkedAtMs = new Date(data.checked_at).getTime();
-    // If the published page version is newer than this running copy, offer a one-tap reload.
+    // Self-updating page: when a newer page version is published, reload to it
+    // automatically via a cache-busted URL. Only tries once per version per
+    // session, so a slow GitHub Pages deploy can't cause a reload loop; in
+    // that case a manual reload banner is shown instead.
     const upd = document.getElementById("page-update");
-    if (upd) {
-      if (data.page_version && data.page_version !== PAGE_VERSION) {
+    if (data.page_version && data.page_version !== PAGE_VERSION) {
+      const tried = sessionStorage.getItem("pageReloadTried");
+      if (tried !== data.page_version) {
+        sessionStorage.setItem("pageReloadTried", data.page_version);
+        location.href = "build-status.html?v=" + encodeURIComponent(data.page_version);
+        return;
+      }
+      if (upd) {
         window.__newPageVersion = data.page_version;
         upd.style.display = "block";
-      } else {
-        upd.style.display = "none";
       }
+    } else if (upd) {
+      upd.style.display = "none";
     }
     document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds);
     document.getElementById("build-notes").innerHTML = renderBuildNotes(data.build_notes);
