@@ -93,7 +93,7 @@
         "version": "1.0.33",
         "version_code": 100033,
         "apk_ready": true,
-        "apk_size": 38957651
+        "apk_size": 38941303
       },
       "recent_commits": [
         {
@@ -334,5 +334,5 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T14:11:43Z"
+  "checked_at": "2026-10-03T14:12:11Z"
 }
