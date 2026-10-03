@@ -93,7 +93,7 @@
         "version": "1.0.33",
         "version_code": 100033,
         "apk_ready": true,
-        "apk_size": 38957651
+        "apk_size": 38941303
       },
       "recent_commits": [
         {
@@ -324,5 +324,5 @@
       "Accessibility status auto-refreshes live every 5 seconds"
     ]
   },
-  "checked_at": "2026-10-03T14:09:44Z"
+  "checked_at": "2026-10-03T14:10:12Z"
 }
