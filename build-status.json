@@ -90,10 +90,10 @@
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
-        "version": "1.0.33",
-        "version_code": 100033,
+        "version": "1.0.34",
+        "version_code": 100034,
         "apk_ready": true,
-        "apk_size": 38941303
+        "apk_size": 38957651
       },
       "recent_commits": [
         {
@@ -322,17 +322,13 @@
     }
   ],
   "build_notes": {
-    "version": "1.0.34",
+    "version": "1.0.33",
     "notes": [
-      "Circular progress ring fills as the update downloads and installs",
-      "D-pad navigation no longer jumps around in Settings and the app",
-      "New layered wake-from-sleep when the iPhone power button is pressed"
-    ],
-    "changes": [
-      "Circular update progress ring",
-      "D-pad navigation fixes",
-      "Layered wake-from-sleep"
+      "iPhone help note on home screen (restart iPhone if won't connect)",
+      "Red badge on Settings cog when update available",
+      "System notification when update found",
+      "Accessibility status auto-refreshes live every 5 seconds"
     ]
   },
-  "checked_at": "2026-10-03T14:12:11Z"
+  "checked_at": "2026-10-03T14:12:43Z"
 }
