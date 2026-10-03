@@ -48,17 +48,17 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -88,7 +88,7 @@
         "version": "1.0.33",
         "version_code": 100033,
         "apk_ready": true,
-        "apk_size": 38941303
+        "apk_size": 38957651
       },
       "recent_commits": [
         {
@@ -319,5 +319,5 @@
       "Accessibility status auto-refreshes live every 5 seconds"
     ]
   },
-  "checked_at": "2026-10-03T14:08:42Z"
+  "checked_at": "2026-10-03T14:09:14Z"
 }
