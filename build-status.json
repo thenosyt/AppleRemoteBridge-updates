@@ -87,6 +87,7 @@
           "conclusion": "success"
         }
       ],
+      "eta_seconds": null,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
@@ -334,5 +335,5 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T14:39:44Z"
+  "checked_at": "2026-10-03T14:40:11Z"
 }
