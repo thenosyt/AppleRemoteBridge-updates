@@ -142,7 +142,6 @@
   <div class="subtitle">Live progress for everything being built</div>
   <div id="page-update" style="display:none;width:100%;max-width:560px;background:rgba(10,132,255,0.15);border:1px solid rgba(10,132,255,0.5);border-radius:12px;padding:12px 16px;margin:8px 0;text-align:center;font-size:15px;">A new version of this page is available. <button onclick="location.href='build-status.html?v='+window.__newPageVersion" style="margin-left:8px;background:#0a84ff;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:15px;font-weight:600;cursor:pointer;">Reload</button></div>
   <div id="tasks" style="width:100%;max-width:560px;"></div>
-  <div id="build-notes" style="width:100%;max-width:560px;"></div>
   <div id="builds" style="width:100%;max-width:560px;"></div>
   <div id="history" style="width:100%;max-width:560px;"></div>
   <div class="build-card" style="width:100%;max-width:560px;border:1px solid rgba(255,159,10,0.3);">
@@ -175,7 +174,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "8";
+const PAGE_VERSION = "9";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -251,7 +250,7 @@ function buildTimeHtml(build) {
   return `<div class="build-meta" style="opacity:0.6;">Started ${started}${extra}</div>`;
 }
 
-function renderBuild(build) {
+function renderBuild(build, versionHistory) {
   const [badgeClass, badgeText] = badgeFor(build);
   const fillClass = fillClassFor(build);
   const pct = pctFor(build);
@@ -318,7 +317,7 @@ function renderBuild(build) {
       ${etaHtml}
       ${buildTimeHtml(build)}
       ${liveHtml}
-      ${commitsHtml(build)}
+      ${commitsHtml(build, versionHistory)}
       ${stepsHtml(build, steps, isBuilding)}
     </div>`;
 }
@@ -339,7 +338,29 @@ function stepsHtml(build, steps, isBuilding) {
     <div id="${uid}" class="step-list" style="display:none;margin-top:4px;">${steps}</div>`;
 }
 
-function commitsHtml(build) {
+function commitsHtml(build, versionHistory) {
+  const uid = "commits-" + (build.run_id || Math.random().toString(36).slice(2));
+  const toggle = (open) => `
+    <div class="build-meta" style="margin-top:10px;">
+      <a href="javascript:void(0)" onclick="document.getElementById('${uid}').style.display = document.getElementById('${uid}').style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-arrow').textContent = document.getElementById('${uid}').style.display === 'none' ? '▸' : '▾';" style="color:#0a84ff;text-decoration:none;cursor:pointer;">
+        <span class="toggle-arrow">${open ? "▾" : "▸"}</span> What changed in this build
+      </a>
+    </div>`;
+  // Completed builds: show the official release notes for that version.
+  // The raw recent-commit list mixes in other builds' commits, so it does
+  // not belong under "this build".
+  if (build.state === "completed" && versionHistory && build.run_number) {
+    const ver = `1.0.${build.run_number}`;
+    const entry = versionHistory.find(v => v.version === ver);
+    if (entry && entry.notes) {
+      return toggle(true) + `
+    <div id="${uid}" class="step-list" style="margin-top:4px;">
+      <div class="step"><span class="dot" style="color:#0a84ff;">·</span>${escapeHtml(entry.notes)}</div>
+    </div>`;
+    }
+  }
+  // In-progress builds (or versions without notes): show recent commits,
+  // translated to plain language.
   const commits = build.recent_commits || [];
   if (!commits.length) return "";
   // Translate technical commit messages to plain language.
@@ -368,13 +389,7 @@ function commitsHtml(build) {
     seen.add(text);
     return `<div class="step"><span class="dot" style="color:#0a84ff;">·</span>${escapeHtml(text)}</div>`;
   }).join("");
-  const uid = "commits-" + (build.run_id || Math.random().toString(36).slice(2));
-  return `
-    <div class="build-meta" style="margin-top:10px;">
-      <a href="javascript:void(0)" onclick="document.getElementById('${uid}').style.display = document.getElementById('${uid}').style.display === 'none' ? 'block' : 'none'; this.querySelector('.toggle-arrow').textContent = document.getElementById('${uid}').style.display === 'none' ? '▸' : '▾';" style="color:#0a84ff;text-decoration:none;cursor:pointer;">
-        <span class="toggle-arrow">▾</span> What changed in this build
-      </a>
-    </div>
+  return toggle(true) + `
     <div id="${uid}" class="step-list" style="margin-top:4px;">${items}</div>`;
 }
 
@@ -504,28 +519,6 @@ function renderHistory(history) {
     </div>`;
 }
 
-function renderBuildNotes(notes) {
-  if (!notes || !notes.notes || !notes.notes.length) return "";
-  const items = notes.notes.map(n =>
-    `<div class="step"><span class="dot dot-run">·</span>${escapeHtml(n)}</div>`
-  ).join("");
-  // Same Apple-style checkmark ring as completed builds.
-  const circ = 2 * Math.PI * 24;
-  const ringSvg = `
-      <svg class="progress-ring ring-success" viewBox="0 0 56 56" style="width:40px;height:40px;">
-        <circle class="ring-bg" cx="28" cy="28" r="24"></circle>
-        <circle class="ring-fg" cx="28" cy="28" r="24" stroke-dasharray="${circ}" stroke-dashoffset="0"></circle>
-        <text x="28" y="28" class="ring-icon" fill="#30d158">✓</text>
-      </svg>`;
-  return `
-    <div class="build-card" style="border:1px solid rgba(10,132,255,0.3);">
-      <div class="build-header">
-        <div class="build-name">In this build (v${escapeHtml(notes.version)})</div>
-        ${ringSvg}
-      </div>
-      <div class="step-list" style="max-height:none;">${items}</div>
-    </div>`;
-}
 
 async function load() {
   try {
@@ -555,7 +548,6 @@ async function load() {
       upd.style.display = "none";
     }
     document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds);
-    document.getElementById("build-notes").innerHTML = renderBuildNotes(data.build_notes);
     document.getElementById("history").innerHTML = renderHistory(data.version_history);
     // Separate current (in-progress) from completed builds
     const inProgress = builds.filter(b => b.state === "in_progress" || b.state === "queued");
@@ -563,11 +555,11 @@ async function load() {
     let buildsHtml = "";
     if (inProgress.length) {
       buildsHtml += `<div style="font-size:24px;font-weight:800;margin:28px 0 16px;color:#0a84ff;letter-spacing:-0.5px;">Currently Building</div>`;
-      buildsHtml += inProgress.map(renderBuild).join("");
+      buildsHtml += inProgress.map(b => renderBuild(b, data.version_history)).join("");
     }
     if (completed.length) {
       buildsHtml += `<div style="font-size:24px;font-weight:800;margin:28px 0 16px;opacity:0.8;letter-spacing:-0.5px;">Completed Builds</div>`;
-      buildsHtml += completed.map(renderBuild).join("");
+      buildsHtml += completed.map(b => renderBuild(b, data.version_history)).join("");
     }
     document.getElementById("builds").innerHTML = buildsHtml || '<div class="error">No builds tracked yet.</div>';
     if (data.checked_at) {
