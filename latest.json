@@ -1,6 +1,6 @@
 {
-  "versionCode": 100033,
-  "versionName": "1.0.33",
+  "versionCode": 100034,
+  "versionName": "1.0.34",
   "apkUrl": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
-  "notes": "Apple Remote Bridge + iPhone keyboard text entry + push-to-talk voice"
+  "notes": "v1.0.34: circular update progress ring, D-pad navigation fixes, layered wake-from-sleep"
 }
