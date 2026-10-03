@@ -290,8 +290,11 @@ function renderBuild(build) {
     ringCenter = `<text x="28" y="28" class="ring-icon" fill="#fff" font-size="12">${pct}%</text>`;
   }
   const isBuilding = build.state === "in_progress" || build.state === "queued";
-  const versionColor = isBuilding ? "#0a84ff" : "inherit";
-  const versionHtml = build.run_number ? `<span style="color:${versionColor};font-weight:700;">v1.0.${build.run_number}</span> · ` : "";
+  const versionColor = isBuilding ? "#0a84ff" : "inherit";  const versionHtml = build.run_number ? `<span style="color:${versionColor};font-weight:700;">v1.0.${build.run_number}</span> · ` : "";
+  // Live ETA countdown for in-progress builds. Ticks every second client-side.
+  const etaHtml = (isBuilding && build.eta_seconds != null)
+    ? `<div class="build-meta" data-eta-seconds="${build.eta_seconds}" data-eta-asof="${window.__checkedAtMs || Date.now()}" style="margin-top:6px;color:#0a84ff;font-weight:600;">${fmtEta(build.eta_seconds)}</div>`
+    : "";
   const ringSvg = `
       <div class="progress-ring-wrap">
         <svg class="progress-ring ${ringClass}" viewBox="0 0 56 56">
@@ -308,6 +311,7 @@ function renderBuild(build) {
         <div class="build-badge ${badgeClass}">${escapeHtml(badgeText)}</div>
       </div>
       ${ringSvg}
+      ${etaHtml}
       ${buildTimeHtml(build)}
       ${liveHtml}
       ${commitsHtml(build)}
@@ -374,6 +378,14 @@ function escapeHtml(s) {
   return String(s == null ? "" : s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;")
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+// Format a live ETA countdown, e.g. "≈ 3 min 12 sec left".
+function fmtEta(sec) {
+  sec = Math.round(sec);
+  if (sec <= 0) return "Finishing up…";
+  const m = Math.floor(sec / 60), s = sec % 60;
+  return m > 0 ? `≈ ${m} min ${s} sec left` : `≈ ${s} sec left`;
 }
 
 function renderTasks(tasks, builds) {
@@ -502,6 +514,8 @@ async function load() {
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     const builds = data.builds || [];
+    // Anchor for live ETA countdowns (ticks every second between refreshes).
+    if (data.checked_at) window.__checkedAtMs = new Date(data.checked_at).getTime();
     document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds);
     document.getElementById("build-notes").innerHTML = renderBuildNotes(data.build_notes);
     document.getElementById("history").innerHTML = renderHistory(data.version_history);
@@ -530,7 +544,17 @@ async function load() {
 }
 
 load();
-setInterval(load, 10000);
+setInterval(load, 5000);
+// Tick every ETA countdown each second so it counts down live between refreshes.
+setInterval(() => {
+  const now = Date.now();
+  document.querySelectorAll("[data-eta-seconds]").forEach(el => {
+    const base = parseFloat(el.getAttribute("data-eta-seconds"));
+    const asOf = parseInt(el.getAttribute("data-eta-asof") || "0", 10);
+    if (!asOf || isNaN(base)) return;
+    el.textContent = fmtEta(base - (now - asOf) / 1000);
+  });
+}, 1000);
 </script>
 </body>
 </html>
