@@ -292,8 +292,15 @@
       "done": true,
       "category": "site",
       "completed_at": "2026-10-03"
+    },
+    {
+      "label": "Hub: 'Pending approval' section in 'What I'm working on' listing fixes awaiting approval",
+      "done": true,
+      "category": "site",
+      "completed_at": "2026-10-03"
     }
   ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -387,7 +394,7 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T15:39:59Z",
+  "checked_at": "2026-10-03T15:40:24Z",
   "newly_completed": [],
-  "page_version": "10"
+  "page_version": "11"
 }
