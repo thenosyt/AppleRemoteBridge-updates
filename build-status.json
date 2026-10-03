@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 37128394448,
-      "run_number": 34,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 37135365168,
+      "run_number": 35,
       "branch": "master",
-      "sha": "bd7b4fa",
-      "created_at": "2026-10-03T14:05:01Z",
-      "updated_at": "2026-10-03T14:09:17Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37128394448",
+      "sha": "b9da0c0",
+      "created_at": "2026-10-03T16:02:05Z",
+      "updated_at": "2026-10-03T16:02:09Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37135365168",
       "steps": [
         {
           "name": "Set up job",
@@ -48,46 +48,41 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         },
         {
           "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
-      "eta_seconds": null,
+      "eta_seconds": 216,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "published": {
@@ -407,7 +402,7 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T16:01:55Z",
+  "checked_at": "2026-10-03T16:02:23Z",
   "newly_completed": [],
   "page_version": "11"
 }
