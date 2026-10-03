@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 37128394448,
       "run_number": 34,
       "branch": "master",
       "sha": "bd7b4fa",
       "created_at": "2026-10-03T14:05:01Z",
-      "updated_at": "2026-10-03T14:05:06Z",
+      "updated_at": "2026-10-03T14:09:17Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37128394448",
       "steps": [
         {
@@ -58,28 +58,33 @@
         },
         {
           "name": "Publish to updates repo",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
       "name": "Apple Remote Bridge",
@@ -319,5 +324,5 @@
       "Accessibility status auto-refreshes live every 5 seconds"
     ]
   },
-  "checked_at": "2026-10-03T14:09:14Z"
+  "checked_at": "2026-10-03T14:09:44Z"
 }
