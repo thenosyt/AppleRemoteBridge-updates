@@ -157,67 +157,83 @@
   "tasks": [
     {
       "done": true,
-      "label": "1.0.26 published: AirPlay home screen, tappable status rows"
+      "label": "1.0.26 published: AirPlay home screen, tappable status rows",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "Fixed: D-pad navigation was completely broken when statuses showed checkmarks"
+      "label": "Fixed: D-pad navigation was completely broken when statuses showed checkmarks",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "Build 1.0.27 - published"
+      "label": "Build 1.0.27 - published",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "Notify Tyson when 1.0.27 is live"
+      "label": "Notify Tyson when 1.0.27 is live",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "Trackpad remapping: center-halfway=1, near-edge=2, flick=5 (waiting for Tyson to finish testing)"
+      "label": "Trackpad remapping: center-halfway=1, near-edge=2, flick=5 (waiting for Tyson to finish testing)",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "Bug: Bridge status row doesn't refresh after tapping Start (shows X even when running)"
+      "label": "Bug: Bridge status row doesn't refresh after tapping Start (shows X even when running)",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "UX: Bridge row should show a dialog when tapped (e.g., 'Looking for iPhone to pair...') instead of just silently starting"
+      "label": "UX: Bridge row should show a dialog when tapped (e.g., 'Looking for iPhone to pair...') instead of just silently starting",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "Bug: Settings cog and other top elements have no focus highlight (can't tell what's selected)"
+      "label": "Bug: Settings cog and other top elements have no focus highlight (can't tell what's selected)",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "UX: ONN 4K Pro must never be focusable. Status rows only focusable when showing X (need action). When all checkmarks, only Settings cog is selectable."
+      "label": "UX: ONN 4K Pro must never be focusable. Status rows only focusable when showing X (need action). When all checkmarks, only Settings cog is selectable.",
+      "category": "app"
     },
     {
       "done": false,
-      "label": "App: Circular progress ring animation when downloading/installing update (same Apple-style as website)"
+      "label": "App: Circular progress ring animation when downloading/installing update (same Apple-style as website)",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "App: Badge on Settings cog when update is available (red dot indicator)"
+      "label": "App: Badge on Settings cog when update is available (red dot indicator)",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "App: Notification when update is available (if auto-check finds one)"
+      "label": "App: Notification when update is available (if auto-check finds one)",
+      "category": "app"
     },
     {
       "done": false,
-      "label": "Bug v1.0.29: D-pad navigation jumps around erratically when clicking in Settings/app"
+      "label": "Bug v1.0.29: D-pad navigation jumps around erratically when clicking in Settings/app",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "UX: Accessibility status should auto-update to checkmark live when service connects, without requiring app restart"
+      "label": "UX: Accessibility status should auto-update to checkmark live when service connects, without requiring app restart",
+      "category": "app"
     },
     {
       "done": true,
-      "label": "App: Help note on home screen - 'If iPhone won't connect, try restarting your iPhone'"
+      "label": "App: Help note on home screen - 'If iPhone won't connect, try restarting your iPhone'",
+      "category": "app"
     },
     {
       "done": false,
-      "label": "Fix: Wake TV from sleep when iPhone power button pressed (currently not working on Onn 4K Pro)"
+      "label": "Fix: Wake TV from sleep when iPhone power button pressed (currently not working on Onn 4K Pro)",
+      "category": "app"
     }
   ],
   "version_history": [
@@ -303,5 +319,5 @@
       "Accessibility status auto-refreshes live every 5 seconds"
     ]
   },
-  "checked_at": "2026-10-03T14:06:43Z"
+  "checked_at": "2026-10-03T14:07:12Z"
 }
