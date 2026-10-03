@@ -413,7 +413,13 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-03T16:09:10Z",
-  "newly_completed": [],
+  "checked_at": "2026-10-03T16:09:40Z",
+  "newly_completed": [
+    {
+      "version": "1.0.35",
+      "apk_size_mb": 37.2,
+      "run_number": 35
+    }
+  ],
   "page_version": "11"
 }
