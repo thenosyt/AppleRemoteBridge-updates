@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 36935364633,
-      "run_number": 33,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 37128394448,
+      "run_number": 34,
       "branch": "master",
-      "sha": "3ca27da",
-      "created_at": "2026-10-01T22:29:25Z",
-      "updated_at": "2026-10-01T22:33:44Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/36935364633",
+      "sha": "bd7b4fa",
+      "created_at": "2026-10-03T14:05:01Z",
+      "updated_at": "2026-10-03T14:05:06Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37128394448",
       "steps": [
         {
           "name": "Set up job",
@@ -18,73 +18,53 @@
         },
         {
           "name": "Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         },
         {
           "name": "Vendor Companion Link protocol",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Decode signing keystore",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
       "name": "Apple Remote Bridge",
@@ -96,6 +76,11 @@
         "apk_size": 38941303
       },
       "recent_commits": [
+        {
+          "sha": "a9d3d9a",
+          "date": "2026-10-03",
+          "message": "v1.0.34: update progress ring, D-pad focus fixes, layered wake-from-sleep"
+        },
         {
           "sha": "33b2e71",
           "date": "2026-10-01",
@@ -150,11 +135,6 @@
           "sha": "6d6f9fd",
           "date": "2026-10-01",
           "message": "Fix nullability: ctx must be non-null for wakeScreenDirect"
-        },
-        {
-          "sha": "af1e859",
-          "date": "2026-10-01",
-          "message": "Fix nullable lambda capture in statusRow"
         }
       ]
     }
@@ -308,5 +288,5 @@
       "Accessibility status auto-refreshes live every 5 seconds"
     ]
   },
-  "checked_at": "2026-10-03T14:04:16Z"
+  "checked_at": "2026-10-03T14:05:13Z"
 }
