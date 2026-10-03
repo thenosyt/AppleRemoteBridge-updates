@@ -240,6 +240,26 @@
       "done": true,
       "label": "Fix: Wake TV from sleep when iPhone power button pressed (currently not working on Onn 4K Pro)",
       "category": "app"
+    },
+    {
+      "label": "Hub: completed builds show release notes expanded, build steps collapsed",
+      "done": true,
+      "category": "site"
+    },
+    {
+      "label": "Hub: live ETA countdown on running builds, page refreshes every 5s",
+      "done": true,
+      "category": "site"
+    },
+    {
+      "label": "Hub: tell Tyson the moment a build finishes and the APK is ready",
+      "done": true,
+      "category": "site"
+    },
+    {
+      "label": "Hub: task ring turns green with checkmark when all tasks are done",
+      "done": true,
+      "category": "site"
     }
   ],
   "version_history": [
@@ -335,6 +355,6 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T14:50:08Z",
+  "checked_at": "2026-10-03T14:50:29Z",
   "newly_completed": []
 }
