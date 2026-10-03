@@ -322,13 +322,17 @@
     }
   ],
   "build_notes": {
-    "version": "1.0.33",
+    "version": "1.0.34",
     "notes": [
-      "iPhone help note on home screen (restart iPhone if won't connect)",
-      "Red badge on Settings cog when update available",
-      "System notification when update found",
-      "Accessibility status auto-refreshes live every 5 seconds"
+      "Circular progress ring fills as the update downloads and installs",
+      "D-pad navigation no longer jumps around in Settings and the app",
+      "New layered wake-from-sleep when the iPhone power button is pressed"
+    ],
+    "changes": [
+      "Circular update progress ring",
+      "D-pad navigation fixes",
+      "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T14:12:43Z"
+  "checked_at": "2026-10-03T14:13:11Z"
 }
