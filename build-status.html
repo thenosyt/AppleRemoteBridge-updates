@@ -175,7 +175,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "7";
+const PAGE_VERSION = "8";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -394,6 +394,15 @@ function fmtEta(sec) {
 
 function renderTasks(tasks, builds) {
   if (!tasks || !tasks.length) return "";
+  // Completed tasks auto-expire 7 days after completion so the list never
+  // piles up forever. Tasks without a completed_at date are kept.
+  const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+  tasks = tasks.filter(t => {
+    if (!t.done || !t.completed_at) return true;
+    const c = new Date(t.completed_at + "T00:00:00");
+    return isNaN(c) || (Date.now() - c.getTime() <= WEEK_MS);
+  });
+  if (!tasks.length) return "";
   // Task progress ring (overall). Turns green with a checkmark when all done,
   // matching the completed-build rings elsewhere on the page.
   const doneCount = tasks.filter(t => t.done).length;
