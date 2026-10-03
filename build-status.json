@@ -298,6 +298,13 @@
       "done": true,
       "category": "site",
       "completed_at": "2026-10-03"
+    },
+    {
+      "id": "app-trackpad-sensitivity-and-autostart",
+      "title": "v1.0.35: trackpad sensitivity fix (slider, dead zone, one step per swipe) + bridge auto-start",
+      "category": "app",
+      "status": "open",
+      "created_at": "2026-10-03"
     }
   ],
   "pending_fixes": [],
@@ -394,7 +401,7 @@
       "Layered wake-from-sleep"
     ]
   },
-  "checked_at": "2026-10-03T15:54:41Z",
+  "checked_at": "2026-10-03T15:55:10Z",
   "newly_completed": [],
   "page_version": "11"
 }
