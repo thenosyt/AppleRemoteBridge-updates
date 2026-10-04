@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "b6e3a38",
+          "date": "2026-10-04",
+          "message": "Fix onboarding skip: use isGrantActive for step 2, not isRestrictedSettingsBlocked"
+        },
+        {
           "sha": "1873626",
           "date": "2026-10-04",
           "message": "Replace PC fix dialog with Shizuku flow, update onboarding text for AirRemote"
@@ -154,11 +159,6 @@
           "sha": "c9ebc0d",
           "date": "2026-10-03",
           "message": "Revert cog slide: gear stays in place when the settings HUD opens"
-        },
-        {
-          "sha": "274a61b",
-          "date": "2026-10-03",
-          "message": "Cog slide: indent Settings title so the traveling cog lands clear of it"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T13:17:00Z",
+  "checked_at": "2026-10-04T13:17:54Z",
   "newly_completed": [],
   "page_version": "16"
 }
