@@ -388,6 +388,12 @@
       "category": "site",
       "label": "Universal accessibility repair command for hub PC setup page: single copy-paste ADB command that enables accessibility services for Apple Remote Bridge, Projectivy, Button Mapper, TVQuickActions Pro, Mouse Toggle, and other popular TV apps (checks each is installed first, safe and silent if not). Research exact service class names, do not guess.",
       "added_at": "2026-10-03"
+    },
+    {
+      "id": "siri-push-fix-to-pc",
+      "category": "siri",
+      "label": "Siri Shortcut 'Push the fix to my PC': voice-triggered shortcut that SSHs into the Windows PC and runs the universal accessibility repair ADB command, so saying 'push the fix to my PC' repairs it after every update",
+      "added_at": "2026-10-03"
     }
   ],
   "version_history": [
@@ -499,7 +505,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:40:49Z",
+  "checked_at": "2026-10-04T01:41:08Z",
   "newly_completed": [],
   "page_version": "15"
 }
