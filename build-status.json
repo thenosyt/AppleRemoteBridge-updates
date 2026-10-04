@@ -318,6 +318,12 @@
       "category": "site",
       "id": "hub-nuvio-build-section",
       "label": "Nuvio build section: track the Nuvio TV fork's GitHub Actions builds (android-debug.yml) on the hub, so its builds appear alongside the Apple Remote Bridge builds"
+    },
+    {
+      "added_at": "2026-10-03",
+      "category": "site",
+      "id": "hub-group-builds-by-name",
+      "label": "Group version releases by build name: Currently Building and Completed Builds get a separate section per project, so Apple Remote Bridge and Nuvio TV builds don't mix in one list"
     }
   ],
   "version_history": [
@@ -424,7 +430,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T00:55:54Z",
+  "checked_at": "2026-10-04T00:56:24Z",
   "newly_completed": [],
   "page_version": "11"
 }
