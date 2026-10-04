@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "77bebc1",
+          "date": "2026-10-03",
+          "message": "Cog slide: indent Settings title so the traveling cog lands clear of it"
+        },
+        {
           "sha": "a30f6f0",
           "date": "2026-10-03",
           "message": "Remove dead mic status line (was never attached to a view) and its mockup row"
@@ -154,11 +159,6 @@
           "sha": "04ba4d3",
           "date": "2026-10-01",
           "message": "Remove broken Fix on TV button from Accessibility status row"
-        },
-        {
-          "sha": "1119017",
-          "date": "2026-10-01",
-          "message": "Fix cut-off pairing steps text: smaller size, tighter spacing"
         }
       ]
     },
@@ -498,7 +498,13 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T05:02:50Z",
-  "newly_completed": [],
+  "checked_at": "2026-10-04T05:03:09Z",
+  "newly_completed": [
+    {
+      "version": "1.0.36",
+      "apk_size_mb": 37.7,
+      "run_number": 39
+    }
+  ],
   "page_version": "15"
 }
