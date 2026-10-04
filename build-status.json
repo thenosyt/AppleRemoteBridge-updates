@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "1e89754",
+          "date": "2026-10-03",
+          "message": "v1.0.37: settings HUD, reliable updates, no-scroll home, Inter font, slider back, auto-download"
+        },
+        {
           "sha": "77886c0",
           "date": "2026-10-03",
           "message": "v1.0.36: compact home, rounded gear focus, checklist sort/collapse, compact Settings, typing fix"
@@ -154,11 +159,6 @@
           "sha": "006290d",
           "date": "2026-10-01",
           "message": "Fix publish race: pull --rebase before push to updates repo"
-        },
-        {
-          "sha": "9b39e64",
-          "date": "2026-10-01",
-          "message": "Fix unresolved references: statusRow returns View, capture bridgeRow/a11yRow for focus"
         }
       ]
     },
@@ -517,7 +517,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:34:28Z",
+  "checked_at": "2026-10-04T01:34:57Z",
   "newly_completed": [],
   "page_version": "14"
 }
