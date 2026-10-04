@@ -219,7 +219,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 220,
+      "eta_seconds": 190,
       "name": "Nuvio TV",
       "repo": "thenosyt/NuvioMobile-Enhanced",
       "version_display": "Build #10"
@@ -377,7 +377,17 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [],
+  "pending_fixes": [
+    {
+      "label": "Reliable in-app updates: check the install-unknown-apps permission before downloading (not after), auto-retry the download when the APK is not yet on the CDN, and show a clear message instead of silently doing nothing on a failed install tap"
+    },
+    {
+      "label": "Home screen never scrolls: drop the redundant mic line from the hero card (the checklist already has a Microphone row), move the iPhone-restart tip into the Settings guide, and let the hero card wrap its content instead of a fixed tall height"
+    },
+    {
+      "label": "Text size toggle stays in Settings: remember the open screen across the activity recreate instead of dropping back to Home"
+    }
+  ],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -487,7 +497,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:21:13Z",
+  "checked_at": "2026-10-04T01:21:42Z",
   "newly_completed": [],
   "page_version": "14"
 }
