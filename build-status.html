@@ -174,7 +174,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "13";
+const PAGE_VERSION = "14";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -515,11 +515,19 @@ function renderTasks(tasks, builds, pending) {
     sections += `<div class="step-list" style="max-height:none;">${open.map(taskItem).join("") || '<div class="step" style="opacity:0.5;">All done</div>'}</div>`;
   }
   // Fixes waiting for Tyson's tap on the push button, grouped by category
-  // (App / Website). Uncategorized fixes count as App. Shown only when
-  // there is something pending, so the card stays clean otherwise.
+  // (App / Website). Uncategorized fixes count as App. Each fix gets a Push
+  // button, plus a Push All button, linking to a pre-filled GitHub issue.
+  // Submitting the issue signals approval; a watcher implements the fixes.
   let pendingBlock = "";
   const waiting = (pending || []).filter(p => p && p.label);
   if (waiting.length) {
+    const issueBase = "https://github.com/thenosyt/AppleRemoteBridge-updates/issues/new";
+    const approvalUrl = (fixes) => {
+      const title = encodeURIComponent("[Hub Approval] " + (fixes.length === 1 ? "1 fix" : fixes.length + " fixes"));
+      const body = encodeURIComponent("Approved from Build Status Hub.\n\n" + fixes.map(f => "- [" + (f.id || "no-id") + "] " + f.label).join("\n"));
+      return `${issueBase}?title=${title}&body=${body}`;
+    };
+    const pushBtn = (fixes, label) => `<a href="${approvalUrl(fixes)}" target="_blank" rel="noopener" style="display:inline-block;background:#0a84ff;color:#fff;font-weight:700;font-size:13px;border-radius:8px;padding:4px 12px;margin-left:8px;text-decoration:none;white-space:nowrap;">${label}</a>`;
     const pendingCats = [
       { key: "app", title: "App" },
       { key: "site", title: "Website" },
@@ -530,10 +538,10 @@ function renderTasks(tasks, builds, pending) {
       if (!items.length) continue;
       pendingSections += `
         <div style="font-size:14px;font-weight:700;margin:10px 0 6px;opacity:0.85;">${pc.title} <span style="font-weight:400;opacity:0.6;">· ${items.length} waiting</span></div>
-        <div class="step-list" style="max-height:none;">${items.map(p => `<div class="step"><span class="dot dot-run">○</span>${escapeHtml(p.label)}</div>`).join("")}</div>`;
+        <div class="step-list" style="max-height:none;">${items.map(p => `<div class="step"><span class="dot dot-run">○</span><span style="flex:1;">${escapeHtml(p.label)}</span>${pushBtn([p], "Push")}</div>`).join("")}</div>`;
     }
     pendingBlock = `
-      <div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">Pending approval</div>
+      <div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">Pending approval ${pushBtn(waiting, "Push All")}</div>
       ${pendingSections}`;
   }
   let doneBlock = "";
