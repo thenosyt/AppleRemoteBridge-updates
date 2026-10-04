@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple Remote Bridge - PC Fix</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; color: #fff; font-family: -apple-system, sans-serif; padding: 40px 24px; max-width: 700px; margin: 0 auto; }
+  h1 { font-size: 24px; margin-bottom: 16px; }
+  h2 { font-size: 18px; margin: 28px 0 12px; }
+  .steps { background: #1c1c1e; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+  .steps ol { margin-left: 20px; }
+  .steps li { margin-bottom: 12px; font-size: 15px; line-height: 1.5; }
+  .cmd { background: #000; border: 1px solid #333; border-radius: 8px; padding: 16px; font-family: monospace; font-size: 12px; word-break: break-all; user-select: all; margin-top: 12px; white-space: pre-wrap; }
+  .note { color: rgba(255,255,255,0.6); font-size: 13px; margin-top: 16px; line-height: 1.5; }
+  .apps { color: rgba(255,255,255,0.8); font-size: 14px; margin: 12px 0; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <h1>Apple Remote Bridge - PC Fix</h1>
+
+  <h2>Option 1: One-Time Repair Command</h2>
+  <div class="steps">
+    <ol>
+      <li>On your PC, open a terminal (Command Prompt on Windows, Terminal on Mac).</li>
+      <li>Make sure your TV is connected: <b>adb devices</b> should list it.</li>
+      <li>Copy the command below (click it to select all, then Ctrl+C).</li>
+      <li>Paste it into your terminal (Ctrl+V) and hit Enter.</li>
+      <li>On your TV, open Apple Remote Bridge. Accessibility should show a checkmark.</li>
+    </ol>
+    <div class="apps">Covers: Apple Remote Bridge, Projectivy Launcher, Button Mapper, Mouse Toggle for Android TV.<br>Safe: only touches apps you have installed. Silent for the rest.</div>
+    <div class="cmd" id="cmd">adb shell '
+for entry in \
+  "com.sagi.appleremotebridge|com.sagi.appleremotebridge/com.sagi.appleremotebridge.RemoteAccessibilityService" \
+  "com.spocky.projengmenu|com.spocky.projengmenu/com.spocky.projengmenu.services.ProjectivyAccessibilityService" \
+  "flar2.homebutton|flar2.homebutton/flar2.homebutton.a.ai" \
+  "com.fluxii.androidtv.mousetoggle|com.fluxii.androidtv.mousetoggle/com.fluxii.androidtv.mousetoggle.AccessService"; do
+  pkg="${entry%%|*}"
+  svc="${entry#*|}"
+  if pm list packages 2>/dev/null | grep -q "^package:${pkg}$"; then
+    cur="$(settings get secure enabled_accessibility_services 2>/dev/null)"
+    case ":${cur}:" in
+      *":${svc}:"*) ;;
+      *)
+        if [ "$cur" = "null" ] || [ -z "$cur" ]; then
+          settings put secure enabled_accessibility_services "$svc"
+        else
+          settings put secure enabled_accessibility_services "${cur}:${svc}"
+        fi
+        ;;
+    esac
+    appops set "$pkg" ACCESS_RESTRICTED_SETTINGS allow 2>/dev/null
+    echo "Enabled: $svc"
+  fi
+done
+settings put secure accessibility_enabled 1
+echo "Done."
+'</div>
+  </div>
+
+  <h2>Option 2: Automatic Background Fix (Recommended)</h2>
+  <div class="steps">
+    <ol>
+      <li>Download the auto-fix script on your PC.</li>
+      <li>Install Python 3 from python.org (check "Add to PATH" during install).</li>
+      <li>Make sure ADB is installed and in your PATH.</li>
+      <li>Connect your TV: <b>adb connect &lt;TV-IP&gt;:5555</b> (or via USB).</li>
+      <li>Run: <b>python a11y-autofix.py</b></li>
+      <li>Leave it running. It checks every 5 minutes and fixes accessibility automatically after updates.</li>
+    </ol>
+    <div class="note">To run on Windows startup: press Win+R, type <b>shell:startup</b>, and put a shortcut to the script there.</div>
+  </div>
+
+  <div class="note">Run the one-time command when the accessibility toggle flips off after an app update. Or use the automatic script and never think about it again.</div>
+</body>
+</html>
