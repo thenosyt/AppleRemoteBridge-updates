@@ -499,7 +499,8 @@
       "Cog slides left to head the settings panel, slides back on close",
       "Tighter settings layout: compact rows, hidden empty update rows, taller panel",
       "New app icon: white TV with black droid and remote badge, sized for the TV banner and launcher",
-      "Removed the leftover microphone status line and its dead code"
+      "Removed the leftover microphone status line and its dead code",
+      "Hero collect animation: the status card drops down and vacuums each checkmark into the hero ring, landing centered with a green Paired pop"
     ],
     "notes": [
       "In-app updates are now reliable: the install permission is checked before downloading instead of after, downloads auto-retry up to 3 times when the APK is not yet on the CDN, and a failed install tap explains what to do instead of silently doing nothing",
@@ -517,11 +518,12 @@
       "When the final setup check completes, the checklist badges fly up into the hero badge one by one and the hero pops green with a spring bounce as it switches to Paired",
       "The settings gear no longer sits dimmed under the panel: when the HUD opens, the cog floats above the dim and slides left into the panel header spot, and slides back to its home position when the menu closes",
       "Settings rows are tighter and slightly smaller, the Install Update row and update status line hide when there is nothing to show, and the panel uses more of the screen height, so the menu scrolls less",
-      "Tyson supplied the new icon art (white TV, black android character, white remote between the eyes, TV base). It is cut to the exact Android TV banner sizes (320x180 xhdpi, 480x270 xxhdpi) and matching square launcher/foreground icons for every density"
+      "Tyson supplied the new icon art (white TV, black android character, white remote between the eyes, TV base). It is cut to the exact Android TV banner sizes (320x180 xhdpi, 480x270 xxhdpi) and matching square launcher/foreground icons for every density",
+      "When the last setup check completes, the hero card now drops toward the center of the screen, collecting each checklist badge into the hero ring on the way down, then pops green Paired. The finished home keeps the hero centered."
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T05:24:49Z",
+  "checked_at": "2026-10-04T05:25:09Z",
   "newly_completed": [],
   "page_version": "15"
 }
