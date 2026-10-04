@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "c0d1092",
+          "date": "2026-10-03",
+          "message": "Paired iPhones: device list, auto-naming, rename/forget, count-aware checklist"
+        },
+        {
           "sha": "9495d93",
           "date": "2026-10-03",
           "message": "Hero collects checkmarks: card drops to center, badges make contact with the ring"
@@ -154,11 +159,6 @@
           "sha": "33b2e71",
           "date": "2026-10-01",
           "message": "v1.0.33: iPhone help note, Settings badge, update notification, live status auto-refresh"
-        },
-        {
-          "sha": "96aaf78",
-          "date": "2026-10-01",
-          "message": "v1.0.30: Trackpad remapping, Bridge dialog, focus rules, PC fix dialog"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T05:49:19Z",
+  "checked_at": "2026-10-04T05:49:49Z",
   "newly_completed": [],
   "page_version": "15"
 }
