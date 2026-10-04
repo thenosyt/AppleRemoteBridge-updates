@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 37135365168,
-      "run_number": 35,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 37167002530,
+      "run_number": 36,
       "branch": "master",
-      "sha": "b9da0c0",
-      "created_at": "2026-10-03T16:02:05Z",
-      "updated_at": "2026-10-03T16:05:39Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37135365168",
+      "sha": "8fc93ea",
+      "created_at": "2026-10-04T01:06:34Z",
+      "updated_at": "2026-10-04T01:06:37Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37167002530",
       "steps": [
         {
           "name": "Set up job",
@@ -48,49 +48,44 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         },
         {
           "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
-      "eta_seconds": null,
+      "eta_seconds": 206,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
-      "version_display": "v1.0.35",
+      "version_display": "v1.0.36",
       "published": {
         "version": "1.0.35",
         "version_code": 100035,
@@ -384,19 +379,10 @@
   ],
   "pending_fixes": [
     {
-      "label": "Compact home screen: shrink the device-name/status hero card so the hero and entire setup checklist fit on one TV screen with no scrolling"
-    },
-    {
-      "label": "Rounded settings gear focus highlight: replace the square selection highlight with a rounded/filled Apple-style focus state"
-    },
-    {
-      "label": "Setup checklist ordering and collapse: incomplete items sort to the top, completed move below; when everything is complete, collapse the list to one green checkmark"
-    },
-    {
-      "label": "Compact Apple-style Settings: redesign as a tighter grouped settings list like the Apple TV+ app for Android TV, several settings fitting on one screen"
-    },
-    {
-      "label": "Fix iPhone typing: text entry fails because editable-field detection only checks input focus and drops the text on many TV apps; fall back to accessibility focus and child-node search, and focus the field before setting text"
+      "id": "hub-group-pending-by-category",
+      "category": "site",
+      "label": "Group Pending approval by category: show App fixes and Website fixes in separate groups instead of one flat list (uncategorized fixes count as App)",
+      "added_at": "2026-10-03"
     }
   ],
   "version_history": [
@@ -503,7 +489,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T01:06:26Z",
+  "checked_at": "2026-10-04T01:06:59Z",
   "newly_completed": [],
   "page_version": "12"
 }
