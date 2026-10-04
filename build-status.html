@@ -174,7 +174,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "17";
+const PAGE_VERSION = "18";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -659,6 +659,11 @@ async function load() {
         }
       }
       el.setAttribute("data-eta-deadline", window.__etaDeadlines[runId]);
+      // Immediately sync the displayed text to the deadline value so it never
+      // flashes the raw server value before the 1s tick corrects it.
+      const dl = window.__etaDeadlines[runId];
+      const txt = fmtEta((dl - now) / 1000);
+      if (el.textContent !== txt) el.textContent = txt;
     });
     // Clean up deadlines for builds that finished or disappeared.
     for (const k of Object.keys(window.__etaDeadlines)) {
