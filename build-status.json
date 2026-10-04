@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "20ec1d6",
+          "date": "2026-10-04",
+          "message": "Onboarding: skip completed steps instantly instead of showing them briefly"
+        },
+        {
           "sha": "5e9d4a8",
           "date": "2026-10-04",
           "message": "Add white Shizuku logo to the no-PC setup checklist"
@@ -154,11 +159,6 @@
           "sha": "1e89754",
           "date": "2026-10-03",
           "message": "v1.0.37: settings HUD, reliable updates, no-scroll home, Inter font, slider back, auto-download"
-        },
-        {
-          "sha": "77886c0",
-          "date": "2026-10-03",
-          "message": "v1.0.36: compact home, rounded gear focus, checklist sort/collapse, compact Settings, typing fix"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T12:45:22Z",
+  "checked_at": "2026-10-04T12:45:50Z",
   "newly_completed": [],
   "page_version": "16"
 }
