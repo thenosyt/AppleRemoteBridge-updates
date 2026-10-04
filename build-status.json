@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "fbd3f72",
+          "date": "2026-10-04",
+          "message": "Replace Shizuku checklist with PC method (Shizuku incompatible with device)"
+        },
+        {
           "sha": "9b3f22e",
           "date": "2026-10-04",
           "message": "Hide checkDot circle on Welcome step"
@@ -154,11 +159,6 @@
           "sha": "1873626",
           "date": "2026-10-04",
           "message": "Replace PC fix dialog with Shizuku flow, update onboarding text for AirRemote"
-        },
-        {
-          "sha": "1a3ba17",
-          "date": "2026-10-04",
-          "message": "Fix Shizuku grant ANR: run newProcess on background thread"
         }
       ]
     },
@@ -514,7 +514,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T23:48:20Z",
+  "checked_at": "2026-10-04T23:48:50Z",
   "newly_completed": [],
   "page_version": "18"
 }
