@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "59105f9",
+          "date": "2026-10-04",
+          "message": "Simplify Shizuku: remove broken UserService, disable grant for now"
+        },
+        {
           "sha": "560a510",
           "date": "2026-10-04",
           "message": "Fix AIDL destroy transaction code for Shizuku UserService"
@@ -154,11 +159,6 @@
           "sha": "b508830",
           "date": "2026-10-04",
           "message": "Fix build: cast hudPanel to ViewGroup before getChildAt"
-        },
-        {
-          "sha": "20ec1d6",
-          "date": "2026-10-04",
-          "message": "Onboarding: skip completed steps instantly instead of showing them briefly"
         }
       ]
     },
@@ -502,7 +502,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T22:36:51Z",
+  "checked_at": "2026-10-04T22:37:22Z",
   "newly_completed": [],
   "page_version": "17"
 }
