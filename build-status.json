@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "c9ebc0d",
+          "date": "2026-10-03",
+          "message": "Revert cog slide: gear stays in place when the settings HUD opens"
+        },
+        {
           "sha": "274a61b",
           "date": "2026-10-03",
           "message": "Cog slide: indent Settings title so the traveling cog lands clear of it"
@@ -154,11 +159,6 @@
           "sha": "af27287",
           "date": "2026-10-01",
           "message": "Accessibility row shows PC fix dialog with short URL and steps"
-        },
-        {
-          "sha": "04ba4d3",
-          "date": "2026-10-01",
-          "message": "Remove broken Fix on TV button from Accessibility status row"
         }
       ]
     },
@@ -521,7 +521,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T05:07:29Z",
+  "checked_at": "2026-10-04T05:07:49Z",
   "newly_completed": [],
   "page_version": "15"
 }
