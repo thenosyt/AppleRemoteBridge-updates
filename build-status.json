@@ -1,17 +1,88 @@
 {
   "builds": [
     {
-      "state": "queued",
+      "state": "in_progress",
       "conclusion": null,
       "run_id": 37211301150,
       "run_number": 44,
       "branch": "master",
       "sha": "a0c5e03",
       "created_at": "2026-10-04T14:59:24Z",
-      "updated_at": "2026-10-04T14:59:24Z",
+      "updated_at": "2026-10-04T14:59:28Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37211301150",
-      "steps": [],
-      "eta_seconds": 182,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Vendor Companion Link protocol",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-java@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run gradle/actions/setup-gradle@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Decode signing keystore",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build signed release APK",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "Verify the APK is signed",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Publish to updates repo",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-java@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null
+        }
+      ],
+      "eta_seconds": 152,
       "name": "AirRemote",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.44",
@@ -433,7 +504,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T14:59:30Z",
+  "checked_at": "2026-10-04T15:00:00Z",
   "newly_completed": [],
   "page_version": "16"
 }
