@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "77886c0",
+          "date": "2026-10-03",
+          "message": "v1.0.36: compact home, rounded gear focus, checklist sort/collapse, compact Settings, typing fix"
+        },
+        {
           "sha": "cbf35d5",
           "date": "2026-10-03",
           "message": "v1.0.35: trackpad sensitivity fix, bridge auto-start, Paired status, home layout cleanup"
@@ -154,11 +159,6 @@
           "sha": "9b39e64",
           "date": "2026-10-01",
           "message": "Fix unresolved references: statusRow returns View, capture bridgeRow/a11yRow for focus"
-        },
-        {
-          "sha": "c45a3c3",
-          "date": "2026-10-01",
-          "message": "Remove old permission card referencing non-existent R.color.text"
         }
       ]
     },
@@ -503,7 +503,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T01:05:26Z",
+  "checked_at": "2026-10-04T01:05:58Z",
   "newly_completed": [],
   "page_version": "12"
 }
