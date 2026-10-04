@@ -382,14 +382,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "id": "hub-rename-airremote",
-      "category": "site",
-      "label": "Rename 'Apple Remote Bridge' to 'AirRemote' on the Build Status Hub (display name in updater and page).",
-      "added_at": "2026-10-04"
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -509,7 +502,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T15:05:59Z",
+  "checked_at": "2026-10-04T15:06:24Z",
   "newly_completed": [],
   "page_version": "17"
 }
