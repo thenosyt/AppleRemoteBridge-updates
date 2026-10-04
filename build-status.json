@@ -48,22 +48,22 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "failure"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "skipped"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "skipped"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -82,7 +82,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 76,
+      "eta_seconds": 56,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.40",
@@ -518,7 +518,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T11:46:49Z",
+  "checked_at": "2026-10-04T11:47:09Z",
   "newly_completed": [],
   "page_version": "15"
 }
