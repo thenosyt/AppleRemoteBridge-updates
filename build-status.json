@@ -23,32 +23,32 @@
         },
         {
           "name": "Vendor Companion Link protocol",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Decode signing keystore",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Build signed release APK",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -62,12 +62,27 @@
           "conclusion": null
         },
         {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-java@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
           "name": "Post Run actions/checkout@v4",
           "status": "pending",
           "conclusion": null
         }
       ],
-      "eta_seconds": 177,
+      "eta_seconds": 157,
       "name": "AirRemote",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.46",
@@ -482,7 +497,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T19:51:51Z",
+  "checked_at": "2026-10-04T19:52:10Z",
   "newly_completed": [],
   "page_version": "17"
 }
