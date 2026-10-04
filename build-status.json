@@ -314,16 +314,10 @@
   ],
   "pending_fixes": [
     {
-      "label": "Compact home screen: shrink the device-name/status hero card so the hero and entire setup checklist fit on one TV screen with no scrolling"
-    },
-    {
-      "label": "Rounded settings gear focus highlight: replace the square selection highlight with a rounded/filled Apple-style focus state"
-    },
-    {
-      "label": "Setup checklist ordering and collapse: incomplete items sort to the top, completed move below; when everything is complete, collapse the list to one green checkmark"
-    },
-    {
-      "label": "Compact Apple-style Settings: redesign as a tighter grouped settings list like the Apple TV+ app for Android TV, several settings fitting on one screen"
+      "added_at": "2026-10-03",
+      "category": "site",
+      "id": "hub-nuvio-build-section",
+      "label": "Nuvio build section: track the Nuvio TV fork's GitHub Actions builds (android-debug.yml) on the hub, so its builds appear alongside the Apple Remote Bridge builds"
     }
   ],
   "version_history": [
@@ -430,7 +424,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T00:55:40Z",
+  "checked_at": "2026-10-04T00:55:54Z",
   "newly_completed": [],
   "page_version": "11"
 }
