@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "1d7595b",
+          "date": "2026-10-04",
+          "message": "Remove PC setup page link from home screen"
+        },
+        {
           "sha": "c0d1092",
           "date": "2026-10-03",
           "message": "Paired iPhones: device list, auto-naming, rename/forget, count-aware checklist"
@@ -154,11 +159,6 @@
           "sha": "a9d3d9a",
           "date": "2026-10-03",
           "message": "v1.0.34: update progress ring, D-pad focus fixes, layered wake-from-sleep"
-        },
-        {
-          "sha": "33b2e71",
-          "date": "2026-10-01",
-          "message": "v1.0.33: iPhone help note, Settings badge, update notification, live status auto-refresh"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T11:56:09Z",
+  "checked_at": "2026-10-04T11:56:30Z",
   "newly_completed": [],
   "page_version": "16"
 }
