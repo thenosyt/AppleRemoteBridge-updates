@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "e4693a0",
+          "date": "2026-10-03",
+          "message": "Ring status badges: green ring + bold check for done, orange ring + bold ! for action needed, big Configured badge when "
+        },
+        {
           "sha": "7effc68",
           "date": "2026-10-04",
           "message": "Fix v1.0.37 compile errors: 0x99000000.toInt() for scrim color, default value=null on settingsRow"
@@ -154,11 +159,6 @@
           "sha": "f25af9b",
           "date": "2026-10-01",
           "message": "Add visual focus highlight to status rows so D-pad selection is visible"
-        },
-        {
-          "sha": "ef3d2fb",
-          "date": "2026-10-01",
-          "message": "Fix D-pad navigation: status rows always focusable, not only when showing X"
         }
       ]
     },
@@ -382,7 +382,13 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [],
+  "pending_fixes": [
+    {
+      "id": "v1037-ring-badges",
+      "title": "Ring status badges (green check / orange alert / Configured)",
+      "desc": "Green ring + bold checkmark for completed items, orange ring + bold ! for action needed, big \"Configured\" badge when all done. Includes v1.0.37 compile fix (7effc68)."
+    }
+  ],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -492,7 +498,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T03:56:29Z",
+  "checked_at": "2026-10-04T03:56:50Z",
   "newly_completed": [],
   "page_version": "15"
 }
