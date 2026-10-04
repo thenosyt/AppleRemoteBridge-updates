@@ -48,17 +48,17 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -487,7 +487,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T04:54:19Z",
+  "checked_at": "2026-10-04T04:54:39Z",
   "newly_completed": [],
   "page_version": "15"
 }
