@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "5e9d4a8",
+          "date": "2026-10-04",
+          "message": "Add white Shizuku logo to the no-PC setup checklist"
+        },
+        {
           "sha": "2126a88",
           "date": "2026-10-04",
           "message": "Shizuku no-PC grant: guided 5-step checklist with auto-detection"
@@ -154,11 +159,6 @@
           "sha": "77886c0",
           "date": "2026-10-03",
           "message": "v1.0.36: compact home, rounded gear focus, checklist sort/collapse, compact Settings, typing fix"
-        },
-        {
-          "sha": "cbf35d5",
-          "date": "2026-10-03",
-          "message": "v1.0.35: trackpad sensitivity fix, bridge auto-start, Paired status, home layout cleanup"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T12:36:09Z",
+  "checked_at": "2026-10-04T12:36:31Z",
   "newly_completed": [],
   "page_version": "16"
 }
