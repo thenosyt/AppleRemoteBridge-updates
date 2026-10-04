@@ -1,17 +1,88 @@
 {
   "builds": [
     {
-      "state": "queued",
+      "state": "in_progress",
       "conclusion": null,
       "run_id": 37178163087,
       "run_number": 38,
       "branch": "master",
       "sha": "0a06801",
       "created_at": "2026-10-04T04:50:35Z",
-      "updated_at": "2026-10-04T04:50:35Z",
+      "updated_at": "2026-10-04T04:50:39Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37178163087",
-      "steps": [],
-      "eta_seconds": 219,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Vendor Companion Link protocol",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-java@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run gradle/actions/setup-gradle@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Decode signing keystore",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build signed release APK",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "Verify the APK is signed",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Publish to updates repo",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-java@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null
+        }
+      ],
+      "eta_seconds": 199,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.38",
@@ -306,13 +377,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "id": "v1037-ring-badges",
-      "title": "v1.0.37 round 2: compile fix + ring badges + animations + cog slide + settings compaction + new icon",
-      "desc": "Compile fix (7effc68); animated ring badges (green check/orange alert); checklist hides when complete with fly-up collapse; hero Paired only when all pass; cog slides left to head the panel and back on close; tighter settings rows with hidden empty update rows. New app icon from Tyson art, cut to TV banner + launcher sizes."
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -422,7 +487,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T04:50:40Z",
+  "checked_at": "2026-10-04T04:51:00Z",
   "newly_completed": [],
   "page_version": "15"
 }
