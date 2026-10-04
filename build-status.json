@@ -478,7 +478,7 @@
       "version": "1.0.39",
       "version_code": 100039,
       "date": "2026-10-04",
-      "notes": "Version 1.0.39"
+      "notes": "Reliable in-app updates (permission pre-check, download auto-retry, clear failure messages); Home screen fits without scrolling; Text size toggle reopens the settings HUD"
     }
   ],
   "build_notes": {
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T06:06:09Z",
+  "checked_at": "2026-10-04T06:06:30Z",
   "newly_completed": [],
   "page_version": "15"
 }
