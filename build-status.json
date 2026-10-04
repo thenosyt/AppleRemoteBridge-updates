@@ -324,6 +324,12 @@
       "category": "site",
       "id": "hub-group-builds-by-name",
       "label": "Group version releases by build name: Currently Building and Completed Builds get a separate section per project, so Apple Remote Bridge and Nuvio TV builds don't mix in one list"
+    },
+    {
+      "id": "hub-downloader-code",
+      "category": "site",
+      "label": "Downloader code next to download: the build card gets a direct APK download link, with the current build's downloader code beside it, tap-to-copy for pasting into the app's downloader",
+      "added_at": "2026-10-03"
     }
   ],
   "version_history": [
@@ -430,7 +436,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T00:57:39Z",
+  "checked_at": "2026-10-04T00:58:11Z",
   "newly_completed": [],
   "page_version": "11"
 }
