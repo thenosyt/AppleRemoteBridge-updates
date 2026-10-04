@@ -483,45 +483,22 @@
   ],
   "build_notes": {
     "changes": [
-      "Reliable in-app updates (permission pre-check, download auto-retry, clear failure messages)",
-      "Home screen fits without scrolling",
-      "Text size toggle reopens the settings HUD",
-      "Settings as a floating right-side HUD",
-      "Trackpad sensitivity slider restored inline",
-      "Settings rows: flat full-row highlight, more text inset",
-      "Inter font (closest open match to San Francisco)",
-      "Auto-download updates toggle",
-      "Ring status badges: green ring + bold checkmark for done, orange ring + bold ! for action needed, and a big \"Configured\" badge when everything is set up; removed the redundant One-time PC setup row and PC Fix text labels",
-      "Removed the \"PC Fix\" text labels from the setup checklist (rows stay tappable)",
-      "Setup checklist disappears when complete; hero shows Paired only when everything passes",
-      "Animated status rings: badges pop with a spring bounce and morph color when a check flips state",
-      "Collapse celebration: when the last check completes, the badges fly up into the hero and it pops green",
-      "Cog slides left to head the settings panel, slides back on close",
-      "Tighter settings layout: compact rows, hidden empty update rows, taller panel",
-      "New app icon: white TV with black droid and remote badge, sized for the TV banner and launcher",
-      "Removed the leftover microphone status line and its dead code"
+      "Compact home screen (hero + checklist fit one TV screen, no scrolling)",
+      "Rounded settings gear focus highlight",
+      "Setup checklist sorting + collapse to green checkmark",
+      "Compact Apple-style grouped Settings",
+      "iPhone typing fix (robust editable-field detection)"
     ],
     "notes": [
-      "In-app updates are now reliable: the install permission is checked before downloading instead of after, downloads auto-retry up to 3 times when the APK is not yet on the CDN, and a failed install tap explains what to do instead of silently doing nothing",
-      "Home screen fits on one TV screen with no scrolling: the hero card lost the redundant mic line (the checklist already has a Microphone row), the iPhone-restart tip moved into the Settings guide, and the card wraps its content instead of a fixed tall height",
-      "Changing text size no longer dumps you on the Home screen; the settings HUD reopens after the recreate",
-      "Settings is now a floating HUD docked to the right side: it expands from the gear icon, floats above the home screen, and collapses back into the gear when you back out. Labels and values sit next to each other instead of stretched edge to edge",
-      "The trackpad sensitivity slider is back inline in the HUD's trackpad section (the popup menu is gone)",
-      "Settings rows have more breathing room between the text and the highlight edge, and focus is now a flat full-row highlight instead of a nested box inside the card",
-      "The app now uses the Inter font, the closest open match to Apple's San Francisco, instead of Android's default",
-      "New Auto-Download toggle in Settings: when on, updates download in the background as soon as they are found, so one tap goes straight to the install screen",
-      "Status checkmarks are now ring badges: a green ring with a bold green checkmark for completed items, an orange ring with a bold orange ! for items needing action, and when everything is done the checklist collapses into a single \"Configured\" badge with a big green ring and checkmark; the redundant \"One-time PC setup\" row is gone from the checklist and the \"PC Fix\" text labels were removed (rows stay tappable)",
-      "The setup checklist no longer shows \"PC Fix\" text on incomplete rows; the orange ! badge marks them and tapping a row still opens the fix",
-      "The setup checklist now disappears entirely once every check passes instead of collapsing to a badge, and the hero status shows the green ring + Paired only when everything is complete; otherwise it shows an orange ! ring with Setup needed",
-      "The status ring badges are now animated: when a setup check flips between done and action-needed, the badge pops with a spring bounce while the ring morphs between green and orange and the glyph crossfades",
-      "When the final setup check completes, the checklist badges fly up into the hero badge one by one and the hero pops green with a spring bounce as it switches to Paired",
-      "The settings gear no longer sits dimmed under the panel: when the HUD opens, the cog floats above the dim and slides left into the panel header spot, and slides back to its home position when the menu closes",
-      "Settings rows are tighter and slightly smaller, the Install Update row and update status line hide when there is nothing to show, and the panel uses more of the screen height, so the menu scrolls less",
-      "Tyson supplied the new icon art (white TV, black android character, white remote between the eyes, TV base). It is cut to the exact Android TV banner sizes (320x180 xhdpi, 480x270 xxhdpi) and matching square launcher/foreground icons for every density"
+      "Home screen is more compact: smaller header and hero card, so the status card and the full setup checklist fit on one TV screen without scrolling",
+      "The settings gear now gets a soft circular focus highlight instead of a square wash",
+      "Setup checklist sorts incomplete items to the top; when everything is done it collapses to a single green 'Everything is set up' checkmark",
+      "Settings redesigned as compact grouped rows with dividers, Apple TV+ style: TV name, text size, trackpad sensitivity, updates, guide, and advanced all fit with room to spare",
+      "Fixed iPhone typing into TV text fields: the app now also finds the field via accessibility focus and child-node search, and focuses it before setting text, instead of silently dropping the text"
     ],
-    "version": "1.0.37"
+    "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T05:01:41Z",
+  "checked_at": "2026-10-04T05:02:20Z",
   "newly_completed": [
     {
       "version": "1.0.39",
