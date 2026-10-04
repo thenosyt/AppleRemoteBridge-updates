@@ -1,6 +1,6 @@
 {
-  "versionCode": 100047,
-  "versionName": "1.0.47",
+  "versionCode": 100048,
+  "versionName": "1.0.48",
   "apkUrl": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
-  "notes": "Simplify Shizuku: remove broken UserService, disable grant for now"
+  "notes": "Remove Shizuku entirely to fix app-not-opening"
 }
