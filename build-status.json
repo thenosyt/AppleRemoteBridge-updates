@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "12cecaa",
+          "date": "2026-10-04",
+          "message": "Fix Shizuku: use UserService instead of removed newProcess API"
+        },
+        {
           "sha": "b6e3a38",
           "date": "2026-10-04",
           "message": "Fix onboarding skip: use isGrantActive for step 2, not isRestrictedSettingsBlocked"
@@ -154,11 +159,6 @@
           "sha": "9495d93",
           "date": "2026-10-03",
           "message": "Hero collects checkmarks: card drops to center, badges make contact with the ring"
-        },
-        {
-          "sha": "c9ebc0d",
-          "date": "2026-10-03",
-          "message": "Revert cog slide: gear stays in place when the settings HUD opens"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T13:29:10Z",
+  "checked_at": "2026-10-04T13:29:35Z",
   "newly_completed": [],
   "page_version": "16"
 }
