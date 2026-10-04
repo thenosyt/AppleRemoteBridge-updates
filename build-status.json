@@ -382,20 +382,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "id": "hub-universal-a11y-command",
-      "category": "site",
-      "label": "Universal accessibility repair command for hub PC setup page: single copy-paste ADB command that enables accessibility services for Apple Remote Bridge, Projectivy, Button Mapper, TVQuickActions Pro, Mouse Toggle, and other popular TV apps (checks each is installed first, safe and silent if not). Research exact service class names, do not guess.",
-      "added_at": "2026-10-03"
-    },
-    {
-      "id": "pc-auto-fix-script",
-      "category": "site",
-      "label": "PC auto-fix script: Python script for the Windows PC that checks the TV over ADB every few minutes and automatically re-enables accessibility services if an update knocked them off. No taps, no Siri, runs in the background.",
-      "added_at": "2026-10-03"
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -505,7 +492,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:48:13Z",
+  "checked_at": "2026-10-04T01:48:47Z",
   "newly_completed": [],
   "page_version": "15"
 }
