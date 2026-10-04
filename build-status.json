@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "1a3ba17",
+          "date": "2026-10-04",
+          "message": "Fix Shizuku grant ANR: run newProcess on background thread"
+        },
+        {
           "sha": "e5f6b1d",
           "date": "2026-10-04",
           "message": "Rename to AirRemote: package com.airremote.app, display name AirRemote"
@@ -154,11 +159,6 @@
           "sha": "a30f6f0",
           "date": "2026-10-03",
           "message": "Remove dead mic status line (was never attached to a view) and its mockup row"
-        },
-        {
-          "sha": "b0af4e9",
-          "date": "2026-10-03",
-          "message": "Ring status badges: green ring + bold check (done), orange ring + bold ! (action needed); checklist hides when complete,"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T13:14:03Z",
+  "checked_at": "2026-10-04T13:14:30Z",
   "newly_completed": [],
   "page_version": "16"
 }
