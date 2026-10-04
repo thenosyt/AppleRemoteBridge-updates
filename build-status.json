@@ -92,8 +92,8 @@
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.48",
       "published": {
-        "version": "1.0.47",
-        "version_code": 100047,
+        "version": "1.0.48",
+        "version_code": 100048,
         "apk_ready": true,
         "apk_size": 39525295,
         "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
@@ -491,6 +491,12 @@
       "version_code": 100047,
       "date": "2026-10-04",
       "notes": "Version 1.0.47"
+    },
+    {
+      "version": "1.0.48",
+      "version_code": 100048,
+      "date": "2026-10-04",
+      "notes": "Version 1.0.48"
     }
   ],
   "build_notes": {
@@ -508,7 +514,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T23:06:16Z",
+  "checked_at": "2026-10-04T23:07:01Z",
   "newly_completed": [],
   "page_version": "18"
 }
