@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "2126a88",
+          "date": "2026-10-04",
+          "message": "Shizuku no-PC grant: guided 5-step checklist with auto-detection"
+        },
+        {
           "sha": "1d7595b",
           "date": "2026-10-04",
           "message": "Remove PC setup page link from home screen"
@@ -154,11 +159,6 @@
           "sha": "cbf35d5",
           "date": "2026-10-03",
           "message": "v1.0.35: trackpad sensitivity fix, bridge auto-start, Paired status, home layout cleanup"
-        },
-        {
-          "sha": "a9d3d9a",
-          "date": "2026-10-03",
-          "message": "v1.0.34: update progress ring, D-pad focus fixes, layered wake-from-sleep"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T12:32:10Z",
+  "checked_at": "2026-10-04T12:32:30Z",
   "newly_completed": [],
   "page_version": "16"
 }
