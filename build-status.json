@@ -382,7 +382,14 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [],
+  "pending_fixes": [
+    {
+      "id": "hub-eta-flicker-fix",
+      "category": "site",
+      "label": "Fix ETA countdown flicker: page re-render every 2s resets the countdown to the server value causing visible jumps. Make the countdown monotonic per build run (store a deadline timestamp, never jump backwards).",
+      "added_at": "2026-10-03"
+    }
+  ],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -523,7 +530,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T11:51:48Z",
+  "checked_at": "2026-10-04T11:52:10Z",
   "newly_completed": [],
   "page_version": "15"
 }
