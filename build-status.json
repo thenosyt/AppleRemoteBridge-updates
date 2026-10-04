@@ -95,7 +95,7 @@
         "version": "1.0.36",
         "version_code": 100036,
         "apk_ready": true,
-        "apk_size": 38958539,
+        "apk_size": 38958491,
         "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
         "downloader_code": "7326894"
       },
@@ -490,22 +490,23 @@
   ],
   "build_notes": {
     "changes": [
-      "Compact home screen (hero + checklist fit one TV screen, no scrolling)",
-      "Rounded settings gear focus highlight",
-      "Setup checklist sorting + collapse to green checkmark",
-      "Compact Apple-style grouped Settings",
-      "iPhone typing fix (robust editable-field detection)"
+      "Trackpad sensitivity fix (one step per swipe, dead zone, step pause, slider)",
+      "Bridge auto-start",
+      "Paired status with checkmark",
+      "Setup checklist on home screen",
+      "Home screen layout cleanup"
     ],
     "notes": [
-      "Home screen is more compact: smaller header and hero card, so the status card and the full setup checklist fit on one TV screen without scrolling",
-      "The settings gear now gets a soft circular focus highlight instead of a square wash",
-      "Setup checklist sorts incomplete items to the top; when everything is done it collapses to a single green 'Everything is set up' checkmark",
-      "Settings redesigned as compact grouped rows with dividers, Apple TV+ style: TV name, text size, trackpad sensitivity, updates, guide, and advanced all fit with room to spare",
-      "Fixed iPhone typing into TV text fields: the app now also finds the field via accessibility focus and child-node search, and focuses it before setting text, instead of silently dropping the text"
+      "Trackpad calmed down: one swipe moves exactly one item, with a bigger dead zone and a short pause between steps",
+      "New trackpad sensitivity slider in Settings, from Calm to Quick",
+      "Bridge now starts on its own when the app opens and after a TV reboot; accessibility stays the only requirement",
+      "Home screen shows a green Paired checkmark once an iPhone pairs, and the pairing steps hide",
+      "Home screen setup checklist mirrors the PC setup page, with checkmarks for each step",
+      "Home screen cleanup: no more tiny scroll, Apple-style settings gear, footer removed"
     ],
-    "version": "1.0.36"
+    "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T01:11:47Z",
+  "checked_at": "2026-10-04T01:12:14Z",
   "newly_completed": [],
   "page_version": "12"
 }
