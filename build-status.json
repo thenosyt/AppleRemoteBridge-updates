@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 37167002530,
       "run_number": 36,
       "branch": "master",
       "sha": "8fc93ea",
       "created_at": "2026-10-04T01:06:34Z",
-      "updated_at": "2026-10-04T01:06:37Z",
+      "updated_at": "2026-10-04T01:09:49Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37167002530",
       "steps": [
         {
@@ -48,41 +48,46 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
-      "eta_seconds": 54,
+      "eta_seconds": null,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.36",
@@ -489,7 +494,13 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T01:09:32Z",
-  "newly_completed": [],
+  "checked_at": "2026-10-04T01:09:58Z",
+  "newly_completed": [
+    {
+      "version": "1.0.35",
+      "apk_size_mb": 37.2,
+      "run_number": 36
+    }
+  ],
   "page_version": "12"
 }
