@@ -174,7 +174,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "12";
+const PAGE_VERSION = "13";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -496,11 +496,12 @@ function renderTasks(tasks, builds, pending) {
     }
     return `<div class="step" style="${style}">${done}${escapeHtml(t.label)}${extra}</div>`;
   };
-  // Group by category (App / Website). Open tasks show inline; completed ones
-  // collapse into an expandable at the bottom so the list stays short.
+  // Group by category (App / Website / Nuvio TV). Open tasks show inline;
+  // completed ones collapse into an expandable at the bottom.
   const cats = [
     { key: "app", title: "App" },
     { key: "site", title: "Website" },
+    { key: "nuvio", title: "Nuvio TV" },
   ];
   let sections = "";
   let allDone = [];
@@ -513,14 +514,27 @@ function renderTasks(tasks, builds, pending) {
     sections += `<div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">${cat.title} <span style="font-weight:400;opacity:0.6;">· ${open.length} open</span></div>`;
     sections += `<div class="step-list" style="max-height:none;">${open.map(taskItem).join("") || '<div class="step" style="opacity:0.5;">All done</div>'}</div>`;
   }
-  // Fixes waiting for Tyson's tap on the push button. Shown only when
+  // Fixes waiting for Tyson's tap on the push button, grouped by category
+  // (App / Website). Uncategorized fixes count as App. Shown only when
   // there is something pending, so the card stays clean otherwise.
   let pendingBlock = "";
   const waiting = (pending || []).filter(p => p && p.label);
   if (waiting.length) {
+    const pendingCats = [
+      { key: "app", title: "App" },
+      { key: "site", title: "Website" },
+    ];
+    let pendingSections = "";
+    for (const pc of pendingCats) {
+      const items = waiting.filter(p => (p.category || "app") === pc.key);
+      if (!items.length) continue;
+      pendingSections += `
+        <div style="font-size:14px;font-weight:700;margin:10px 0 6px;opacity:0.85;">${pc.title} <span style="font-weight:400;opacity:0.6;">· ${items.length} waiting</span></div>
+        <div class="step-list" style="max-height:none;">${items.map(p => `<div class="step"><span class="dot dot-run">○</span>${escapeHtml(p.label)}</div>`).join("")}</div>`;
+    }
     pendingBlock = `
-      <div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">Pending approval <span style="font-weight:400;opacity:0.6;">· ${waiting.length} waiting</span></div>
-      <div class="step-list" style="max-height:none;">${waiting.map(p => `<div class="step"><span class="dot dot-run">○</span>${escapeHtml(p.label)}</div>`).join("")}</div>`;
+      <div style="font-size:15px;font-weight:700;margin:14px 0 6px;opacity:0.9;">Pending approval</div>
+      ${pendingSections}`;
   }
   let doneBlock = "";
   if (allDone.length) {
