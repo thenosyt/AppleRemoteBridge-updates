@@ -397,6 +397,12 @@
     },
     {
       "label": "Bring back the trackpad sensitivity slider: it was removed without being asked; restore the inline slider in Settings instead of the popup menu"
+    },
+    {
+      "label": "Settings row selection cleanup: give row text more inset from the highlight edge, and make focus a flat full-row highlight instead of a nested rounded box inside the card"
+    },
+    {
+      "label": "Use the Inter font (closest open match to Apple's San Francisco) instead of Android's default Roboto"
     }
   ],
   "version_history": [
@@ -508,7 +514,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:25:10Z",
+  "checked_at": "2026-10-04T01:25:42Z",
   "newly_completed": [],
   "page_version": "14"
 }
