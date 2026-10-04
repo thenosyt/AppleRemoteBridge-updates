@@ -1,6 +1,6 @@
 {
-  "versionCode": 100039,
-  "versionName": "1.0.39",
+  "versionCode": 100043,
+  "versionName": "1.0.43",
   "apkUrl": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
-  "notes": "v1.0.37: remove dead mic status line"
+  "notes": "Downgrade Shizuku API to 12.2.0 for newProcess support"
 }
