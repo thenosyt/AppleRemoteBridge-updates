@@ -92,10 +92,10 @@
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.36",
       "published": {
-        "version": "1.0.36",
-        "version_code": 100036,
+        "version": "1.0.35",
+        "version_code": 100035,
         "apk_ready": true,
-        "apk_size": 38958491,
+        "apk_size": 38958539,
         "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
         "downloader_code": "7326894"
       },
@@ -377,9 +377,9 @@
     },
     {
       "label": "Compact home screen (no scroll) + rounded gear highlight + checklist sorting/collapse + compact Apple-style Settings",
-      "done": false,
+      "done": true,
       "category": "app",
-      "completed_at": null
+      "completed_at": "2026-10-03"
     }
   ],
   "pending_fixes": [
@@ -506,7 +506,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T01:12:14Z",
+  "checked_at": "2026-10-04T01:12:43Z",
   "newly_completed": [],
   "page_version": "12"
 }
