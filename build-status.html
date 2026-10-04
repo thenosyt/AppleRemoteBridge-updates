@@ -174,7 +174,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "15";
+const PAGE_VERSION = "16";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -303,8 +303,9 @@ function renderBuild(build, versionHistory) {
   const verLabel = build.version_display || (build.run_number ? `v1.0.${build.run_number}` : "");
   const versionHtml = verLabel ? `<span style="color:${versionColor};font-weight:700;">${escapeHtml(verLabel)}</span> · ` : "";
   // Live ETA countdown for in-progress builds. Ticks every second client-side.
+  // data-eta-run identifies the build so the countdown stays monotonic across re-renders.
   const etaHtml = (isBuilding && build.eta_seconds != null)
-    ? `<div class="build-meta" data-eta-seconds="${build.eta_seconds}" data-eta-asof="${window.__checkedAtMs || Date.now()}" style="margin-top:6px;color:#0a84ff;font-weight:600;">${fmtEta(build.eta_seconds)}</div>`
+    ? `<div class="build-meta" data-eta-run="${build.run_id || ""}" data-eta-seconds="${build.eta_seconds}" style="margin-top:6px;color:#0a84ff;font-weight:600;">${fmtEta(build.eta_seconds)}</div>`
     : "";
   const ringSvg = `
       <div class="progress-ring-wrap">
@@ -634,6 +635,35 @@ async function load() {
       }
     }
     document.getElementById("builds").innerHTML = buildsHtml || '<div class="error">No builds tracked yet.</div>';
+    // Reconcile ETA deadlines: keep the countdown monotonic per build run so it
+    // never jumps backwards when the page re-renders. Only extend if the server
+    // says the build needs significantly (>30s) more time.
+    if (!window.__etaDeadlines) window.__etaDeadlines = {};
+    const now = Date.now();
+    const seenRuns = new Set();
+    document.querySelectorAll("[data-eta-run]").forEach(el => {
+      const runId = el.getAttribute("data-eta-run");
+      if (!runId) return;
+      seenRuns.add(runId);
+      const serverSec = parseFloat(el.getAttribute("data-eta-seconds"));
+      if (isNaN(serverSec)) return;
+      const stored = window.__etaDeadlines[runId];
+      if (stored == null) {
+        window.__etaDeadlines[runId] = now + serverSec * 1000;
+      } else {
+        const serverDeadline = now + serverSec * 1000;
+        // Only extend if server thinks we need >30s more than our deadline.
+        // Never move the deadline earlier (prevents backwards jumps).
+        if (serverDeadline > stored + 30000) {
+          window.__etaDeadlines[runId] = serverDeadline;
+        }
+      }
+      el.setAttribute("data-eta-deadline", window.__etaDeadlines[runId]);
+    });
+    // Clean up deadlines for builds that finished or disappeared.
+    for (const k of Object.keys(window.__etaDeadlines)) {
+      if (!seenRuns.has(k)) delete window.__etaDeadlines[k];
+    }
     if (data.checked_at) {
       const d = new Date(data.checked_at);
       document.getElementById("updated").textContent =
@@ -648,13 +678,15 @@ async function load() {
 load();
 setInterval(load, 2000);
 // Tick every ETA countdown each second so it counts down live between refreshes.
+// Uses the monotonic deadline set during render reconciliation (never jumps backwards).
 setInterval(() => {
   const now = Date.now();
-  document.querySelectorAll("[data-eta-seconds]").forEach(el => {
-    const base = parseFloat(el.getAttribute("data-eta-seconds"));
-    const asOf = parseInt(el.getAttribute("data-eta-asof") || "0", 10);
-    if (!asOf || isNaN(base)) return;
-    el.textContent = fmtEta(base - (now - asOf) / 1000);
+  document.querySelectorAll("[data-eta-deadline]").forEach(el => {
+    const deadline = parseInt(el.getAttribute("data-eta-deadline") || "0", 10);
+    if (!deadline) return;
+    const remaining = (deadline - now) / 1000;
+    const text = fmtEta(remaining);
+    if (el.textContent !== text) el.textContent = text;
   });
 }, 1000);
 </script>
