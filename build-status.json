@@ -82,7 +82,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 161,
+      "eta_seconds": 132,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.42",
@@ -518,7 +518,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T13:32:00Z",
+  "checked_at": "2026-10-04T13:32:29Z",
   "newly_completed": [],
   "page_version": "16"
 }
