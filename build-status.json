@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "7effc68",
+          "date": "2026-10-04",
+          "message": "Fix v1.0.37 compile errors: 0x99000000.toInt() for scrim color, default value=null on settingsRow"
+        },
+        {
           "sha": "1e89754",
           "date": "2026-10-03",
           "message": "v1.0.37: settings HUD, reliable updates, no-scroll home, Inter font, slider back, auto-download"
@@ -154,11 +159,6 @@
           "sha": "ef3d2fb",
           "date": "2026-10-01",
           "message": "Fix D-pad navigation: status rows always focusable, not only when showing X"
-        },
-        {
-          "sha": "006290d",
-          "date": "2026-10-01",
-          "message": "Fix publish race: pull --rebase before push to updates repo"
         }
       ]
     },
@@ -492,7 +492,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:56:00Z",
+  "checked_at": "2026-10-04T01:59:05Z",
   "newly_completed": [],
   "page_version": "15"
 }
