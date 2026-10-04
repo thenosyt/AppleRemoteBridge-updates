@@ -174,7 +174,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "11";
+const PAGE_VERSION = "12";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -276,7 +276,13 @@ function renderBuild(build, versionHistory) {
   if (pub && pub.version) {
     const size = pub.apk_size ? ` (${(pub.apk_size / 1048576).toFixed(1)} MB)` : "";
     const apkState = pub.apk_ready ? "ready to install" : "not ready";
-    liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;font-weight:600;">✓ Available now: v${escapeHtml(pub.version)} · ${apkState}${size}</div>`;
+    const dlLink = (pub.apk_ready && pub.apk_url)
+      ? ` · <a href="${escapeHtml(pub.apk_url)}" target="_blank" rel="noopener" style="color:#30d158;font-weight:700;text-decoration:underline;">Download APK</a>`
+      : "";
+    const codeHtml = pub.downloader_code
+      ? ` · <span style="white-space:nowrap;">Downloader code: <button data-code="${escapeHtml(pub.downloader_code)}" onclick="copyDlCode(this)" style="background:rgba(48,209,88,0.15);border:1px solid #30d158;color:#30d158;font-weight:700;border-radius:8px;padding:2px 10px;font-size:14px;cursor:pointer;font-family:inherit;">${escapeHtml(pub.downloader_code)}</button></span>`
+      : "";
+    liveHtml = `<div class="build-meta" style="margin-top:8px;color:#30d158;font-weight:600;">✓ Available now: v${escapeHtml(pub.version)} · ${apkState}${size}${dlLink}${codeHtml}</div>`;
   }
   // Circular progress ring (Apple-style)
   const isSuccess = build.conclusion === "success";
@@ -293,7 +299,9 @@ function renderBuild(build, versionHistory) {
     ringCenter = `<text x="28" y="28" class="ring-icon" fill="#fff" font-size="12">${pct}%</text>`;
   }
   const isBuilding = build.state === "in_progress" || build.state === "queued";
-  const versionColor = isBuilding ? "#0a84ff" : "inherit";  const versionHtml = build.run_number ? `<span style="color:${versionColor};font-weight:700;">v1.0.${build.run_number}</span> · ` : "";
+  const versionColor = isBuilding ? "#0a84ff" : "inherit";
+  const verLabel = build.version_display || (build.run_number ? `v1.0.${build.run_number}` : "");
+  const versionHtml = verLabel ? `<span style="color:${versionColor};font-weight:700;">${escapeHtml(verLabel)}</span> · ` : "";
   // Live ETA countdown for in-progress builds. Ticks every second client-side.
   const etaHtml = (isBuilding && build.eta_seconds != null)
     ? `<div class="build-meta" data-eta-seconds="${build.eta_seconds}" data-eta-asof="${window.__checkedAtMs || Date.now()}" style="margin-top:6px;color:#0a84ff;font-weight:600;">${fmtEta(build.eta_seconds)}</div>`
@@ -397,6 +405,27 @@ function escapeHtml(s) {
   return String(s == null ? "" : s)
     .replace(/&/g, "&amp;").replace(/</g, "&lt;")
     .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+// Tap-to-copy for the Downloader code button on build cards.
+function copyDlCode(btn) {
+  const code = btn.getAttribute("data-code") || "";
+  const done = () => {
+    const orig = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => { btn.textContent = orig; }, 1500);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(code).then(done).catch(done);
+  } else {
+    const ta = document.createElement("textarea");
+    ta.value = code;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+    done();
+  }
 }
 
 // Format a live ETA countdown, e.g. "≈ 3 min 12 sec left".
@@ -559,17 +588,28 @@ async function load() {
     }
     document.getElementById("tasks").innerHTML = renderTasks(data.tasks, builds, data.pending_fixes);
     document.getElementById("history").innerHTML = renderHistory(data.version_history);
-    // Separate current (in-progress) from completed builds
-    const inProgress = builds.filter(b => b.state === "in_progress" || b.state === "queued");
-    const completed = builds.filter(b => b.state !== "in_progress" && b.state !== "queued");
-    let buildsHtml = "";
-    if (inProgress.length) {
-      buildsHtml += `<div style="font-size:24px;font-weight:800;margin:28px 0 16px;color:#0a84ff;letter-spacing:-0.5px;">Currently Building</div>`;
-      buildsHtml += inProgress.map(b => renderBuild(b, data.version_history)).join("");
+    // Group builds by project (build name), each with its own
+    // Currently Building / Completed Builds sections.
+    const repoOrder = [];
+    for (const b of builds) {
+      const n = b.name || b.repo || "Build";
+      if (!repoOrder.includes(n)) repoOrder.push(n);
     }
-    if (completed.length) {
-      buildsHtml += `<div style="font-size:24px;font-weight:800;margin:28px 0 16px;opacity:0.8;letter-spacing:-0.5px;">Completed Builds</div>`;
-      buildsHtml += completed.map(b => renderBuild(b, data.version_history)).join("");
+    let buildsHtml = "";
+    for (const repoName of repoOrder) {
+      const repoBuilds = builds.filter(b => (b.name || b.repo || "Build") === repoName);
+      const inProgress = repoBuilds.filter(b => b.state === "in_progress" || b.state === "queued");
+      const completed = repoBuilds.filter(b => b.state !== "in_progress" && b.state !== "queued");
+      if (!inProgress.length && !completed.length) continue;
+      buildsHtml += `<div style="font-size:26px;font-weight:800;margin:28px 0 16px;letter-spacing:-0.5px;">${escapeHtml(repoName)}</div>`;
+      if (inProgress.length) {
+        buildsHtml += `<div style="font-size:20px;font-weight:700;margin:20px 0 12px;color:#0a84ff;">Currently Building</div>`;
+        buildsHtml += inProgress.map(b => renderBuild(b, data.version_history)).join("");
+      }
+      if (completed.length) {
+        buildsHtml += `<div style="font-size:20px;font-weight:700;margin:20px 0 12px;opacity:0.8;">Completed Builds</div>`;
+        buildsHtml += completed.map(b => renderBuild(b, data.version_history)).join("");
+      }
     }
     document.getElementById("builds").innerHTML = buildsHtml || '<div class="error">No builds tracked yet.</div>';
     if (data.checked_at) {
