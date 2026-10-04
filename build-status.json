@@ -219,7 +219,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 132,
+      "eta_seconds": 102,
       "name": "Nuvio TV",
       "repo": "thenosyt/NuvioMobile-Enhanced",
       "version_display": "Build #10"
@@ -389,6 +389,9 @@
     },
     {
       "label": "Settings as a floating HUD on the right side: expands from the gear icon, stays docked right where the gear is (never centered or full screen), floats above the home screen, collapses back into the gear on dismiss; rows keep label and value close together instead of stretched edge to edge"
+    },
+    {
+      "label": "Bring back the trackpad sensitivity slider: it was removed without being asked; restore the inline slider in Settings instead of the popup menu"
     }
   ],
   "version_history": [
@@ -500,7 +503,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:22:40Z",
+  "checked_at": "2026-10-04T01:23:10Z",
   "newly_completed": [],
   "page_version": "14"
 }
