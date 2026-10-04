@@ -390,9 +390,9 @@
       "added_at": "2026-10-03"
     },
     {
-      "id": "siri-push-fix-to-pc",
-      "category": "siri",
-      "label": "Siri Shortcut 'Push the fix to my PC': voice-triggered shortcut that SSHs into the Windows PC and runs the universal accessibility repair ADB command, so saying 'push the fix to my PC' repairs it after every update",
+      "id": "pc-auto-fix-script",
+      "category": "site",
+      "label": "PC auto-fix script: Python script for the Windows PC that checks the TV over ADB every few minutes and automatically re-enables accessibility services if an update knocked them off. No taps, no Siri, runs in the background.",
       "added_at": "2026-10-03"
     }
   ],
@@ -505,7 +505,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:41:59Z",
+  "checked_at": "2026-10-04T01:42:20Z",
   "newly_completed": [],
   "page_version": "15"
 }
