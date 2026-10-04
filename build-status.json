@@ -92,8 +92,8 @@
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.39",
       "published": {
-        "version": "1.0.39",
-        "version_code": 100039,
+        "version": "1.0.36",
+        "version_code": 100036,
         "apk_ready": true,
         "apk_size": 39491003,
         "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
@@ -498,13 +498,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T05:02:20Z",
-  "newly_completed": [
-    {
-      "version": "1.0.39",
-      "apk_size_mb": 37.7,
-      "run_number": 39
-    }
-  ],
+  "checked_at": "2026-10-04T05:02:50Z",
+  "newly_completed": [],
   "page_version": "15"
 }
