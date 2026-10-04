@@ -403,6 +403,9 @@
     },
     {
       "label": "Use the Inter font (closest open match to Apple's San Francisco) instead of Android's default Roboto"
+    },
+    {
+      "label": "Automatic update downloads: add a checkbox in Settings to auto-download updates when found, so one tap goes straight to the install screen"
     }
   ],
   "version_history": [
@@ -514,7 +517,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:27:41Z",
+  "checked_at": "2026-10-04T01:28:10Z",
   "newly_completed": [],
   "page_version": "14"
 }
