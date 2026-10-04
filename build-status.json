@@ -382,7 +382,14 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [],
+  "pending_fixes": [
+    {
+      "id": "hub-universal-a11y-command",
+      "category": "site",
+      "label": "Universal accessibility repair command for hub PC setup page: single copy-paste ADB command that enables accessibility services for Apple Remote Bridge, Projectivy, Button Mapper, TVQuickActions Pro, Mouse Toggle, and other popular TV apps (checks each is installed first, safe and silent if not). Research exact service class names, do not guess.",
+      "added_at": "2026-10-03"
+    }
+  ],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -492,7 +499,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:39:51Z",
+  "checked_at": "2026-10-04T01:40:12Z",
   "newly_completed": [],
   "page_version": "15"
 }
