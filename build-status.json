@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "b508830",
+          "date": "2026-10-04",
+          "message": "Fix build: cast hudPanel to ViewGroup before getChildAt"
+        },
+        {
           "sha": "20ec1d6",
           "date": "2026-10-04",
           "message": "Onboarding: skip completed steps instantly instead of showing them briefly"
@@ -154,11 +159,6 @@
           "sha": "7effc68",
           "date": "2026-10-04",
           "message": "Fix v1.0.37 compile errors: 0x99000000.toInt() for scrim color, default value=null on settingsRow"
-        },
-        {
-          "sha": "1e89754",
-          "date": "2026-10-03",
-          "message": "v1.0.37: settings HUD, reliable updates, no-scroll home, Inter font, slider back, auto-download"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T12:50:59Z",
+  "checked_at": "2026-10-04T12:51:30Z",
   "newly_completed": [],
   "page_version": "16"
 }
