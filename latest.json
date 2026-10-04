@@ -1,6 +1,6 @@
 {
-  "versionCode": 100043,
-  "versionName": "1.0.43",
+  "versionCode": 100047,
+  "versionName": "1.0.47",
   "apkUrl": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
-  "notes": "Downgrade Shizuku API to 12.2.0 for newProcess support"
+  "notes": "Simplify Shizuku: remove broken UserService, disable grant for now"
 }
