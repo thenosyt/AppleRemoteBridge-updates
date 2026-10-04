@@ -101,7 +101,7 @@
       },
       "recent_commits": [
         {
-          "sha": "869526a",
+          "sha": "cd842cb",
           "date": "2026-10-03",
           "message": "Ring status badges: green ring + bold check (done), orange ring + bold ! (action needed); checklist hides when complete,"
         },
@@ -498,7 +498,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T04:25:19Z",
+  "checked_at": "2026-10-04T04:25:39Z",
   "newly_completed": [],
   "page_version": "15"
 }
