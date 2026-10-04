@@ -101,7 +101,7 @@
       },
       "recent_commits": [
         {
-          "sha": "7da9fda",
+          "sha": "b0af4e9",
           "date": "2026-10-03",
           "message": "Ring status badges: green ring + bold check (done), orange ring + bold ! (action needed); checklist hides when complete,"
         },
@@ -385,8 +385,8 @@
   "pending_fixes": [
     {
       "id": "v1037-ring-badges",
-      "title": "v1.0.37 round 2: compile fix + ring badges + animations + cog slide + settings compaction",
-      "desc": "Compile fix (7effc68); animated ring badges (green check/orange alert); checklist hides when complete with fly-up collapse; hero Paired only when all pass; cog slides left to head the panel and back on close; tighter settings rows with hidden empty update rows."
+      "title": "v1.0.37 round 2: compile fix + ring badges + animations + cog slide + settings compaction + new icon",
+      "desc": "Compile fix (7effc68); animated ring badges (green check/orange alert); checklist hides when complete with fly-up collapse; hero Paired only when all pass; cog slides left to head the panel and back on close; tighter settings rows with hidden empty update rows. New app icon from Tyson art, cut to TV banner + launcher sizes."
     }
   ],
   "version_history": [
@@ -498,7 +498,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T04:46:10Z",
+  "checked_at": "2026-10-04T04:46:40Z",
   "newly_completed": [],
   "page_version": "15"
 }
