@@ -219,7 +219,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 549,
+      "eta_seconds": 520,
       "name": "Nuvio TV",
       "repo": "thenosyt/NuvioMobile-Enhanced",
       "version_display": "Build #10"
@@ -494,7 +494,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:15:43Z",
+  "checked_at": "2026-10-04T01:16:12Z",
   "newly_completed": [],
   "page_version": "13"
 }
