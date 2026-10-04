@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
-      "run_id": 37205402508,
-      "run_number": 41,
+      "state": "completed",
+      "conclusion": "success",
+      "run_id": 37178432388,
+      "run_number": 39,
       "branch": "master",
-      "sha": "53b74e0",
-      "created_at": "2026-10-04T13:22:40Z",
-      "updated_at": "2026-10-04T13:22:44Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37205402508",
+      "sha": "9f7fdc1",
+      "created_at": "2026-10-04T04:56:20Z",
+      "updated_at": "2026-10-04T05:00:27Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37178432388",
       "steps": [
         {
           "name": "Set up job",
@@ -49,17 +49,17 @@
         {
           "name": "Build signed release APK",
           "status": "completed",
-          "conclusion": "failure"
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
           "status": "completed",
-          "conclusion": "skipped"
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
           "status": "completed",
-          "conclusion": "skipped"
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
@@ -74,18 +74,23 @@
         {
           "name": "Post Run actions/setup-python@v5",
           "status": "completed",
-          "conclusion": "skipped"
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
-      "eta_seconds": 79,
+      "eta_seconds": null,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
-      "version_display": "v1.0.41",
+      "version_display": "v1.0.39",
       "published": {
         "version": "1.0.39",
         "version_code": 100039,
@@ -518,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T13:25:30Z",
+  "checked_at": "2026-10-04T13:26:09Z",
   "newly_completed": [],
   "page_version": "16"
 }
