@@ -219,7 +219,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 162,
+      "eta_seconds": 132,
       "name": "Nuvio TV",
       "repo": "thenosyt/NuvioMobile-Enhanced",
       "version_display": "Build #10"
@@ -386,6 +386,9 @@
     },
     {
       "label": "Text size toggle stays in Settings: remember the open screen across the activity recreate instead of dropping back to Home"
+    },
+    {
+      "label": "Settings as a floating HUD on the right side: expands from the gear icon, stays docked right where the gear is (never centered or full screen), floats above the home screen, collapses back into the gear on dismiss; rows keep label and value close together instead of stretched edge to edge"
     }
   ],
   "version_history": [
@@ -497,7 +500,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:22:10Z",
+  "checked_at": "2026-10-04T01:22:40Z",
   "newly_completed": [],
   "page_version": "14"
 }
