@@ -163,14 +163,14 @@
       ]
     },
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 37167313970,
       "run_number": 10,
       "branch": "main",
       "sha": "1fa425e",
       "created_at": "2026-10-04T01:12:43Z",
-      "updated_at": "2026-10-04T01:12:47Z",
+      "updated_at": "2026-10-04T01:24:07Z",
       "html_url": "https://github.com/thenosyt/NuvioMobile-Enhanced/actions/runs/37167313970",
       "steps": [
         {
@@ -200,26 +200,31 @@
         },
         {
           "name": "Build fullDebug",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Upload APKs",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Set up JDK 17",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Check out",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
-      "eta_seconds": 70,
+      "eta_seconds": null,
       "name": "Nuvio TV",
       "repo": "thenosyt/NuvioMobile-Enhanced",
       "version_display": "Build #10"
@@ -503,7 +508,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:23:43Z",
+  "checked_at": "2026-10-04T01:24:12Z",
   "newly_completed": [],
   "page_version": "14"
 }
