@@ -101,7 +101,7 @@
       },
       "recent_commits": [
         {
-          "sha": "cd842cb",
+          "sha": "7da9fda",
           "date": "2026-10-03",
           "message": "Ring status badges: green ring + bold check (done), orange ring + bold ! (action needed); checklist hides when complete,"
         },
@@ -385,8 +385,8 @@
   "pending_fixes": [
     {
       "id": "v1037-ring-badges",
-      "title": "Ring status badges (green check / orange alert / Configured)",
-      "desc": "Green ring + bold checkmark for completed items, orange ring + bold ! for action needed, big \"Configured\" badge when all done. Includes v1.0.37 compile fix (7effc68)."
+      "title": "v1.0.37 round 2: compile fix + ring badges + animations + cog slide + settings compaction",
+      "desc": "Compile fix (7effc68); animated ring badges (green check/orange alert); checklist hides when complete with fly-up collapse; hero Paired only when all pass; cog slides left to head the panel and back on close; tighter settings rows with hidden empty update rows."
     }
   ],
   "version_history": [
@@ -498,7 +498,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T04:25:39Z",
+  "checked_at": "2026-10-04T04:25:59Z",
   "newly_completed": [],
   "page_version": "15"
 }
