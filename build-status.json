@@ -90,11 +90,13 @@
       "eta_seconds": null,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
+      "version_display": "v1.0.35",
       "published": {
         "version": "1.0.35",
         "version_code": 100035,
         "apk_ready": true,
-        "apk_size": 38958491
+        "apk_size": 38958491,
+        "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk"
       },
       "recent_commits": [
         {
@@ -158,6 +160,73 @@
           "message": "Remove old permission card referencing non-existent R.color.text"
         }
       ]
+    },
+    {
+      "state": "completed",
+      "conclusion": "success",
+      "run_id": 37157670583,
+      "run_number": 9,
+      "branch": "main",
+      "sha": "04340db",
+      "created_at": "2026-10-03T22:13:07Z",
+      "updated_at": "2026-10-03T22:25:16Z",
+      "html_url": "https://github.com/thenosyt/NuvioMobile-Enhanced/actions/runs/37157670583",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check out",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Set up JDK 17",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Prepare local.properties",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Tune Gradle memory for CI runner",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build fullDebug",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Upload APKs",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Set up JDK 17",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Check out",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "eta_seconds": null,
+      "name": "Nuvio TV",
+      "repo": "thenosyt/NuvioMobile-Enhanced",
+      "version_display": "Build #9"
     }
   ],
   "tasks": [
@@ -342,6 +411,9 @@
       "category": "site",
       "id": "hub-downloader-code",
       "label": "Downloader code next to download: the build card gets a direct APK download link, with the current build's downloader code beside it, tap-to-copy for pasting into the app's downloader"
+    },
+    {
+      "label": "Fix iPhone typing: text entry fails because editable-field detection only checks input focus and drops the text on many TV apps; fall back to accessibility focus and child-node search, and focus the field before setting text"
     }
   ],
   "version_history": [
@@ -448,7 +520,7 @@
     ],
     "version": "1.0.35"
   },
-  "checked_at": "2026-10-04T01:01:10Z",
+  "checked_at": "2026-10-04T01:01:41Z",
   "newly_completed": [],
   "page_version": "11"
 }
