@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "1873626",
+          "date": "2026-10-04",
+          "message": "Replace PC fix dialog with Shizuku flow, update onboarding text for AirRemote"
+        },
+        {
           "sha": "1a3ba17",
           "date": "2026-10-04",
           "message": "Fix Shizuku grant ANR: run newProcess on background thread"
@@ -154,11 +159,6 @@
           "sha": "274a61b",
           "date": "2026-10-03",
           "message": "Cog slide: indent Settings title so the traveling cog lands clear of it"
-        },
-        {
-          "sha": "a30f6f0",
-          "date": "2026-10-03",
-          "message": "Remove dead mic status line (was never attached to a view) and its mockup row"
         }
       ]
     },
@@ -523,7 +523,7 @@
     ],
     "version": "1.0.39"
   },
-  "checked_at": "2026-10-04T13:16:10Z",
+  "checked_at": "2026-10-04T13:16:46Z",
   "newly_completed": [],
   "page_version": "16"
 }
