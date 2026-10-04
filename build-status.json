@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "9b3f22e",
+          "date": "2026-10-04",
+          "message": "Hide checkDot circle on Welcome step"
+        },
+        {
           "sha": "1c3acbb",
           "date": "2026-10-04",
           "message": "Remove Shizuku entirely to fix app-not-opening"
@@ -154,11 +159,6 @@
           "sha": "1a3ba17",
           "date": "2026-10-04",
           "message": "Fix Shizuku grant ANR: run newProcess on background thread"
-        },
-        {
-          "sha": "e5f6b1d",
-          "date": "2026-10-04",
-          "message": "Rename to AirRemote: package com.airremote.app, display name AirRemote"
         }
       ]
     },
@@ -514,7 +514,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T23:47:31Z",
+  "checked_at": "2026-10-04T23:47:51Z",
   "newly_completed": [],
   "page_version": "18"
 }
