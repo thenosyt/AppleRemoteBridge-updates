@@ -382,32 +382,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "label": "Reliable in-app updates: check the install-unknown-apps permission before downloading (not after), auto-retry the download when the APK is not yet on the CDN, and show a clear message instead of silently doing nothing on a failed install tap"
-    },
-    {
-      "label": "Home screen never scrolls: drop the redundant mic line from the hero card (the checklist already has a Microphone row), move the iPhone-restart tip into the Settings guide, and let the hero card wrap its content instead of a fixed tall height"
-    },
-    {
-      "label": "Text size toggle stays in Settings: remember the open screen across the activity recreate instead of dropping back to Home"
-    },
-    {
-      "label": "Settings as a floating HUD on the right side: expands from the gear icon, stays docked right where the gear is (never centered or full screen), floats above the home screen, collapses back into the gear on dismiss; rows keep label and value close together instead of stretched edge to edge"
-    },
-    {
-      "label": "Bring back the trackpad sensitivity slider: it was removed without being asked; restore the inline slider in Settings instead of the popup menu"
-    },
-    {
-      "label": "Settings row selection cleanup: give row text more inset from the highlight edge, and make focus a flat full-row highlight instead of a nested rounded box inside the card"
-    },
-    {
-      "label": "Use the Inter font (closest open match to Apple's San Francisco) instead of Android's default Roboto"
-    },
-    {
-      "label": "Automatic update downloads: add a checkbox in Settings to auto-download updates when found, so one tap goes straight to the install screen"
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -517,7 +492,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:34:57Z",
+  "checked_at": "2026-10-04T01:35:28Z",
   "newly_completed": [],
   "page_version": "14"
 }
