@@ -219,7 +219,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 490,
+      "eta_seconds": 459,
       "name": "Nuvio TV",
       "repo": "thenosyt/NuvioMobile-Enhanced",
       "version_display": "Build #10"
@@ -377,14 +377,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "id": "hub-approve-buttons",
-      "category": "site",
-      "label": "Hub approve buttons: Pending approval gets per-fix Push buttons plus a Push All button, so you can approve fixes right from the hub without going to chat",
-      "added_at": "2026-10-03"
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -494,7 +487,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:16:42Z",
+  "checked_at": "2026-10-04T01:17:14Z",
   "newly_completed": [],
-  "page_version": "13"
+  "page_version": "14"
 }
