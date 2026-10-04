@@ -48,17 +48,17 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -497,7 +497,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T22:41:21Z",
+  "checked_at": "2026-10-04T22:41:39Z",
   "newly_completed": [],
   "page_version": "17"
 }
