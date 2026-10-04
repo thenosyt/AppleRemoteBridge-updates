@@ -92,10 +92,10 @@
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.36",
       "published": {
-        "version": "1.0.35",
-        "version_code": 100035,
+        "version": "1.0.36",
+        "version_code": 100036,
         "apk_ready": true,
-        "apk_size": 38958491,
+        "apk_size": 38958539,
         "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
         "downloader_code": "7326894"
       },
@@ -388,6 +388,12 @@
       "category": "site",
       "label": "Group Pending approval by category: show App fixes and Website fixes in separate groups instead of one flat list (uncategorized fixes count as App)",
       "added_at": "2026-10-03"
+    },
+    {
+      "id": "hub-nuvio-task-group",
+      "category": "site",
+      "label": "Nuvio task group: add a Nuvio category to 'What I'm working on' so Nuvio TV fork tasks get their own group alongside App and Website (Nuvio builds are already tracked)",
+      "added_at": "2026-10-03"
     }
   ],
   "version_history": [
@@ -474,33 +480,32 @@
       "version_code": 100035,
       "date": "2026-10-03",
       "notes": "Trackpad sensitivity fix (one step per swipe, dead zone, step pause, slider), bridge auto-start, Paired status with checkmark, setup checklist on home, home layout cleanup"
+    },
+    {
+      "version": "1.0.36",
+      "version_code": 100036,
+      "date": "2026-10-04",
+      "notes": "Compact home screen (hero + checklist fit one TV screen, no scrolling); Rounded settings gear focus highlight"
     }
   ],
   "build_notes": {
     "changes": [
-      "Trackpad sensitivity fix (one step per swipe, dead zone, step pause, slider)",
-      "Bridge auto-start",
-      "Paired status with checkmark",
-      "Setup checklist on home screen",
-      "Home screen layout cleanup"
+      "Compact home screen (hero + checklist fit one TV screen, no scrolling)",
+      "Rounded settings gear focus highlight",
+      "Setup checklist sorting + collapse to green checkmark",
+      "Compact Apple-style grouped Settings",
+      "iPhone typing fix (robust editable-field detection)"
     ],
     "notes": [
-      "Trackpad calmed down: one swipe moves exactly one item, with a bigger dead zone and a short pause between steps",
-      "New trackpad sensitivity slider in Settings, from Calm to Quick",
-      "Bridge now starts on its own when the app opens and after a TV reboot; accessibility stays the only requirement",
-      "Home screen shows a green Paired checkmark once an iPhone pairs, and the pairing steps hide",
-      "Home screen setup checklist mirrors the PC setup page, with checkmarks for each step",
-      "Home screen cleanup: no more tiny scroll, Apple-style settings gear, footer removed"
+      "Home screen is more compact: smaller header and hero card, so the status card and the full setup checklist fit on one TV screen without scrolling",
+      "The settings gear now gets a soft circular focus highlight instead of a square wash",
+      "Setup checklist sorts incomplete items to the top; when everything is done it collapses to a single green 'Everything is set up' checkmark",
+      "Settings redesigned as compact grouped rows with dividers, Apple TV+ style: TV name, text size, trackpad sensitivity, updates, guide, and advanced all fit with room to spare",
+      "Fixed iPhone typing into TV text fields: the app now also finds the field via accessibility focus and child-node search, and focuses it before setting text, instead of silently dropping the text"
     ],
-    "version": "1.0.35"
+    "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:09:58Z",
-  "newly_completed": [
-    {
-      "version": "1.0.35",
-      "apk_size_mb": 37.2,
-      "run_number": 36
-    }
-  ],
+  "checked_at": "2026-10-04T01:11:47Z",
+  "newly_completed": [],
   "page_version": "12"
 }
