@@ -82,7 +82,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 199,
+      "eta_seconds": 170,
       "name": "Apple Remote Bridge",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.37",
@@ -377,7 +377,14 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [],
+  "pending_fixes": [
+    {
+      "id": "hub-faster-updates",
+      "category": "site",
+      "label": "Faster live updates: updater runs every 10s instead of 15s, page polls every 2s instead of 5s, for the most live feel possible within GitHub's rate limits",
+      "added_at": "2026-10-03"
+    }
+  ],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -487,7 +494,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T01:35:58Z",
+  "checked_at": "2026-10-04T01:36:27Z",
   "newly_completed": [],
   "page_version": "14"
 }
