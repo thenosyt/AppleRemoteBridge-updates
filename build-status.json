@@ -101,9 +101,9 @@
       },
       "recent_commits": [
         {
-          "sha": "ab4bf60",
+          "sha": "c347076",
           "date": "2026-10-03",
-          "message": "Ring status badges: green ring + bold check for done, orange ring + bold ! for action needed, big Configured badge when "
+          "message": "Ring status badges: green ring + bold check (done), orange ring + bold ! (action needed); checklist hides when complete,"
         },
         {
           "sha": "7effc68",
@@ -498,7 +498,7 @@
     ],
     "version": "1.0.36"
   },
-  "checked_at": "2026-10-04T04:11:19Z",
+  "checked_at": "2026-10-04T04:11:39Z",
   "newly_completed": [],
   "page_version": "15"
 }
