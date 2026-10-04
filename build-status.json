@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "b8acbaf",
+          "date": "2026-10-04",
+          "message": "Use Shizuku UserService for grant (newProcess removed in API 13)"
+        },
+        {
           "sha": "ac68b61",
           "date": "2026-10-04",
           "message": "Fix app label to AirRemote, use Shizuku 13.1.5 for Android 14 fix"
@@ -154,11 +159,6 @@
           "sha": "5e9d4a8",
           "date": "2026-10-04",
           "message": "Add white Shizuku logo to the no-PC setup checklist"
-        },
-        {
-          "sha": "2126a88",
-          "date": "2026-10-04",
-          "message": "Shizuku no-PC grant: guided 5-step checklist with auto-detection"
         }
       ]
     },
@@ -502,7 +502,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-04T16:39:30Z",
+  "checked_at": "2026-10-04T16:40:01Z",
   "newly_completed": [],
   "page_version": "17"
 }
