@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "cc46981",
+          "date": "2026-10-04",
+          "message": "Focus primary button on all dialogs; focus text input on TV Name dialog"
+        },
+        {
           "sha": "4e19707",
           "date": "2026-10-04",
           "message": "Dialogs open with D-pad focus on the primary button"
@@ -154,11 +159,6 @@
           "sha": "f9eb876",
           "date": "2026-10-04",
           "message": "Revert UserService, use newProcess with Shizuku API 12.2.0"
-        },
-        {
-          "sha": "12cecaa",
-          "date": "2026-10-04",
-          "message": "Fix Shizuku: use UserService instead of removed newProcess API"
         }
       ]
     },
@@ -520,7 +520,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-05T00:42:00Z",
+  "checked_at": "2026-10-05T00:42:20Z",
   "newly_completed": [],
   "page_version": "18"
 }
