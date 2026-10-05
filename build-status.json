@@ -82,7 +82,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 400,
+      "eta_seconds": 372,
       "name": "AirRemote",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.50",
@@ -515,7 +515,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-05T00:51:04Z",
+  "checked_at": "2026-10-05T00:51:31Z",
   "newly_completed": [],
   "page_version": "18"
 }
