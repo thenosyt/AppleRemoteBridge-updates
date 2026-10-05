@@ -520,7 +520,13 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-05T00:31:12Z",
-  "newly_completed": [],
+  "checked_at": "2026-10-05T00:31:41Z",
+  "newly_completed": [
+    {
+      "version": "1.0.49",
+      "apk_size_mb": 37.7,
+      "run_number": 49
+    }
+  ],
   "page_version": "18"
 }
