@@ -48,17 +48,17 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -82,7 +82,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 327,
+      "eta_seconds": 298,
       "name": "AirRemote",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.49",
@@ -509,7 +509,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-05T00:28:50Z",
+  "checked_at": "2026-10-05T00:29:19Z",
   "newly_completed": [],
   "page_version": "18"
 }
