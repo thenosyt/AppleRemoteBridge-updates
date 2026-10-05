@@ -101,6 +101,11 @@
       },
       "recent_commits": [
         {
+          "sha": "4e19707",
+          "date": "2026-10-04",
+          "message": "Dialogs open with D-pad focus on the primary button"
+        },
+        {
           "sha": "da2f9ab",
           "date": "2026-10-04",
           "message": "Shizuku Next: download flow, real grant, QR PC option"
@@ -154,11 +159,6 @@
           "sha": "12cecaa",
           "date": "2026-10-04",
           "message": "Fix Shizuku: use UserService instead of removed newProcess API"
-        },
-        {
-          "sha": "b6e3a38",
-          "date": "2026-10-04",
-          "message": "Fix onboarding skip: use isGrantActive for step 2, not isRestrictedSettingsBlocked"
         }
       ]
     },
@@ -520,7 +520,7 @@
       "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
     ]
   },
-  "checked_at": "2026-10-05T00:41:11Z",
+  "checked_at": "2026-10-05T00:41:39Z",
   "newly_completed": [],
   "page_version": "18"
 }
