@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirRemote - PC Setup Instructions</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px; background: #1a1a1a; color: #fff; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; margin-top: 30px; color: #4da6ff; }
+  .step { background: #2a2a2a; border-radius: 12px; padding: 16px; margin: 12px 0; }
+  .step-num { display: inline-block; background: #4da6ff; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-weight: bold; margin-right: 10px; }
+  code { background: #000; padding: 4px 8px; border-radius: 6px; font-family: monospace; }
+  .cmd-box { background: #000; border-radius: 12px; padding: 16px; margin: 16px 0; position: relative; }
+  .cmd-box code { background: none; padding: 0; font-size: 14px; word-break: break-all; }
+  .copy-btn { background: #4da6ff; color: #fff; border: none; border-radius: 8px; padding: 10px 20px; font-size: 16px; cursor: pointer; margin-top: 12px; }
+  .copy-btn:active { background: #3a85d6; }
+  .copied { color: #4dff88; margin-left: 10px; display: none; }
+</style>
+</head>
+<body>
+<h1>AirRemote PC Setup</h1>
+<p>Grant the one-time permission using a computer. Takes about 2 minutes.</p>
+
+<h2>On your TV</h2>
+<div class="step"><span class="step-num">1</span> Go to <strong>Settings → Device Preferences → About</strong></div>
+<div class="step"><span class="step-num">2</span> Click <strong>Build</strong> 7 times to enable Developer Options</div>
+<div class="step"><span class="step-num">3</span> Go to <strong>Settings → Device Preferences → Developer Options</strong></div>
+<div class="step"><span class="step-num">4</span> Turn on <strong>USB Debugging</strong> (or <strong>Wireless Debugging</strong>)</div>
+
+<h2>On your computer</h2>
+<div class="step"><span class="step-num">5</span> Install ADB (<a href="https://developer.android.com/tools/releases/platform-tools" style="color:#4da6ff">platform-tools</a>) if you don't have it</div>
+<div class="step"><span class="step-num">6</span> Connect to your TV:
+<br><br><code>adb connect &lt;TV-IP-ADDRESS&gt;</code>
+<br><br>Find the IP in TV Settings → Network</div>
+<div class="step"><span class="step-num">7</span> Run this command:</div>
+
+<div class="cmd-box">
+<code id="cmd">adb shell appops set com.airremote.app android:access_restricted_settings allow</code>
+<br>
+<button class="copy-btn" onclick="copyCmd()">Copy Command</button>
+<span class="copied" id="copied">Copied!</span>
+</div>
+
+<div class="step"><span class="step-num">8</span> Go back to AirRemote on your TV. The permission step will check itself off.</div>
+
+<script>
+function copyCmd() {
+  const cmd = document.getElementById('cmd').innerText;
+  navigator.clipboard.writeText(cmd).then(() => {
+    document.getElementById('copied').style.display = 'inline';
+    setTimeout(() => document.getElementById('copied').style.display = 'none', 2000);
+  });
+}
+</script>
+</body>
+</html>
