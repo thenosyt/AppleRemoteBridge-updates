@@ -484,38 +484,46 @@
       "version": "1.0.43",
       "version_code": 100043,
       "date": "2026-10-04",
-      "notes": "Version 1.0.43"
+      "notes": "Build fix: resolved the v1.0.40 compile failure (Shizuku API fix, newProcess removed in API 13; Shizuku downgraded to 12.2.0 for newProcess support); AirRemote rename: all user-visible Apple Remote Bridge strings now say AirRemote"
     },
     {
       "version": "1.0.47",
       "version_code": 100047,
       "date": "2026-10-04",
-      "notes": "Version 1.0.47"
+      "notes": "Shizuku simplified: removed the broken UserService, grant disabled for now; Investigation build for the app-not-opening issue on TV (tapping the icon did nothing)"
     },
     {
       "version": "1.0.48",
       "version_code": 100048,
       "date": "2026-10-04",
-      "notes": "Version 1.0.48"
+      "notes": "Shizuku removed entirely to fix the app-not-opening issue (tapping the icon did nothing on TV)"
     },
     {
       "version": "1.0.49",
       "version_code": 100049,
       "date": "2026-10-05",
-      "notes": "Version 1.0.49"
+      "notes": "New app icon: closed iPhone Duo remote; Hardcoded manifest label fixed to AirRemote"
     }
   ],
   "build_notes": {
     "changes": [
-      "Shizuku simplified: removed the broken UserService, grant disabled for now",
-      "Investigation build for the app-not-opening issue on TV (tapping the icon did nothing)"
+      "New app icon: closed iPhone Duo remote",
+      "Hardcoded manifest label fixed to AirRemote",
+      "Home header centered like the onboarding style",
+      "Home checklist uses real buttons like onboarding",
+      "Dialogs open with D-pad focus on the primary button; text input auto-focused in the TV Name dialog",
+      "Onboarding: 2 second delay after the green checkmark before auto-advancing",
+      "checkDot circle hidden on the Welcome step",
+      "TV banner updated with the new icon",
+      "Shizuku Next: download flow with real grant, QR code PC option"
     ],
     "notes": [
-      "A diagnostic step toward the app-not-opening issue: Shizuku is simplified by removing the broken UserService and disabling the grant for now."
+      "The AirRemote rebrand lands fully: new closed-iPhone-Duo icon, AirRemote name in the launcher, centered home header with real-button checklist, and a TV banner using the new icon.",
+      "Dialogs now open with D-pad focus on the primary button, the TV Name dialog focuses its text input, onboarding pauses 2 seconds on the green checkmark, and the Shizuku Next flow supports QR code PC setup."
     ],
-    "version": "1.0.47"
+    "version": "1.0.49"
   },
-  "checked_at": "2026-10-06T01:55:31Z",
+  "checked_at": "2026-10-06T01:56:01Z",
   "newly_completed": [],
   "page_version": "18"
 }
