@@ -506,21 +506,16 @@
     }
   ],
   "build_notes": {
-    "version": "1.0.40",
     "changes": [
-      "Hero collect animation: the status card drops down and vacuums each checkmark into the hero ring, landing centered with a green Paired pop",
-      "Paired iPhones section in Settings: expandable list showing every paired iPhone with Rename and Forget",
-      "Automatic iPhone naming via reverse DNS (Tys-iPhone.local becomes Tys iPhone); one-time Name this iPhone prompt if lookup fails",
-      "Checklist now shows iPhone count (1 iPhone paired, 2 iPhones paired)",
-      "Menu button replaced the settings cog: Apple-style three lines with faint circle, floats above the Settings panel",
-      "Pair your iPhone setup guidance under the app name until an iPhone pairs"
+      "Shizuku simplified: removed the broken UserService, grant disabled for now",
+      "Investigation build for the app-not-opening issue on TV (tapping the icon did nothing)"
     ],
     "notes": [
-      "When the last setup check completes, the hero card now drops toward the center of the screen, collecting each checklist badge into the hero ring on the way down, then pops green Paired. The finished home keeps the hero centered.",
-      "Each paired iPhone is now listed by name in Settings under Paired iPhones. Tap to expand, rename any device, or Forget it (Apple-style, like forgetting a Bluetooth device)."
-    ]
+      "A diagnostic step toward the app-not-opening issue: Shizuku is simplified by removing the broken UserService and disabling the grant for now."
+    ],
+    "version": "1.0.47"
   },
-  "checked_at": "2026-10-06T01:55:01Z",
+  "checked_at": "2026-10-06T01:55:31Z",
   "newly_completed": [],
   "page_version": "18"
 }
