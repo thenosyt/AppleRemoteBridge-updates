@@ -10,8 +10,44 @@
       "created_at": "2026-10-07T15:32:57Z",
       "updated_at": "2026-10-07T15:33:02Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37644789937",
-      "steps": [],
-      "eta_seconds": 416,
+      "steps": [
+        {
+          "name": "Vendor Companion Link protocol",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-java@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run gradle/actions/setup-gradle@v4",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-java@v5",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "pending",
+          "conclusion": null
+        }
+      ],
+      "eta_seconds": 371,
       "name": "AirRemote",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.51",
@@ -447,7 +483,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T15:33:37Z",
+  "checked_at": "2026-10-07T15:34:24Z",
   "newly_completed": [],
   "page_version": "19"
 }
