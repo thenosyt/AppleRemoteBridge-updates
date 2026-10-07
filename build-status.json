@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 37665809651,
       "run_number": 59,
       "branch": "master",
       "sha": "705e261",
       "created_at": "2026-10-07T18:18:26Z",
-      "updated_at": "2026-10-07T18:18:31Z",
+      "updated_at": "2026-10-07T18:22:07Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37665809651",
       "steps": [
         {
@@ -43,36 +43,41 @@
         },
         {
           "name": "Build debug APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run actions/upload-artifact@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
-      "eta_seconds": 55,
+      "eta_seconds": null,
       "name": "AirRemote Build",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.59",
@@ -195,12 +200,12 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -229,7 +234,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 62,
+      "eta_seconds": 15,
       "name": "AirRemote Publish",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.55",
@@ -677,8 +682,14 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T18:21:45Z",
-  "newly_completed": [],
+  "checked_at": "2026-10-07T18:22:32Z",
+  "newly_completed": [
+    {
+      "version": "1.0.54",
+      "apk_size_mb": 37.7,
+      "run_number": 59
+    }
+  ],
   "newly_failed": [],
   "page_version": "22"
 }
