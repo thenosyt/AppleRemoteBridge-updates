@@ -544,6 +544,15 @@
         "fork/app/src/main/java/com/sagi/appleremotebridge/MainActivity.kt"
       ],
       "added": "2026-10-07"
+    },
+    {
+      "id": "hub-honest-progress-20261007",
+      "title": "Hub shows honest progress: current step + elapsed, no fake countdown",
+      "desc": "Replaces 'approx 22 sec left' with 'Building the app \u2014 Build debug APK (running 4 min)'. Bumps page version to 21.",
+      "files": [
+        "build-status.html"
+      ],
+      "added": "2026-10-07"
     }
   ],
   "version_history": [
@@ -698,8 +707,8 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T18:13:43Z",
+  "checked_at": "2026-10-07T18:14:12Z",
   "newly_completed": [],
   "newly_failed": [],
-  "page_version": "20"
+  "page_version": "21"
 }
