@@ -234,7 +234,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 94,
+      "eta_seconds": 47,
       "name": "AirRemote Publish",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.53",
@@ -680,8 +680,14 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T17:37:17Z",
-  "newly_completed": [],
+  "checked_at": "2026-10-07T17:38:04Z",
+  "newly_completed": [
+    {
+      "version": "1.0.49",
+      "apk_size_mb": 37.7,
+      "run_number": 57
+    }
+  ],
   "newly_failed": [],
   "page_version": "20"
 }
