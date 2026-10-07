@@ -1,15 +1,15 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 37662743327,
-      "run_number": 58,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 37665809651,
+      "run_number": 59,
       "branch": "master",
-      "sha": "cbe8b00",
-      "created_at": "2026-10-07T17:54:48Z",
-      "updated_at": "2026-10-07T17:58:58Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37662743327",
+      "sha": "705e261",
+      "created_at": "2026-10-07T18:18:26Z",
+      "updated_at": "2026-10-07T18:18:31Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37665809651",
       "steps": [
         {
           "name": "Set up job",
@@ -43,44 +43,39 @@
         },
         {
           "name": "Build debug APK",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         },
         {
           "name": "Run actions/upload-artifact@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
-      "eta_seconds": null,
+      "eta_seconds": 205,
       "name": "AirRemote Build",
       "repo": "thenosyt/AppleRemoteBridge",
-      "version_display": "v1.0.58",
+      "version_display": "v1.0.59",
       "published": {
         "version": "1.0.54",
         "version_code": 100054,
@@ -153,15 +148,15 @@
       ]
     },
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 37662743197,
-      "run_number": 54,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 37665809684,
+      "run_number": 55,
       "branch": "master",
-      "sha": "cbe8b00",
-      "created_at": "2026-10-07T17:54:48Z",
-      "updated_at": "2026-10-07T17:58:55Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37662743197",
+      "sha": "705e261",
+      "created_at": "2026-10-07T18:18:26Z",
+      "updated_at": "2026-10-07T18:18:30Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37665809684",
       "steps": [
         {
           "name": "Set up job",
@@ -200,49 +195,44 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         },
         {
           "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "pending",
+          "conclusion": null
         }
       ],
-      "eta_seconds": null,
+      "eta_seconds": 213,
       "name": "AirRemote Publish",
       "repo": "thenosyt/AppleRemoteBridge",
-      "version_display": "v1.0.54",
+      "version_display": "v1.0.55",
       "published": {
         "version": "1.0.54",
         "version_code": 100054,
@@ -534,27 +524,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "id": "voice-gemini-fix-20261007",
-      "title": "Fix Gemini voice: more intent candidates + voice diagnostics",
-      "desc": "Adds explicit Gemini package intents, skips intents with no handler, adds 'Show voice diagnostics' button in Settings so failures are visible.",
-      "files": [
-        "fork/app/src/main/java/com/sagi/appleremotebridge/RemoteAccessibilityService.kt",
-        "fork/app/src/main/java/com/sagi/appleremotebridge/MainActivity.kt"
-      ],
-      "added": "2026-10-07"
-    },
-    {
-      "id": "hub-honest-progress-20261007",
-      "title": "Hub: honest progress + correct \"what changed\" notes",
-      "desc": "Replaces fake countdown with current step + elapsed time. Adds plain-language translations for duplication/trackpad/voice commits so \"what changed\" is accurate.",
-      "files": [
-        "build-status.html"
-      ],
-      "added": "2026-10-07"
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -707,7 +677,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T18:18:24Z",
+  "checked_at": "2026-10-07T18:19:16Z",
   "newly_completed": [],
   "newly_failed": [],
   "page_version": "21"
