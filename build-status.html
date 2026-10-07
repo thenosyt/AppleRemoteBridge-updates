@@ -197,7 +197,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "20";
+const PAGE_VERSION = "21";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -334,8 +334,15 @@ function renderBuild(build, versionHistory) {
     if (n.includes("build")) return "Building the app";
     return "Working";
   })();
-  const etaHtml = (isBuilding && build.eta_seconds != null)
-    ? `<div class="build-meta" data-eta-run="${build.run_id || ""}" data-eta-seconds="${build.eta_seconds}" style="margin-top:6px;color:#0a84ff;font-weight:600;">${actionText}… ${fmtEta(build.eta_seconds)}</div>`
+  // Honest progress: show current step and elapsed time, not a fake countdown.
+  const currentStep = (build.steps || []).find(s => s.status === "in_progress");
+  const stepName = currentStep ? currentStep.name : "";
+  const startedAt = build.started_at ? new Date(build.started_at).getTime() : null;
+  const elapsedMin = startedAt ? Math.max(0, Math.floor((Date.now() - startedAt) / 60000)) : null;
+  const elapsedTxt = elapsedMin != null ? ` (running ${elapsedMin} min)` : "";
+  const stepTxt = stepName ? ` \u2014 ${escapeHtml(stepName)}` : "";
+  const etaHtml = isBuilding
+    ? `<div class="build-meta" style="margin-top:6px;color:#0a84ff;font-weight:600;">${actionText}…${stepTxt}${elapsedTxt}</div>`
     : "";
   const ringSvg = `
       <div class="progress-ring-wrap">
@@ -411,6 +418,10 @@ function commitsHtml(build, versionHistory) {
     if (m.includes("r.color.text") || m.includes("permission card")) return "Removed old permission popup that was causing a crash";
     if (m.includes("nullability") || m.includes("ctx must be non-null")) return "Fixed a crash when waking the TV";
     if (m.includes("nullable lambda")) return "Fixed a crash in the status display";
+    if (m.includes("duplication") && m.includes("trackpad")) return "Fix iPhone keyboard text duplication; tune trackpad for one-swipe-one-move";
+    if (m.includes("duplication")) return "Fix iPhone keyboard typing duplication on TV";
+    if (m.includes("trackpad") && m.includes("d-pad")) return "Tune trackpad: one swipe moves one item, no skipping";
+    if (m.includes("gemini") && m.includes("voice")) return "Fix Gemini voice button; add voice diagnostics";
     if (m.includes("power type error") || m.includes("power dispatch")) return "Fixed power button handling";
     if (m.includes("tappable rows replace banners")) return "New: tap a status row to jump to the fix";
     if (m.includes("airplay-style home")) return "New: AirPlay-style home screen with big TV name and pairing steps";
