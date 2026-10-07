@@ -197,7 +197,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "19";
+const PAGE_VERSION = "20";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -327,8 +327,15 @@ function renderBuild(build, versionHistory) {
   const versionHtml = verLabel ? `<span style="color:${versionColor};font-weight:700;">${escapeHtml(verLabel)}</span> · ` : "";
   // Live ETA countdown for in-progress builds. Ticks every second client-side.
   // data-eta-run identifies the build so the countdown stays monotonic across re-renders.
+  // Plain-language status: says WHAT is happening, not just the countdown.
+  const actionText = (() => {
+    const n = (build.name || "").toLowerCase();
+    if (n.includes("publish")) return "Publishing the update";
+    if (n.includes("build")) return "Building the app";
+    return "Working";
+  })();
   const etaHtml = (isBuilding && build.eta_seconds != null)
-    ? `<div class="build-meta" data-eta-run="${build.run_id || ""}" data-eta-seconds="${build.eta_seconds}" style="margin-top:6px;color:#0a84ff;font-weight:600;">${fmtEta(build.eta_seconds)}</div>`
+    ? `<div class="build-meta" data-eta-run="${build.run_id || ""}" data-eta-seconds="${build.eta_seconds}" style="margin-top:6px;color:#0a84ff;font-weight:600;">${actionText}… ${fmtEta(build.eta_seconds)}</div>`
     : "";
   const ringSvg = `
       <div class="progress-ring-wrap">
