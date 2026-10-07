@@ -382,13 +382,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "id": "hub-adb-ip-field-20261007",
-      "label": "Hub ADB card: TV IP address field that rewrites the recovery command and remembers it, corrected app package name, append-safe accessibility enable",
-      "category": "site"
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -529,7 +523,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T14:48:18Z",
+  "checked_at": "2026-10-07T14:55:22Z",
   "newly_completed": [],
   "page_version": "19"
 }
