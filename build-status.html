@@ -148,10 +148,33 @@
     <div class="build-header">
       <div class="build-name">ADB Recovery Command — AirRemote</div>
     </div>
-    <div style="color:rgba(255,255,255,0.6);font-size:13px;margin:8px 0 12px;">For AirRemote (all versions). Run this from your PC when the accessibility toggle flips back off after an update. Copy-paste as one line.</div>
-    <div id="adb-cmd" style="background:#000;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;word-break:break-all;color:#fff;user-select:all;">adb -s 192.168.4.32:5555 shell "appops set com.sagi.appleremotebridge ACCESS_RESTRICTED_SETTINGS allow; settings put secure enabled_accessibility_services com.sagi.appleremotebridge/com.sagi.appleremotebridge.RemoteAccessibilityService:com.spocky.projengmenu/com.spocky.projengmenu.services.ProjectivyAccessibilityService; settings put secure accessibility_enabled 1"</div>
+    <div style="color:rgba(255,255,255,0.6);font-size:13px;margin:8px 0 12px;">For AirRemote (all versions). Run this from your PC when the accessibility toggle flips back off after an update. Type your TV's IP once and this page remembers it on this device. Copy-paste as one line.</div>
+    <div style="display:flex;gap:8px;align-items:center;margin:0 0 12px;">
+      <label for="tv-ip" style="font-size:13px;color:rgba(255,255,255,0.6);white-space:nowrap;">TV IP address</label>
+      <input id="tv-ip" inputmode="decimal" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" value="192.168.4.36" oninput="renderAdbCmd()" style="flex:1;min-width:0;background:#000;border:1px solid #333;border-radius:8px;padding:10px 12px;color:#fff;font-family:monospace;font-size:14px;outline:none;">
+    </div>
+    <div id="adb-cmd" style="background:#000;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;word-break:break-all;color:#fff;user-select:all;"></div>
     <button onclick="copyAdbCmd()" style="margin-top:12px;background:#0a84ff;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:16px;font-weight:600;cursor:pointer;width:100%;">Copy Command</button>
     <script>
+    const ADB_PKG = 'com.airremote.app';
+    const ADB_SVC = 'com.airremote.app/com.sagi.appleremotebridge.RemoteAccessibilityService';
+    function adbCmdFor(ip) {
+      return 'adb -s ' + ip + ':5555 shell "appops set ' + ADB_PKG + ' android:access_restricted_settings allow; S=' + ADB_SVC + '; C=$(settings get secure enabled_accessibility_services); if [ \\"$C\\" = null ]; then C=; fi; case :$C: in *:$S:*) echo already-on;; *) settings put secure enabled_accessibility_services ${C:+$C:}$S;; esac; settings put secure accessibility_enabled 1"';
+    }
+    function renderAdbCmd() {
+      const input = document.getElementById('tv-ip');
+      const typed = (input.value || '').trim();
+      const ip = typed || '192.168.4.36';
+      document.getElementById('adb-cmd').innerText = adbCmdFor(ip);
+      try { localStorage.setItem('airremote-tv-ip', typed); } catch (e) {}
+    }
+    (function initAdbCmd() {
+      try {
+        const saved = localStorage.getItem('airremote-tv-ip');
+        if (saved) document.getElementById('tv-ip').value = saved;
+      } catch (e) {}
+      renderAdbCmd();
+    })();
     function copyAdbCmd() {
       const el = document.getElementById('adb-cmd');
       const text = el.innerText;
@@ -174,7 +197,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "18";
+const PAGE_VERSION = "19";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
