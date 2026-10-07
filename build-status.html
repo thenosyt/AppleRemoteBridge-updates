@@ -140,7 +140,7 @@
 <body>
   <h1>Build Status</h1>
   <div class="subtitle">Live progress for everything being built</div>
-  <div id="page-update" style="display:none;width:100%;max-width:560px;background:rgba(10,132,255,0.15);border:1px solid rgba(10,132,255,0.5);border-radius:12px;padding:12px 16px;margin:8px 0;text-align:center;font-size:15px;">A new version of this page is available. <button onclick="location.href='build-status.html?v='+window.__newPageVersion" style="margin-left:8px;background:#0a84ff;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:15px;font-weight:600;cursor:pointer;">Reload</button></div>
+  <div id="page-update" style="display:none;width:100%;max-width:560px;background:rgba(10,132,255,0.15);border:1px solid rgba(10,132,255,0.5);border-radius:12px;padding:12px 16px;margin:8px 0;text-align:center;font-size:15px;">A new version of this page is available. <button onclick="location.href='build-status.html?v='+Date.now()"  style="margin-left:8px;background:#0a84ff;color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:15px;font-weight:600;cursor:pointer;">Reload</button></div>
   <div id="tasks" style="width:100%;max-width:560px;"></div>
   <div id="builds" style="width:100%;max-width:560px;"></div>
   <div id="history" style="width:100%;max-width:560px;"></div>
@@ -197,7 +197,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "21";
+const PAGE_VERSION = "22";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
