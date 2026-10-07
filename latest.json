@@ -1,6 +1,6 @@
 {
-  "versionCode": 100054,
-  "versionName": "1.0.54",
+  "versionCode": 100055,
+  "versionName": "1.0.55",
   "apkUrl": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
-  "notes": "Fix iPhone keyboard duplication and tune trackpad D-pad-like"
+  "notes": "Fix Gemini voice intents + add voice diagnostics"
 }
