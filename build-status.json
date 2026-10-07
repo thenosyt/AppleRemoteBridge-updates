@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "state": "in_progress",
-      "conclusion": null,
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 37659431813,
       "run_number": 57,
       "branch": "master",
       "sha": "25eedfb",
       "created_at": "2026-10-07T17:29:13Z",
-      "updated_at": "2026-10-07T17:29:17Z",
+      "updated_at": "2026-10-07T17:33:21Z",
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37659431813",
       "steps": [
         {
@@ -77,7 +77,7 @@
           "conclusion": "success"
         }
       ],
-      "eta_seconds": 0,
+      "eta_seconds": null,
       "name": "AirRemote Build",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.57",
@@ -153,15 +153,15 @@
       ]
     },
     {
-      "state": "in_progress",
-      "conclusion": null,
-      "run_id": 37659431808,
-      "run_number": 52,
+      "state": "completed",
+      "conclusion": "success",
+      "run_id": 37247439969,
+      "run_number": 49,
       "branch": "master",
-      "sha": "25eedfb",
-      "created_at": "2026-10-07T17:29:13Z",
-      "updated_at": "2026-10-07T17:29:19Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37659431808",
+      "sha": "c3611fe",
+      "created_at": "2026-10-05T00:25:04Z",
+      "updated_at": "2026-10-05T00:29:25Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37247439969",
       "steps": [
         {
           "name": "Set up job",
@@ -210,34 +210,39 @@
         },
         {
           "name": "Publish to updates repo",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
-      "eta_seconds": 307,
+      "eta_seconds": null,
       "name": "AirRemote Publish",
       "repo": "thenosyt/AppleRemoteBridge",
-      "version_display": "v1.0.52",
+      "version_display": "v1.0.49",
       "published": {
         "version": "1.0.49",
         "version_code": 100049,
@@ -670,8 +675,14 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T17:33:24Z",
-  "newly_completed": [],
+  "checked_at": "2026-10-07T17:34:09Z",
+  "newly_completed": [
+    {
+      "version": "1.0.49",
+      "apk_size_mb": 37.7,
+      "run_number": 57
+    }
+  ],
   "newly_failed": [],
   "page_version": "19"
 }
