@@ -1,96 +1,20 @@
 {
   "builds": [
     {
-      "state": "completed",
-      "conclusion": "success",
-      "run_id": 37247439969,
-      "run_number": 49,
+      "state": "in_progress",
+      "conclusion": null,
+      "run_id": 37644789937,
+      "run_number": 51,
       "branch": "master",
-      "sha": "c3611fe",
-      "created_at": "2026-10-05T00:25:04Z",
-      "updated_at": "2026-10-05T00:29:25Z",
-      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37247439969",
-      "steps": [
-        {
-          "name": "Set up job",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Vendor Companion Link protocol",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Decode signing keystore",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Build signed release APK",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Verify the APK is signed",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Publish to updates repo",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run actions/setup-java@v5",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run actions/setup-python@v5",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Post Run actions/checkout@v4",
-          "status": "completed",
-          "conclusion": "success"
-        },
-        {
-          "name": "Complete job",
-          "status": "completed",
-          "conclusion": "success"
-        }
-      ],
-      "eta_seconds": null,
+      "sha": "f00fa77",
+      "created_at": "2026-10-07T15:32:57Z",
+      "updated_at": "2026-10-07T15:33:02Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37644789937",
+      "steps": [],
+      "eta_seconds": 416,
       "name": "AirRemote",
       "repo": "thenosyt/AppleRemoteBridge",
-      "version_display": "v1.0.49",
+      "version_display": "v1.0.51",
       "published": {
         "version": "1.0.49",
         "version_code": 100049,
@@ -382,17 +306,7 @@
       "completed_at": "2026-10-03"
     }
   ],
-  "pending_fixes": [
-    {
-      "id": "rti-tic-fallback-20261007",
-      "title": "Fix iPhone keyboard typing into TV text fields",
-      "desc": "Typing on the Apple remote keyboard never reached the TV: the _tic text handler silently dropped keystrokes when the session-UUID check or upstream parsing disagreed. Now extracts text directly from the message as a fallback and logs each step to the pairing trace.",
-      "files": [
-        "fork/app/src/main/python/android_companion.py"
-      ],
-      "added": "2026-10-07"
-    }
-  ],
+  "pending_fixes": [],
   "version_history": [
     {
       "date": "2026-10-01",
@@ -533,7 +447,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T15:32:48Z",
+  "checked_at": "2026-10-07T15:33:37Z",
   "newly_completed": [],
   "page_version": "19"
 }
