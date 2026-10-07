@@ -43,36 +43,41 @@
         },
         {
           "name": "Build debug APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Run actions/upload-artifact@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run gradle/actions/setup-gradle@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-java@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/setup-python@v5",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Post Run actions/checkout@v4",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
         }
       ],
-      "eta_seconds": 18,
+      "eta_seconds": 0,
       "name": "AirRemote Build",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.57",
@@ -195,17 +200,17 @@
         },
         {
           "name": "Build signed release APK",
-          "status": "in_progress",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Verify the APK is signed",
-          "status": "pending",
-          "conclusion": null
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "name": "Publish to updates repo",
-          "status": "pending",
+          "status": "in_progress",
           "conclusion": null
         },
         {
@@ -229,7 +234,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 353,
+      "eta_seconds": 307,
       "name": "AirRemote Publish",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.52",
@@ -665,7 +670,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T17:32:36Z",
+  "checked_at": "2026-10-07T17:33:24Z",
   "newly_completed": [],
   "newly_failed": [],
   "page_version": "19"
