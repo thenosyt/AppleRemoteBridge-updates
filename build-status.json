@@ -687,19 +687,8 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T18:23:23Z",
-  "newly_completed": [
-    {
-      "version": "1.0.55",
-      "apk_size_mb": 37.7,
-      "run_number": 59
-    },
-    {
-      "version": "1.0.54",
-      "apk_size_mb": 37.7,
-      "run_number": 55
-    }
-  ],
+  "checked_at": "2026-10-07T18:24:14Z",
+  "newly_completed": [],
   "newly_failed": [],
-  "page_version": "22"
+  "page_version": "23"
 }
