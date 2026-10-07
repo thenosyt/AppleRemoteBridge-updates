@@ -12,6 +12,16 @@
       "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37644789937",
       "steps": [
         {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "in_progress",
+          "conclusion": null
+        },
+        {
           "name": "Vendor Companion Link protocol",
           "status": "completed",
           "conclusion": "success"
@@ -28,7 +38,27 @@
         },
         {
           "name": "Run gradle/actions/setup-gradle@v4",
-          "status": "in_progress",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Decode signing keystore",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Build signed release APK",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Verify the APK is signed",
+          "status": "pending",
+          "conclusion": null
+        },
+        {
+          "name": "Publish to updates repo",
+          "status": "pending",
           "conclusion": null
         },
         {
@@ -45,9 +75,14 @@
           "name": "Post Run actions/setup-python@v5",
           "status": "pending",
           "conclusion": null
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "pending",
+          "conclusion": null
         }
       ],
-      "eta_seconds": 371,
+      "eta_seconds": 331,
       "name": "AirRemote",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.51",
@@ -483,7 +518,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T15:34:24Z",
+  "checked_at": "2026-10-07T15:35:02Z",
   "newly_completed": [],
   "page_version": "19"
 }
