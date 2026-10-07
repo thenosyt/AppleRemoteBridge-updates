@@ -82,10 +82,10 @@
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.57",
       "published": {
-        "version": "1.0.49",
-        "version_code": 100049,
+        "version": "1.0.53",
+        "version_code": 100053,
         "apk_ready": true,
-        "apk_size": 39525403,
+        "apk_size": 39525307,
         "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
         "downloader_code": "7326894"
       },
@@ -244,10 +244,10 @@
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.53",
       "published": {
-        "version": "1.0.49",
-        "version_code": 100049,
+        "version": "1.0.53",
+        "version_code": 100053,
         "apk_ready": true,
-        "apk_size": 39525403,
+        "apk_size": 39525307,
         "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
         "downloader_code": "7326894"
       },
@@ -665,6 +665,12 @@
       "version_code": 100049,
       "date": "2026-10-05",
       "notes": "New app icon: closed iPhone Duo remote; Hardcoded manifest label fixed to AirRemote"
+    },
+    {
+      "version": "1.0.53",
+      "version_code": 100053,
+      "date": "2026-10-07",
+      "notes": "Version 1.0.53"
     }
   ],
   "build_notes": {
@@ -685,14 +691,8 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T17:39:24Z",
-  "newly_completed": [
-    {
-      "version": "1.0.49",
-      "apk_size_mb": 37.7,
-      "run_number": 53
-    }
-  ],
+  "checked_at": "2026-10-07T17:44:17Z",
+  "newly_completed": [],
   "newly_failed": [],
   "page_version": "20"
 }
