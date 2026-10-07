@@ -1,6 +1,6 @@
 {
-  "versionCode": 100053,
-  "versionName": "1.0.53",
+  "versionCode": 100054,
+  "versionName": "1.0.54",
   "apkUrl": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
-  "notes": "Revert 12 fixes to restore build; keep iPhone keyboard typing fix"
+  "notes": "Fix iPhone keyboard duplication and tune trackpad D-pad-like"
 }
