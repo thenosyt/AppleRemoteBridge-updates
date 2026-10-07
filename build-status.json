@@ -3,6 +3,158 @@
     {
       "state": "completed",
       "conclusion": "success",
+      "run_id": 37247439966,
+      "run_number": 53,
+      "branch": "master",
+      "sha": "c3611fe",
+      "created_at": "2026-10-05T00:25:04Z",
+      "updated_at": "2026-10-05T00:28:41Z",
+      "html_url": "https://github.com/thenosyt/AppleRemoteBridge/actions/runs/37247439966",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Vendor Companion Link protocol",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-java@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run gradle/actions/setup-gradle@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Build debug APK",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run gradle/actions/setup-gradle@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-java@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "eta_seconds": null,
+      "name": "AirRemote Build",
+      "repo": "thenosyt/AppleRemoteBridge",
+      "version_display": "v1.0.53",
+      "published": {
+        "version": "1.0.49",
+        "version_code": 100049,
+        "apk_ready": true,
+        "apk_size": 39525403,
+        "apk_url": "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/apk/AppleRemoteBridge.apk",
+        "downloader_code": "7326894"
+      },
+      "recent_commits": [
+        {
+          "sha": "1beaa81",
+          "date": "2026-10-07",
+          "message": "Fix iPhone keyboard typing: direct _tic text extraction fallback"
+        },
+        {
+          "sha": "e25c3c3",
+          "date": "2026-10-04",
+          "message": "TV banner updated with new icon"
+        },
+        {
+          "sha": "f89ca24",
+          "date": "2026-10-04",
+          "message": "New app icon: closed iPhone Duo remote"
+        },
+        {
+          "sha": "c98a3fd",
+          "date": "2026-10-04",
+          "message": "Home header centered like onboarding style"
+        },
+        {
+          "sha": "7f519e1",
+          "date": "2026-10-04",
+          "message": "Rename all user-visible Apple Remote Bridge strings to AirRemote"
+        },
+        {
+          "sha": "1496400",
+          "date": "2026-10-04",
+          "message": "Home checklist uses real buttons like onboarding"
+        },
+        {
+          "sha": "cc46981",
+          "date": "2026-10-04",
+          "message": "Focus primary button on all dialogs; focus text input on TV Name dialog"
+        },
+        {
+          "sha": "4e19707",
+          "date": "2026-10-04",
+          "message": "Dialogs open with D-pad focus on the primary button"
+        },
+        {
+          "sha": "da2f9ab",
+          "date": "2026-10-04",
+          "message": "Shizuku Next: download flow, real grant, QR PC option"
+        },
+        {
+          "sha": "54abc44",
+          "date": "2026-10-04",
+          "message": "Onboarding: 2s delay after green checkmark before auto-advance"
+        },
+        {
+          "sha": "9b3f22e",
+          "date": "2026-10-04",
+          "message": "Hide checkDot circle on Welcome step"
+        },
+        {
+          "sha": "1c3acbb",
+          "date": "2026-10-04",
+          "message": "Remove Shizuku entirely to fix app-not-opening"
+        }
+      ]
+    },
+    {
+      "state": "completed",
+      "conclusion": "success",
       "run_id": 37247439969,
       "run_number": 49,
       "branch": "master",
@@ -88,7 +240,7 @@
         }
       ],
       "eta_seconds": null,
-      "name": "AirRemote",
+      "name": "AirRemote Publish",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.49",
       "published": {
@@ -523,7 +675,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T15:46:56Z",
+  "checked_at": "2026-10-07T15:53:43Z",
   "newly_completed": [],
   "page_version": "19"
 }
