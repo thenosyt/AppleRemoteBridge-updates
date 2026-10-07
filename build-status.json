@@ -536,11 +536,11 @@
   ],
   "pending_fixes": [
     {
-      "id": "hub-status-text-20261007",
-      "title": "Hub shows plain-language status for major steps",
-      "desc": "Build/publish cards now say 'Building the app\u2026' or 'Publishing the update\u2026' with the countdown, instead of just a number.",
+      "id": "rti-no-duplicate-20261007",
+      "title": "Fix iPhone keyboard text duplication on TV",
+      "desc": "Typed text was duplicated ('Owoeoed' became 'OOwOwoOwoe...') because insertions were appended instead of using the iPhone's full asserted text. Now uses text_to_assert directly.",
       "files": [
-        "build-status.html"
+        "fork/app/src/main/python/android_companion.py"
       ],
       "added": "2026-10-07"
     }
@@ -691,7 +691,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T17:48:53Z",
+  "checked_at": "2026-10-07T17:49:33Z",
   "newly_completed": [],
   "newly_failed": [],
   "page_version": "20"
