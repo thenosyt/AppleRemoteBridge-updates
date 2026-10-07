@@ -72,7 +72,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 62,
+      "eta_seconds": 18,
       "name": "AirRemote Build",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.57",
@@ -229,7 +229,7 @@
           "conclusion": null
         }
       ],
-      "eta_seconds": 398,
+      "eta_seconds": 353,
       "name": "AirRemote Publish",
       "repo": "thenosyt/AppleRemoteBridge",
       "version_display": "v1.0.52",
@@ -665,7 +665,8 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-07T17:31:52Z",
+  "checked_at": "2026-10-07T17:32:36Z",
   "newly_completed": [],
+  "newly_failed": [],
   "page_version": "19"
 }
