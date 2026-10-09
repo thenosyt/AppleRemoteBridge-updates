@@ -384,6 +384,12 @@
   ],
   "tasks": [
     {
+      "label": "atvloadly-patched:v3 build (2FA UI fix only) - Docker build on laptop",
+      "done": false,
+      "category": "app",
+      "completed_at": null
+    },
+    {
       "label": "1.0.26 published: AirPlay home screen, tappable status rows",
       "done": true,
       "category": "app",
@@ -703,7 +709,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-09T19:39:26Z",
+  "checked_at": "2026-10-09T19:40:16Z",
   "newly_completed": [],
   "newly_failed": [],
   "page_version": "23"
