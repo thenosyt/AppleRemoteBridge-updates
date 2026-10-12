@@ -200,7 +200,7 @@
 const STATUS_URL = "https://raw.githubusercontent.com/thenosyt/AppleRemoteBridge-updates/main/build-status.json";
 // Bump on every push of this file. The page shows a one-tap reload banner
 // when the published build-status.json carries a newer version.
-const PAGE_VERSION = "23";
+const PAGE_VERSION = "24";
 // Typical build takes ~12 min; used to estimate progress while running.
 const TYPICAL_BUILD_MS = 12 * 60 * 1000;
 
@@ -547,6 +547,7 @@ function renderTasks(tasks, builds, pending) {
     { key: "app", title: "App" },
     { key: "site", title: "Website" },
     { key: "nuvio", title: "Nuvio TV" },
+    { key: "photos", title: "Google Photos" },
   ];
   let sections = "";
   let allDone = [];
