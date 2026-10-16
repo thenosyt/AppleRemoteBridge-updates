@@ -553,9 +553,9 @@
     },
     {
       "label": "\u21b3 Download file 2/20 (~10 GB) and verify on disk -- downloading now",
-      "done": false,
+      "done": true,
       "category": "photos",
-      "completed_at": null
+      "completed_at": "2026-10-15"
     },
     {
       "label": "\u21b3 Download file 3/20 (~10 GB) and verify on disk",
@@ -877,7 +877,7 @@
     ],
     "version": "1.0.49"
   },
-  "checked_at": "2026-10-16T00:35:09Z",
+  "checked_at": "2026-10-16T00:53:39Z",
   "newly_completed": [],
   "newly_failed": [],
   "page_version": "24"
